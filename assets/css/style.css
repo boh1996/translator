@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* CSS Document */
+
+.page-container{
+  position: relative;
+  margin-top: 20px;
+  padding-left:20px;
+  margin-right: 20px;
+}
+
+.length_select{
+	background: transparent;
+  padding-right: 5px;
+  border: 1px solid #ccc;
+  width: 240px;
+  overflow: hidden;
+}
+
+select:focus {
+   outline-color: transparent !important;
+}
+
+a[data-target] {
+  cursor: pointer;
+}
+
+.disabled {
+  display: none;
+}
+
+#loading {
+  position: absolute; 
+  top: 50%; 
+  left: 50%; 
+  margin-top: -32px; 
+  margin-left: -32px;
+  width: 64px;
+  height: 64px;
+}
+
+.disabled_page{
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+#footer {
+  margin-top: 60px;
+}
+
+@media (max-width: 767px) {
+  [class*="span"], .row-fluid [class*="span"]{
+    float:left;
+  }
+  .searh-field-row{
+    right: 0px;
+    position: absolute;
+  }
+  .row-fluid:last-child {
+    right: 0px;
+  }
+}
+
+@media (min-width: 980px) {
+  .page-container{
+    margin-top:60px;
+  }
+}
