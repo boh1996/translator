@@ -27,6 +27,7 @@ class API_Controller extends REST_Controller{
 	public function API_Controller () {
 		parent::__construct();
 		$this->load->config("api");
+		$this->user = $this->user_control->user;
 	}
 
 	/**

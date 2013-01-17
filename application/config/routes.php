@@ -58,9 +58,24 @@ if ( ! empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_R
 	$route["token/(:num)\.(xml|json)"] = "api/api_token/index/id/$1";
 	$route["token/(:num)"] = "api/api_token/index/id/$1";
 
+	#Project
+	$route["project"] = "api/api_project/index";
+	$route["project/(:num)\.(xml|json)"] = "api/api_project/index/id/$1";
+	$route["project/(:num)"] = "api/api_project/index/id/$1";
+
 	#Language
 
 	#Key
+	
+	#Access Control
+	$route["access"] = "api/api_access/index";
+	$route["access/(:num)\.(xml|json)"] = "api/api_access/index/id/$1";
+	$route["access/(:num)"] = "api/api_access/index/id/$1";
+
+	#Access Control Project
+	$route["access/project"] = "api/api_access/project";
+	$route["access/project/(:num)\.(xml|json)"] = "api/api_access/project/project/$1";
+	$route["access/project/(:num)"] = "api/api_access/project/project/$1";
 
 /**
  * User Routes

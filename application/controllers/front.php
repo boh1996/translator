@@ -32,7 +32,8 @@ class Front extends CI_Controller{
 			"script_includes" => array(
 				"functions.js",
 				"urlhandling.js",
-				"routes.js"
+				"routes.js",
+				"application.js"
 			)
 		)));
 	}

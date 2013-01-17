@@ -12,13 +12,23 @@ class API_Project extends API_Controller {
 	 */
 	public function __construct () {
 		parent::__construct();
+		$this->load->library("project");
 	}
 
 	public function index_get () {
 		if ( ! $this->get('id') ) {  
-           	self::error(400);
+           	self::error($this->config->item("api_bad_request_code"));
             return; 
         }
+
+        $Project = new Project();
+
+        if ( ! $Project->Load( $this->get("id") ) ) {
+        	self::error($this->config->item("api_not_found_code"));
+        	return;
+        }
+
+        $this->response( $Project->Export() );
 	}
 
 	public function index_post () {
@@ -30,9 +40,24 @@ class API_Project extends API_Controller {
 	}
 
 	public function index_delete () {
-		if ( ! $this->delete('id') ) {  
-            self::error(400);
-            return; 
-        }
+		if ( $this->user->has_one_mode("delete") ) {
+			if ( ! $this->get('id') ) {  
+	            self::error($this->config->item("api_bad_request_code"));
+	            return; 
+	        }
+
+	        $Project = new Project();
+
+	        if ( ! $Project->Load( $this->get("id") ) ) {
+	        	self::error($this->config->item("api_not_found_code"));
+	        	return;
+	        }
+
+	        $Project->Delete();
+	        
+		    $this->response = array();
+    	} else {
+    		self::error($this->config->item("api_forbidden_error"));
+    	}
 	}
 }

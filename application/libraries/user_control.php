@@ -112,6 +112,18 @@ class User_Control{
 	}
 
 	/**
+	 * This function loads a view with controller info
+	 * @param string $template The name of the template without the templates/ directory
+	 * @param array $data
+	 * @since 1.0
+	 * @access public
+	 * @return string
+	 */
+	public function LoadTemplate ($template, $data = null) {
+		return $this->_CI->load->view("templates/".$template, self::ControllerInfo($data),true);
+	}
+
+	/**
 	 * This function can merge Víew data and Standard view data
 	 * @since 1.0
 	 * @access public

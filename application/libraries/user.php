@@ -88,4 +88,26 @@ class User extends Std_Library {
 		}
 		return true;
 	}
+
+	/**
+	 * This function checks if one of the specified modes are present in the users role
+	 * @since 1.0
+	 * @access public
+	 * @param  array  $modes an array containing the allowed modes
+	 * @return boolean
+	 */
+	public function has_one_mode ( $modes ) {
+		if ( !is_array($modes) ) {
+			$modes = array($modes);
+		}
+		if ( !isset($this->role) && !is_object($this->role) ) {
+			return false;
+		}
+		foreach ($modes as $mode) {
+			if ( $this->role->has_mode($mode) ) {
+				return true;
+			}
+		}
+		return false;
+	}
 }

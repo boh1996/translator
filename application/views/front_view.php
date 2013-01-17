@@ -1,4 +1,9 @@
 <script type="text/javascript">var method = "<?php echo $method; ?>";</script>
+<script type="text/javascript">
+	var translations = {
+		"error_sorry_error_occured" : '<?php echo $this->lang->line('errors_sorry_an_error_occured'); ?>',
+	};
+</script>
 
 <!--<div class="navbar navbar-fixed-top navbar-inverse">-->
 <div class="navbar navbar-fixed-top">
@@ -46,7 +51,26 @@
 <!--<div id="error_container"></div>-->
 <div class="wrapper">
 	<div id="page">
-		<div class="page-container">	
+		<div class="page-container">
+
+			<?php if ($this->user_control->user->has_one_mode(array("edit","create","view","delete"))) : ?>
+				<div id="project" class="disabled_page">
+					Project {id}
+				</div>
+			<?php endif; ?>
+
+			<?php if ($this->user_control->user->has_modes("edit")) : ?>
+				<div id="project_edit" class="disabled_page">
+					Project Edit
+				</div>
+			<?php endif; ?>
+
+			<?php if ($this->user_control->user->has_modes("create")) : ?>
+				<div id="project_create" class="disabled_page">
+					Project Create
+				</div>
+			<?php endif; ?>
+
 			<div id="home" >
 				<section class="project-table">
 					<h2 class="section-header"><?php echo $this->lang->line('pages_projects'); ?>:</h2>
@@ -71,12 +95,12 @@
 									<td><?= $i; ?></td>
 									<td><a data-target="project/<?= $project["id"]; ?>"><?= $project["name"]; ?></a></td>
 									<?php if ($this->user_control->user->has_modes("edit")) : ?>
-										<td><a href="#" data-target="project/edit/<?= $project["id"]; ?>"><?php echo $this->lang->line('front_edit'); ?></a></td>
+										<td><a href="#" data-index="<?= $project["id"]; ?>" data-target="project/edit/<?= $project["id"]; ?>"><?php echo $this->lang->line('front_edit'); ?></a></td>
 									<?php else : ?>
 										<td></td>
 									<?php endif; ?>
 									<?php if ($this->user_control->user->has_modes("delete")) : ?>
-										<td><a href="#" data-target="project/delete/<?= $project["id"]; ?>"><?php echo $this->lang->line('front_delete'); ?></a></td>
+										<td><a href="#" data-index="<?= $project["id"]; ?>" data-target="project/delete/<?= $project["id"]; ?>"><?php echo $this->lang->line('front_delete'); ?></a></td>
 									<?php else : ?>
 										<td></td>
 									<?php endif; ?>
@@ -110,3 +134,9 @@
 </div>
 
 <div class="modal-backdrop in" style="display:none;" id="loading-background"></div>
+
+<?php if ($this->user_control->user->has_modes("delete")) : ?>
+	<script type="mustache/template" id="deleteProjectConfirmModalTemplate">
+		<?= $this->user_control->LoadTemplate("delete_confirm_view"); ?>
+	</script>
+<?php endif; ?>
