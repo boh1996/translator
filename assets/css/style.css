@@ -38,14 +38,15 @@ a[data-target] {
   height: 64px;
 }
 
+html {
+  height: 100%;
+  min-height: 100%;
+}
+
 .disabled_page{
   position: absolute !important;
   top: -9999px !important;
   left: -9999px !important;
-}
-
-#footer {
-  margin-top: 60px;
 }
 
 @media (max-width: 767px) {

@@ -40,10 +40,6 @@ function showPage (newPage) {
 	$("#loading-background").hide();
 	$("#loading").hide();
 	var currentPage = $(".active_page");
-	if (objx.get(generators,currentPage.attr("id")) != null) {
-		var id = objx.get(generators,currentPage.attr("id"));
-		objx.get(application,id).hide();
-	}
 	$(".active").removeClass("active");
    	if ($("#"+newPage).length > 0) {
    		$(".active_page").addClass("disabled_page").removeClass("active_page");
@@ -63,4 +59,48 @@ function showPage (newPage) {
  */
 function getPage () {
 	return History.getState().url.replace(root,"");
+}
+
+/**
+ * This function is a wrapper for the bootstrap alert system
+ * @param  {object} data          Data for the Mustache template
+ * @param  {string} template      An optional Mustcahe template for the content, if no data is supplied then this would be the text
+ * @param  {string} templateId    The id without the # of the alert template to use
+ * @param  {object} container     The container to insert the alert into
+ * @param  {string} mode          The insert mode "prepend" or "append"
+ * @param  {function} closeCallback A function to called when the alert is closed
+ * @param  {integer} timeout       An optional time in ms the alert should be shown
+ */
+function alert (data, template, templateId, container, mode, closeCallback, timeout) {
+	container = container || $("body");
+	timeout = timeout || null;
+	$("#"+templateId+"Clone").remove();
+	var alert = $("#"+templateId).clone();
+	var html = alert.html();
+	if (data == null) {
+		var content = template;
+	} else {
+		var content = Mustache.render(template,data);
+	}
+	alert.html(html.replace("{{message}}",content));
+	alert.attr("id",templateId+"Clone");
+	if (mode == "append") {
+		$(container).append(alert);
+	} else {
+		$(container).prepend(alert);
+	}
+
+	if (timeout != null) {
+		setTimeout(function () {
+			$("#"+templateId+"Clone").alert("close");
+		},timeout);
+	}
+
+	$(alert).bind('closed', function () {
+		console.log("closed");
+		$(this).remove();
+		if (typeof closeCallback == "function") {
+			closeCallback();
+		}
+	});
 }

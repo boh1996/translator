@@ -2,6 +2,10 @@
 <script type="text/javascript">
 	var translations = {
 		"error_sorry_error_occured" : '<?php echo $this->lang->line('errors_sorry_an_error_occured'); ?>',
+		"error_no_permission" : '<?php echo $this->lang->line('errrors_no_permission'); ?>',
+		"error_warining" : '<?php echo $this->lang->line('errors_warning'); ?>',
+		"project_saved" : '<?php echo $this->lang->line('front_project_saved'); ?>',
+		"error_project_found" : '<?php echo $this->lang->line('front_project_error_exists'); ?>',
 	};
 </script>
 
@@ -61,17 +65,17 @@
 
 			<?php if ($this->user_control->user->has_modes("edit")) : ?>
 				<div id="project_edit" class="disabled_page">
-					Project Edit
+					
 				</div>
 			<?php endif; ?>
 
 			<?php if ($this->user_control->user->has_modes("create")) : ?>
 				<div id="project_create" class="disabled_page">
-					Project Create
+					<?= $this->user_control->LoadTemplate("create_project_view"); ?>
 				</div>
 			<?php endif; ?>
 
-			<div id="home" >
+			<div id="home" class="disabled_page">
 				<section class="project-table">
 					<h2 class="section-header"><?php echo $this->lang->line('pages_projects'); ?>:</h2>
 					<table class="table table-condensed">
@@ -134,6 +138,16 @@
 </div>
 
 <div class="modal-backdrop in" style="display:none;" id="loading-background"></div>
+
+<div style="display:none;">
+	<?= $this->user_control->LoadTemplate("alerts_view"); ?>
+</div>
+
+<?php if ($this->user_control->user->has_modes("edit")) : ?>
+	<script type="mustache/template" id="editProjectViewTemplate">
+		<?= $this->user_control->LoadTemplate("project_edit_view"); ?>
+	</script>
+<?php endif; ?>
 
 <?php if ($this->user_control->user->has_modes("delete")) : ?>
 	<script type="mustache/template" id="deleteProjectConfirmModalTemplate">

@@ -1,16 +1,14 @@
-		<div id="footer">
-			<div class="navbar navbar-fixed-bottom">
-			  <div class="navbar-inner">
-			    <div class="container">
-			 
-			      	<!-- Be sure to leave the brand out there if you want it shown -->
-			      	<a class="brand">
-			      		<?php echo $this->lang->line('ui_copyright_line'); ?>
-			      	</a>
-			    </div>
-			  </div>
-			</div>
-		</div>	
+		<div class="navbar navbar-fixed-bottom">
+		  <div class="navbar-inner">
+		    <div class="container">
+		 
+		      	<!-- Be sure to leave the brand out there if you want it shown -->
+		      	<a class="brand">
+		      		<?php echo $this->lang->line('ui_copyright_line'); ?>
+		      	</a>
+		    </div>
+		  </div>
+		</div>
 	
 		<!-- Include jquery,boostrap and script -->
 		<?php 

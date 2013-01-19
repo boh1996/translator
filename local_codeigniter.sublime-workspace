@@ -1,0 +1,1913 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"req",
+				"requested_modes"
+			],
+			[
+				"array_ke",
+				"array_key_exists"
+			],
+			[
+				"Clas",
+				"ClassProperty"
+			],
+			[
+				"strto",
+				"strtolower"
+			],
+			[
+				"pro",
+				"project_id"
+			],
+			[
+				"Get",
+				"Get_User_Project_Roles"
+			],
+			[
+				"q",
+				"query"
+			],
+			[
+				"padd",
+				"padding-bottom"
+			],
+			[
+				"marg",
+				"margin-left"
+			],
+			[
+				"th",
+				"th	Tag"
+			],
+			[
+				"inc",
+				"include"
+			],
+			[
+				"st",
+				"style_includes"
+			],
+			[
+				"sc",
+				"script"
+			],
+			[
+				"scr",
+				"script_includes"
+			],
+			[
+				"lan",
+				"language"
+			],
+			[
+				"la",
+				"languages"
+			],
+			[
+				"lang",
+				"languages"
+			],
+			[
+				"proje",
+				"projects_model"
+			],
+			[
+				"res",
+				"response"
+			],
+			[
+				"tras",
+				"translation"
+			],
+			[
+				"error",
+				"error_reporting"
+			],
+			[
+				"pixel_",
+				"pixel_per_inch"
+			],
+			[
+				"save",
+				"save_self"
+			],
+			[
+				"in",
+				"input	Tag"
+			],
+			[
+				"line",
+				"lineWidth"
+			],
+			[
+				"chil",
+				"childsReturn"
+			],
+			[
+				"cent",
+				"centering"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"render",
+				"renderHeight"
+			],
+			[
+				"ch",
+				"childsReturn"
+			],
+			[
+				"last",
+				"lastRenderedElement"
+			],
+			[
+				"fon",
+				"fontSize"
+			],
+			[
+				"font",
+				"fontSize"
+			],
+			[
+				"scl",
+				"scaling"
+			],
+			[
+				"num",
+				"numberOfElements"
+			],
+			[
+				"fot",
+				"fontSize"
+			],
+			[
+				"Last",
+				"lastRenderedElement"
+			],
+			[
+				"nu",
+				"numberOfElements"
+			],
+			[
+				"calc",
+				"calculateCircleSize"
+			],
+			[
+				"fontS",
+				"fontSize"
+			],
+			[
+				"Fon",
+				"fontSizeHeight"
+			],
+			[
+				"enc",
+				"encodeText"
+			],
+			[
+				"child",
+				"child"
+			],
+			[
+				"u",
+				"undefined"
+			],
+			[
+				"lin",
+				"lineHeight"
+			],
+			[
+				"chi",
+				"child"
+			],
+			[
+				"li",
+				"lineHeight"
+			],
+			[
+				"le",
+				"left"
+			],
+			[
+				"zoo",
+				"zoom"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"widt",
+				"widthCalculated"
+			],
+			[
+				"of",
+				"offset"
+			],
+			[
+				"col",
+				"columns"
+			],
+			[
+				"c",
+				"childs"
+			],
+			[
+				"ca",
+				"calculateSize"
+			],
+			[
+				"row",
+				"rowsCalculated"
+			],
+			[
+				"co",
+				"columnsCalculated"
+			],
+			[
+				"ro",
+				"rowsCalculated"
+			],
+			[
+				"lie",
+				"lineHeight"
+			],
+			[
+				"sub",
+				"subscripts"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"margi",
+				"margin-top"
+			],
+			[
+				"pr",
+				"printer"
+			],
+			[
+				"preg_ma",
+				"preg_match_all"
+			],
+			[
+				"str_re",
+				"str_replace"
+			],
+			[
+				"mysq_s",
+				"mysql_select_db"
+			],
+			[
+				"mysql",
+				"mysql_connect"
+			],
+			[
+				"com",
+				"computers"
+			],
+			[
+				"var",
+				"variable"
+			],
+			[
+				"inde",
+				"indexOf"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"gene",
+				"generators"
+			],
+			[
+				"done",
+				"doneCallback"
+			],
+			[
+				"ge",
+				"generator"
+			],
+			[
+				"ini",
+				"initializedGenerators"
+			],
+			[
+				"initi",
+				"initialized"
+			],
+			[
+				"initial",
+				"initialize"
+			],
+			[
+				"show",
+				"showPage"
+			],
+			[
+				"obje",
+				"objectTitlePrefix"
+			],
+			[
+				"dis",
+				"disabled_page"
+			],
+			[
+				"path",
+				"pathArray"
+			],
+			[
+				"loca",
+				"location"
+			],
+			[
+				"max-",
+				"max-height"
+			],
+			[
+				"max",
+				"max-height"
+			],
+			[
+				"im",
+				"important"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"vide",
+				"video_architecture"
+			],
+			[
+				"network",
+				"network_cards"
+			],
+			[
+				"utf",
+				"utf8_encode"
+			],
+			[
+				"fie",
+				"fileType"
+			],
+			[
+				"image",
+				"imageUrl"
+			],
+			[
+				"json_",
+				"json_encode"
+			],
+			[
+				"page",
+				"pageLayoutAnalysis"
+			],
+			[
+				"dev",
+				"device_identifier"
+			],
+			[
+				"at",
+				"authenticated"
+			],
+			[
+				"is_i",
+				"is_integer"
+			],
+			[
+				"scre",
+				"screen_size"
+			],
+			[
+				"operat",
+				"operating_system"
+			],
+			[
+				"se",
+				"section	Tag"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"con",
+				"container"
+			],
+			[
+				"val",
+				"value"
+			],
+			[
+				"useR_a",
+				"user_password"
+			],
+			[
+				"len",
+				"length"
+			],
+			[
+				"user",
+				"userPasswordHash"
+			],
+			[
+				"has",
+				"hashing_iterations"
+			],
+			[
+				"column",
+				"columnIndex"
+			],
+			[
+				"colu",
+				"columnIndex"
+			],
+			[
+				"user_",
+				"user_control"
+			],
+			[
+				"_",
+				"_SESSION"
+			],
+			[
+				"array_u",
+				"array_unique"
+			],
+			[
+				"langu",
+				"languageFiles"
+			],
+			[
+				"ba",
+				"batch_load_lang_files"
+			],
+			[
+				"new",
+				"newestVersion"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"whi",
+				"whitelist"
+			],
+			[
+				"type",
+				"typeahead"
+			],
+			[
+				"op",
+				"option	Tag"
+			],
+			[
+				"data",
+				"data-target"
+			],
+			[
+				"dataTa",
+				"dataTables_length"
+			],
+			[
+				"units",
+				"unitsGenerator"
+			],
+			[
+				"set",
+				"settings"
+			],
+			[
+				"tem",
+				"template_data"
+			],
+			[
+				"templ",
+				"template_constants"
+			],
+			[
+				"_Te",
+				"_Template_Mix"
+			],
+			[
+				"el",
+				"element"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "application/views/front_view.php",
+			"settings":
+			{
+				"buffer_size": 5094,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/views/templates/delete_confirm_view.php",
+			"settings":
+			{
+				"buffer_size": 626,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/language/english/front_lang.php",
+			"settings":
+			{
+				"buffer_size": 306,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/language/english/errors_lang.php",
+			"settings":
+			{
+				"buffer_size": 75,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/language/english/common_lang.php",
+			"settings":
+			{
+				"buffer_size": 125,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/controllers/front.php",
+			"settings":
+			{
+				"buffer_size": 1066,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "assets/js/routes.js",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/controllers/api/api_project.php",
+			"settings":
+			{
+				"buffer_size": 1459,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/libraries/user.php",
+			"settings":
+			{
+				"buffer_size": 2436,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Git p",
+				"Git: Push"
+			],
+			[
+				"Gk",
+				"Git: Gitk"
+			],
+			[
+				"doc",
+				"DocBlockr: Reparse comment block"
+			],
+			[
+				"git",
+				"Git: Gui"
+			],
+			[
+				"Package",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"Packgage",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 132.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/xampp/htdocs/codeigniter/application/config/api.php",
+		"/C/xampp/htdocs/codeigniter/application/controllers/api/api_file.php",
+		"/C/xampp/htdocs/codeigniter/assets/js/urlhandling.js",
+		"/C/xampp/htdocs/codeigniter/assets/js/functions.js",
+		"/C/xampp/htdocs/codeigniter/assets/js/application.js",
+		"/C/xampp/htdocs/codeigniter/application/controllers/api/api_project.php",
+		"/C/xampp/htdocs/codeigniter/application/config/autoload.php",
+		"/C/xampp/htdocs/codeigniter/application/libraries/user_control.php",
+		"/C/xampp/htdocs/codeigniter/application/config/routes.php",
+		"/C/xampp/htdocs/codeigniter/application/config/config.php",
+		"/C/xampp/htdocs/codeigniter/application/views/modals_view.php",
+		"/C/xampp/htdocs/codeigniter/application/libraries/std_library.php",
+		"/C/xampp/htdocs/codeigniter/application/libraries/user.php",
+		"/C/xampp/htdocs/codeigniter/application/models/user_roles_model.php",
+		"/C/xampp/htdocs/codeigniter/application/controllers/api/api_access.php",
+		"/C/xampp/htdocs/codeigniter/application/libraries/API_Controller.php",
+		"/C/xampp/htdocs/codeigniter/application/libraries/role.php",
+		"/C/xampp/htdocs/codeigniter/application/models/std_model.php",
+		"/C/xampp/htdocs/codeigniter/application/config/roles.php",
+		"/C/xampp/htdocs/codeigniter/assets/css/front.css",
+		"/C/xampp/htdocs/codeigniter/assets/css/style.css",
+		"/C/xampp/htdocs/codeigniter/assets/js/routes.js",
+		"/C/xampp/htdocs/codeigniter/application/language/english/front_lang.php",
+		"/C/xampp/htdocs/codeigniter/application/models/projects_model.php",
+		"/C/xampp/htdocs/codeigniter/application/libraries/translation.php",
+		"/C/xampp/htdocs/codeigniter/application/controllers/api/api_token.php",
+		"/C/xampp/htdocs/codeigniter/application/controllers/api/api_language_key.php",
+		"/C/xampp/htdocs/codeigniter/application/controllers/api/api_translation.php",
+		"/C/xampp/htdocs/codeigniter/application/config/settings.php",
+		"/C/xampp/htdocs/codeigniter/application/views/header_view.php",
+		"/C/xampp/htdocs/codeigniter/application/language/english/info_lang.php",
+		"/C/xampp/htdocs/codeigniter/application/language/english/pages_lang.php",
+		"/C/xampp/htdocs/codeigniter/application/language/english/user_lang.php",
+		"/C/xampp/htdocs/codeigniter/application/views/footer_view.php",
+		"/C/xampp/htdocs/codeigniter/application/views/front_view.php",
+		"/C/xampp/htdocs/codeigniter/application/models/language_old/model_language.php",
+		"/C/xampp/htdocs/codeigniter/application/config/rest.php",
+		"/C/xampp/htdocs/codeigniter/assets/css/user.css",
+		"/C/xampp/htdocs/codeigniter/assets/css/form.css",
+		"/C/xampp/htdocs/codeigniter/application/views/front_view.ph.html",
+		"/C/xampp/htdocs/codeigniter/application/controllers/home.php",
+		"/C/xampp/htdocs/codeigniter/application/config/hooks.php",
+		"/R/ComputerInfo/application/views/front_view.php",
+		"/C/xampp/htdocs/codeigniter/application/controllers/ui.php",
+		"/R/ComputerInfo/application/config/settings.php",
+		"/C/xampp/htdocs/codeigniter/application/controllers/api/home.php",
+		"/C/xampp/htdocs/codeigniter/application/libraries/file.php",
+		"/C/xampp/htdocs/codeigniter/system/database/drivers/mysql/mysql_driver.php",
+		"/C/xampp/htdocs/codeigniter/application/libraries/REST_Controller.php",
+		"/C/xampp/htdocs/codeigniter/application/libraries/Format.php",
+		"/R/ComputerInfo/application/libraries/computer.php",
+		"/C/xampp/htdocs/codeigniter/application/controllers/api/translation.php",
+		"/C/xampp/htdocs/codeigniter/application/helpers/http_helper.php",
+		"/R/ComputerInfo/application/libraries/api/api_response.php",
+		"/C/xampp/htdocs/codeigniter/application/libraries/key.php",
+		"/C/xampp/htdocs/codeigniter/application/controllers/language/api/home.php",
+		"/C/xampp/htdocs/codeigniter/application/core/MY_Router.php",
+		"/C/xampp/htdocs/codeigniter/system/core/Router.php",
+		"/C/xampp/htdocs/codeigniter/application/core/MY_Lang.php",
+		"/C/xampp/htdocs/codeigniter/application/controllers/language/home.php",
+		"/C/xampp/htdocs/codeigniter/system/core/Common.php",
+		"/C/xampp/htdocs/codeigniter/application/controllers/language/api/abc.php",
+		"/C/xampp/htdocs/codeigniter/application/controllers/language/api.php",
+		"/C/xampp/htdocs/codeigniter/application/libraries/project.php",
+		"/C/xampp/htdocs/codeigniter/application/libraries/vote.php",
+		"/C/xampp/htdocs/codeigniter/application/libraries/language.php",
+		"/C/xampp/htdocs/codeigniter/application/libraries/token.php",
+		"/C/xampp/htdocs/codeigniter/system/helpers/file_helper.php",
+		"/C/xampp/htdocs/codeigniter/application/libraries/comment.php",
+		"/C/xampp/htdocs/codeigniter/application/libraries/language_key.php",
+		"/C/xampp/htdocs/codeigniter/application/controllers/language_old/language.php",
+		"/C/xampp/htdocs/codeigniter/application/config/database.php",
+		"/C/xampp/htdocs/codeigniter/application/models/model_language.php",
+		"/C/xampp/htdocs/codeigniter/application/views/language/dir_list.php",
+		"/C/xampp/htdocs/codeigniter/application/controllers/language.php",
+		"/R/ComputerInfo/application/core/MY_Lang.php",
+		"/R/ComputerInfo/application/models/std_model.php",
+		"/R/ComputerInfo/application/libraries/computerinfo_security.php",
+		"/R/ComputerInfo/application/controllers/api.php",
+		"/R/ComputerInfo/application/config/routes.php",
+		"/R/ComputerInfo/system/core/Security.php",
+		"/R/ComputerInfo/application/libraries/computer_series.php",
+		"/R/ComputerInfo/system/database/drivers/mysql/mysql_driver.php",
+		"/R/ComputerInfo/application/libraries/std_library.php",
+		"/R/ComputerInfo/application/libraries/user.php",
+		"/R/ComputerInfo/application/controllers/user_management.php",
+		"/R/ComputerInfo/index.php",
+		"/R/ComputerInfo/assets/js/tableGenerator.js",
+		"/R/ComputerInfo/application/language/english/pages_lang.php",
+		"/R/ComputerInfo/assets/js/script.js",
+		"/R/ComputerInfo/assets/js/jquery.dataTables.js",
+		"/R/ComputerInfo/application/views/location_view.php",
+		"/R/ComputerInfo/application/controllers/ui.php",
+		"/R/ComputerInfo/application/views/computer_view.php",
+		"/R/ComputerInfo/application/libraries/user_control.php",
+		"/R/ComputerInfo/application/config/autoload.php",
+		"/R/ComputerInfo/application/language/english/computers_lang.php",
+		"/R/ComputerInfo/application/views/printer_view.php",
+		"/R/ComputerInfo/application/language/english/location_lang.php",
+		"/R/ComputerInfo/application/libraries/location.php",
+		"/R/ComputerInfo/application/language/english/printer_lang.php",
+		"/R/ComputerInfo/application/libraries/screen_model.php",
+		"/R/ComputerInfo/application/libraries/screen_series.php",
+		"/R/ComputerInfo/application/libraries/screen_pixel_type.php",
+		"/R/ComputerInfo/application/libraries/printer.php",
+		"/R/ComputerInfo/application/libraries/printer_model.php",
+		"/R/ComputerInfo/application/language/english/device_lang.php",
+		"/R/ComputerInfo/application/libraries/device_model.php",
+		"/R/ComputerInfo/application/views/device_view.php",
+		"/R/ComputerInfo/application/libraries/computer_model.php",
+		"/R/ComputerInfo/application/libraries/device.php",
+		"/R/ComputerInfo/application/language/english/ui_table_lang.php",
+		"/R/ComputerInfo/assets/js/application.js",
+		"/R/ComputerInfo/application/language/english/errors_lang.php",
+		"/R/ComputerInfo/assets/css/style.css",
+		"/R/bootstrap-wip/bootstrap/Makefile",
+		"/R/IllutionBootstrap/bootstrap/less/core/buttons.less",
+		"/R/bootstrap-wip/bootstrap/less/buttons.less",
+		"/R/bootstrap-wip/bootstrap/bootstrap.css",
+		"/R/ComputerInfo/assets/css/dataTables.bootstrap.css",
+		"/R/ComputerInfo/assets/js/dataTables.bootstrap.js",
+		"/R/IllutionBootstrap/bootstrap/less/extra/extra.less",
+		"/R/IllutionBootstrap/bootstrap/js/extra/bootstrap-combobox.js",
+		"/R/IllutionBootstrap/bootstrap/less/extra/combobox.less",
+		"/R/IllutionBootstrap/bootstrap/js/extra/search.js",
+		"/R/fuelux/src/less/fuelux.less",
+		"/R/fuelux/src/less/fuelux-responsive.less",
+		"/R/IllutionBootstrap/bootstrap/js/extra/pillbox.js"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"R:\\ComputerInfo/application/",
+			"R:\\ComputerInfo/application/libraries",
+			"R:\\IllutionBootstrap",
+			"R:\\Font-Awesome-More\\less",
+			"R:\\ComputerInfo\\application",
+			"C:\\Users\\Bo\\Desktop\\Hind\\xpak_hind",
+			"R:\\IllutionBootstrap\\bootstrap\\less",
+			"R:\\IllutionBootstrap\\bootstrap\\less,R:\\ComputerInfo\\application",
+			"R:\\IllutionBootstrap\\bootstrap\\less"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"File",
+			"api_token",
+			"File",
+			"id",
+			"index",
+			"api_token",
+			"token",
+			"_INTERNAL_LINKED_MERGE_RESULTS",
+			"_INTERNAL_LINKED_MERGER_RESULTS",
+			"[type]",
+			"th",
+			"p",
+			"div",
+			"th",
+			"ui",
+			"Translation",
+			"file",
+			" =",
+			"file",
+			"404",
+			"400",
+			"Translation",
+			"translation",
+			"REST",
+			"_error",
+			"language_key_id",
+			"created_time",
+			"translation_id",
+			"$r",
+			"r",
+			"in_lang",
+			"names",
+			"lang",
+			"file",
+			"$dir",
+			"dir",
+			"return",
+			"com",
+			"Calling methid",
+			"Token is valid",
+			"->line(",
+			"->line(\"(.*)\",",
+			"static ",
+			"location",
+			"computer",
+			"identifier",
+			"Screen",
+			"Device",
+			"Id",
+			"Device",
+			"id",
+			"Id",
+			"Screen",
+			"model",
+			"device",
+			"length_select",
+			"length",
+			"this.length_menu",
+			"length_menu",
+			"firstElement",
+			"height",
+			"x",
+			"y",
+			"2",
+			"pos.x",
+			"lineStart",
+			"pos.y",
+			"lineHeight",
+			"{/sup}",
+			"{sup}",
+			"left+lastX",
+			"bugged",
+			"30",
+			"console.log",
+			"]]);",
+			"replace",
+			" data[i]",
+			"i",
+			"myContext",
+			"   ",
+			"';",
+			"[0-9]*:t:='",
+			"w.filter",
+			"_.template",
+			"file",
+			"parse (",
+			"parse(",
+			"variable",
+			"page",
+			".edit.but",
+			"objectTitlePrefix",
+			".edit",
+			"gigabytes",
+			"megabytes",
+			"gigabytes",
+			"location",
+			"GB",
+			"person",
+			"id=\"computer\"",
+			"Identifier",
+			"Data size",
+			"center title",
+			"body",
+			"html",
+			"body",
+			";\n",
+			"physical-drives",
+			"logical",
+			"<?php echo $this->lang->line('ui_computers_page'); ?>",
+			"data-title=\"[a-z]*.*\"",
+			"<?php echo $asset_url; ?>",
+			"logical",
+			"$locateImage",
+			"\\n",
+			"<option value=\"(.*)\">.*</option>",
+			"<option value=\"([a-z]*)\">[a-z]* #[1-]</option>",
+			"<option value=\"([a-z]*)\">[a-z]*</option>",
+			"<option value=\"(*.)\">Telugu</option>",
+			"class phpQuery",
+			"phpQuery",
+			"is_null",
+			"Token is ",
+			"offline",
+			"_Is_Application",
+			"id",
+			"element",
+			"Node",
+			"$Node"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"{/sup}",
+			"{sub}",
+			"",
+			"\",\\n\"",
+			"\"\\n\"",
+			"$1",
+			"",
+			"\"\"",
+			"",
+			"$this->_CI->config->item",
+			"$_SESSION[$this->config->item(\"user_id_session\")]",
+			"datatables_translations",
+			"\"<?php",
+			"?>\"",
+			"\"<?php",
+			"root + \"translate/datatable\"",
+			"root + \"assets/translations/datatables/\"+application.language+\".txt\"\nroot + \"translate/datatable\"",
+			"ObjectTemplate.modifiedByUser \"dkleader\"",
+			"new Reset_Password_Token",
+			"js/core/",
+			"core/js/",
+			"core/js",
+			"\",",
+			"\"",
+			"\"\\n\"js/",
+			"\"\"js/",
+			"\\n js/",
+			"application.readyCallback",
+			"application.settings",
+			"application",
+			"\"bootstrap/js/bootstrap",
+			"\",\\n\"",
+			"_Exists",
+			"_Convert_Properties_To_Database_Row",
+			"if (property_exists($this,\"_INTERNAL_CURRENT_USER\") && isset($this->_INTERNAL_CURRENT_USER) && !is_null($this->_INTERNAL_CURRENT_USER) && method_exists($Class,\"Set_Current_User\")) {",
+			"if (property_exists($this,\"_INTERNAL_CURRENT_USER\") && isset($this->_INTERNAL_CURRENT_USER) && !is_null($this->_INTERNAL_CURRENT_USER) && method_exists($Object,\"Set_Current_User\")) {",
+			"if (!is_null($this->_INTERNAL_CURRENT_USER) && method_exists($Class,\"Set_Current_User\")) {",
+			"if (!is_null($this->_INTERNAL_CURRENT_USER) && method_exists($Object,\"Set_Current_User\")) {",
+			"this",
+			"../images/",
+			"../images/chosen-sprite.png",
+			"../images/chosen-sprite.png\n\n```	",
+			"\n\n```	",
+			"\n\\n\n```	",
+			"\n\\n    \n```	",
+			"\n   \n```	",
+			"\n\\n    \n```	",
+			"\n\n```	",
+			"\n\n\\n		",
+			"/n	",
+			"\\n	",
+			"",
+			"App_Exists(",
+			"",
+			"_Convert_From_Object(",
+			"_Contains_Object(",
+			"_Secure_Export()",
+			"_Normal_Export(",
+			"_Load_From_Class(",
+			"_Link_Properties()",
+			"_Save_Linked_Properties()",
+			"_Force_Array()",
+			"',1,1)",
+			",1,1)",
+			",",
+			"$Data",
+			"$Class",
+			"_INTERNAL_DATABASE_NAME_CONVERT",
+			"$this->CI->Model_User->",
+			"model(\"Model_User\")",
+			"_CI",
+			"$Class",
+			"_CI",
+			"$_CI",
+			"_SetDataClass",
+			"$Group",
+			"_ClearDatabase",
+			"_SetDataArray",
+			"_RemoveUserData",
+			"_CheckData",
+			"_RemoveDatabaseData",
+			"_SetDataClass",
+			",$this->",
+			"$this->",
+			"$User->",
+			"self::CheckData(&2,&1);",
+			"",
+			");",
+			",",
+			"		self::CheckData(",
+			"\\nself::CheckData(",
+			"\\n		self::CheckData(",
+			"\\nself::CheckData(",
+			"self::CheckData(",
+			"0.69",
+			"provider.addBullets(",
+			"searchProviders",
+			"{size}",
+			"jqt/img/chevron.png",
+			"96"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 6,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "application/views/front_view.php",
+					"settings":
+					{
+						"buffer_size": 5094,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3718,
+								3718
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 945.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "application/views/templates/delete_confirm_view.php",
+					"settings":
+					{
+						"buffer_size": 626,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								600,
+								600
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "application/language/english/front_lang.php",
+					"settings":
+					{
+						"buffer_size": 306,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								303,
+								303
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "application/language/english/errors_lang.php",
+					"settings":
+					{
+						"buffer_size": 75,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								13,
+								42
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "application/language/english/common_lang.php",
+					"settings":
+					{
+						"buffer_size": 125,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								93,
+								107
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "application/controllers/front.php",
+					"settings":
+					{
+						"buffer_size": 1066,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1048,
+								1048
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "assets/js/routes.js",
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "application/controllers/api/api_project.php",
+					"settings":
+					{
+						"buffer_size": 1459,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1308,
+								1308
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 242.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "application/libraries/user.php",
+					"settings":
+					{
+						"buffer_size": 2436,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2154,
+								2166
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 855.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 32.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.aaa_package_dev":
+	{
+		"height": 100.0
+	},
+	"output.git":
+	{
+		"height": 100.0
+	},
+	"output.phpdocumentor":
+	{
+		"height": 100.0
+	},
+	"output.sftp":
+	{
+		"height": 106.0
+	},
+	"replace":
+	{
+		"height": 63.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"us",
+				"application/libraries/user.php"
+			],
+			[
+				"api",
+				"application/config/api.php"
+			],
+			[
+				"ai_f",
+				"application/controllers/api/api_file.php"
+			],
+			[
+				"api_pr",
+				"application/controllers/api/api_project.php"
+			],
+			[
+				"url",
+				"assets/js/urlhandling.js"
+			],
+			[
+				"fun",
+				"assets/js/functions.js"
+			],
+			[
+				"ai_p",
+				"application/controllers/api/api_project.php"
+			],
+			[
+				"fun.js",
+				"assets/js/functions.js"
+			],
+			[
+				"aut",
+				"application/config/autoload.php"
+			],
+			[
+				"rot",
+				"application/config/routes.php"
+			],
+			[
+				"api_f",
+				"application/controllers/api/api_file.php"
+			],
+			[
+				"api_pro",
+				"application/controllers/api/api_project.php"
+			],
+			[
+				"conf",
+				"application/config/config.php"
+			],
+			[
+				"user_c",
+				"application/libraries/user_control.php"
+			],
+			[
+				"rou",
+				"assets/js/routes.js"
+			],
+			[
+				"user",
+				"application/libraries/user.php"
+			],
+			[
+				"rote",
+				"application/config/routes.php"
+			],
+			[
+				"api_c",
+				"application/libraries/API_Controller.php"
+			],
+			[
+				"std",
+				"application/libraries/std_library.php"
+			],
+			[
+				"std_",
+				"application/libraries/std_library.php"
+			],
+			[
+				"std_l",
+				"application/libraries/std_library.php"
+			],
+			[
+				"stdli",
+				"application/libraries/std_library.php"
+			],
+			[
+				"std_li",
+				"application/libraries/std_library.php"
+			],
+			[
+				"std_mo",
+				"application/models/std_model.php"
+			],
+			[
+				"role",
+				"application/libraries/role.php"
+			],
+			[
+				"role.ph",
+				"application/libraries/role.php"
+			],
+			[
+				"rol",
+				"application/config/roles.php"
+			],
+			[
+				"pro_m",
+				"application/models/projects_model.php"
+			],
+			[
+				"tra",
+				"application/libraries/translation.php"
+			],
+			[
+				"tr",
+				"application/libraries/translation.php"
+			],
+			[
+				"set",
+				"application/config/settings.php"
+			],
+			[
+				"fro",
+				"application/language/english/front_lang.php"
+			],
+			[
+				"he_v",
+				"application/views/header_view.php"
+			],
+			[
+				"styl",
+				"assets/css/style.css"
+			],
+			[
+				"head_v",
+				"application/views/header_view.php"
+			],
+			[
+				"foo_v",
+				"application/views/footer_view.php"
+			],
+			[
+				"fro_v",
+				"application/views/front_view.php"
+			],
+			[
+				"foo",
+				"application/views/footer_view.php"
+			],
+			[
+				"fro_l",
+				"application/language/english/front_lang.php"
+			],
+			[
+				"au",
+				"application/config/autoload.php"
+			],
+			[
+				"hoe.",
+				"application/controllers/home.php"
+			],
+			[
+				"h",
+				"application/config/hooks.php"
+			],
+			[
+				"home",
+				"application/controllers/home.php"
+			],
+			[
+				"rest",
+				"application/config/rest.php"
+			],
+			[
+				"api_",
+				"application/controllers/api/api_token.php"
+			],
+			[
+				"ap",
+				"application/libraries/API_Controller.php"
+			],
+			[
+				"ro",
+				"application/config/routes.php"
+			],
+			[
+				"mysql",
+				"system/database/drivers/mysql/mysql_driver.php"
+			],
+			[
+				"std_m",
+				"application/models/std_model.php"
+			],
+			[
+				"fil",
+				"application/libraries/file.php"
+			],
+			[
+				"format",
+				"application/libraries/Format.php"
+			],
+			[
+				"api_tr",
+				"application/controllers/api/api_translation.php"
+			],
+			[
+				"std_b",
+				"application/libraries/std_library.php"
+			],
+			[
+				"res",
+				"application/libraries/REST_Controller.php"
+			],
+			[
+				"htt",
+				"application/helpers/http_helper.php"
+			],
+			[
+				"rest_",
+				"application/libraries/REST_Controller.php"
+			],
+			[
+				"ho",
+				"application/config/hooks.php"
+			],
+			[
+				"ke",
+				"application/libraries/key.php"
+			],
+			[
+				"key",
+				"application/libraries/key.php"
+			],
+			[
+				"my_",
+				"application/core/MY_Lang.php"
+			],
+			[
+				"my",
+				"application/core/MY_Router.php"
+			],
+			[
+				"commo",
+				"system/core/Common.php"
+			],
+			[
+				"rout",
+				"application/config/routes.php"
+			],
+			[
+				"file",
+				"application/libraries/file.php"
+			],
+			[
+				"data",
+				"application/config/database.php"
+			],
+			[
+				"sc",
+				"assets/js/script.js"
+			],
+			[
+				"com_secu",
+				"application/libraries/computerinfo_security.php"
+			],
+			[
+				"secu",
+				"system/core/Security.php"
+			],
+			[
+				"com_se",
+				"application/libraries/computer_series.php"
+			],
+			[
+				"drivers/my",
+				"system/database/drivers/mysql/mysql_driver.php"
+			],
+			[
+				"inde",
+				"index.php"
+			],
+			[
+				"user_ma",
+				"application/controllers/user_management.php"
+			],
+			[
+				"user.",
+				"application/libraries/user.php"
+			],
+			[
+				"ta",
+				"assets/js/tableGenerator.js"
+			],
+			[
+				"datab.js",
+				"assets/js/jquery.dataTables.js"
+			],
+			[
+				"tab",
+				"assets/js/tableGenerator.js"
+			],
+			[
+				"com_v",
+				"application/views/computer_view.php"
+			],
+			[
+				"pages",
+				"application/language/english/pages_lang.php"
+			],
+			[
+				"page",
+				"application/language/english/pages_lang.php"
+			],
+			[
+				"us_c",
+				"application/libraries/user_control.php"
+			],
+			[
+				"auto",
+				"application/config/autoload.php"
+			],
+			[
+				"co_la",
+				"application/language/english/computers_lang.php"
+			],
+			[
+				"ui",
+				"application/controllers/ui.php"
+			],
+			[
+				"pr_la",
+				"application/language/english/printer_lang.php"
+			],
+			[
+				"loca.p",
+				"application/libraries/location.php"
+			],
+			[
+				"printer_v",
+				"application/views/printer_view.php"
+			],
+			[
+				"routes",
+				"application/config/routes.php"
+			],
+			[
+				"scren_m",
+				"application/libraries/screen_model.php"
+			],
+			[
+				"com_la",
+				"application/language/english/computers_lang.php"
+			],
+			[
+				"dev_la",
+				"application/language/english/device_lang.php"
+			],
+			[
+				"de_mo",
+				"application/libraries/device_model.php"
+			],
+			[
+				"c_v",
+				"application/views/computer_view.php"
+			],
+			[
+				"devi_m",
+				"application/libraries/device_model.php"
+			],
+			[
+				"com_m",
+				"application/libraries/computer_model.php"
+			],
+			[
+				"prin_m",
+				"application/libraries/printer_model.php"
+			],
+			[
+				"devce_l",
+				"application/language/english/device_lang.php"
+			],
+			[
+				"printer",
+				"application/libraries/printer.php"
+			],
+			[
+				"device_v",
+				"application/views/device_view.php"
+			],
+			[
+				"device",
+				"application/libraries/device.php"
+			],
+			[
+				"device_m",
+				"application/libraries/device_model.php"
+			],
+			[
+				"ui_l",
+				"application/language/english/ui_table_lang.php"
+			],
+			[
+				"devcei",
+				"application/views/device_view.php"
+			],
+			[
+				"app",
+				"assets/js/application.js"
+			],
+			[
+				"err_la",
+				"application/language/english/errors_lang.php"
+			],
+			[
+				"scipt.js",
+				"assets/js/script.js"
+			],
+			[
+				"st",
+				"assets/css/style.css"
+			],
+			[
+				"datatab.",
+				"assets/js/dataTables.bootstrap.js"
+			],
+			[
+				"data.css",
+				"assets/css/dataTables.bootstrap.css"
+			],
+			[
+				"sf",
+				"sftp-config.json"
+			],
+			[
+				"home_v",
+				"application/views/home_view.php"
+			],
+			[
+				"comp_v",
+				"application/views/computer_view.php"
+			],
+			[
+				"sty",
+				"assets/css/style.css"
+			],
+			[
+				"boo",
+				"assets/bootstrap/js/bootstrap.js"
+			],
+			[
+				"desig",
+				"Designs/design.css"
+			],
+			[
+				"computer_v",
+				"application/views/computer_view.php"
+			],
+			[
+				"settin",
+				"application/views/settings.php"
+			],
+			[
+				"error_l",
+				"application/language/english/errors_lang.php"
+			],
+			[
+				"cros",
+				"assets/js/crossroads.min.js"
+			],
+			[
+				"iser_c",
+				"application/libraries/user_control.php"
+			],
+			[
+				"sig",
+				"assets/js/signals.min.js"
+			],
+			[
+				"tabl",
+				"assets/js/tableGenerator.js"
+			],
+			[
+				"scri",
+				"assets/js/script.js"
+			],
+			[
+				"userin",
+				"assets/js/userInfo.js"
+			],
+			[
+				"pro",
+				"application/libraries/processor.php"
+			],
+			[
+				"gra",
+				"application/libraries/graphic_card.php"
+			],
+			[
+				"gr",
+				"application/libraries/graphic_card.php"
+			],
+			[
+				"han",
+				"assets/js/handlebars.js"
+			],
+			[
+				"memo",
+				"application/libraries/memory_slot.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 246.0,
+	"status_bar_visible": true
+}
