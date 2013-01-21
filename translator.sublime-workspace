@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"op",
+				"optgroup	Tag"
+			],
+			[
+				"li",
+				"link	Tag"
+			],
+			[
 				"mar",
 				"margin-left"
 			],
@@ -210,10 +218,6 @@
 			[
 				"chi",
 				"child"
-			],
-			[
-				"li",
-				"lineHeight"
 			],
 			[
 				"le",
@@ -500,10 +504,6 @@
 				"typeahead"
 			],
 			[
-				"op",
-				"option	Tag"
-			],
-			[
 				"data",
 				"data-target"
 			],
@@ -519,46 +519,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "application/views/front_view.php",
-			"settings":
-			{
-				"buffer_size": 5798,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "application/views/templates/project_edit_view.php",
-			"settings":
-			{
-				"buffer_size": 1458,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "assets/js/routes.js",
-			"settings":
-			{
-				"buffer_size": 3455,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "application/controllers/api/api_project.php",
-			"settings":
-			{
-				"buffer_size": 2374,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "application/language/english/front_lang.php",
-			"settings":
-			{
-				"buffer_size": 612,
-				"line_ending": "Windows"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -620,23 +580,37 @@
 	},
 	"file_history":
 	[
+		"/C/Users/Bo/Desktop/widgets.css",
+		"/C/Users/Bo/Desktop/index.html",
+		"/R/translator/application/views/front_view.php",
+		"/R/translator/application/views/templates/project_view.php",
+		"/R/translator/assets/js/routes.js",
+		"/R/translator/application/views/header_view.php",
+		"/R/translator/application/views/footer_view.php",
 		"/R/translator/application/language/english/common_lang.php",
+		"/R/translator/application/views/templates/project_edit_view.php",
 		"/R/translator/application/views/templates/create_project_view.php",
-		"/R/translator/application/views/templates/alerts_view.php",
+		"/R/translator/application/controllers/api/api_project.php",
+		"/R/translator/application/libraries/REST_Controller.php",
+		"/R/translator/application/controllers/api/api_file.php",
+		"/R/translator/application/controllers/api/api_language_key.php",
+		"/R/translator/application/controllers/api/api_token.php",
+		"/R/translator/application/controllers/api/api_translation.php",
+		"/R/translator/application/controllers/api/api_access.php",
+		"/R/translator/application/libraries/std_library.php",
+		"/R/translator/application/libraries/project.php",
+		"/R/translator/application/language/english/front_lang.php",
 		"/R/translator/assets/js/functions.js",
 		"/R/translator/application/language/english/errors_lang.php",
-		"/R/translator/application/language/english/front_lang.php",
+		"/R/translator/application/views/templates/alerts_view.php",
 		"/R/translator/assets/css/front.css",
 		"/R/translator/assets/css/style.css",
-		"/R/translator/application/controllers/api/api_file.php",
 		"/R/translator/application/config/routes.php",
 		"/R/translator/application/views/templates/alert_error_view.php",
 		"/R/translator/application/views/templates/delete_confirm_view.php",
-		"/R/translator/application/views/footer_view.php",
 		"/R/translator/assets/css/user.css",
 		"/R/translator/system/libraries/Form_validation.php",
 		"/C/Users/Bo/Desktop/$R8E90MU/js/routes.js",
-		"/R/translator/assets/js/routes.js",
 		"/C/xampp/htdocs/codeigniter/application/config/api.php",
 		"/C/xampp/htdocs/codeigniter/application/controllers/api/api_file.php",
 		"/C/xampp/htdocs/codeigniter/assets/js/urlhandling.js",
@@ -733,21 +707,7 @@
 		"/R/ComputerInfo/application/views/computer_view.php",
 		"/R/ComputerInfo/application/libraries/user_control.php",
 		"/R/ComputerInfo/application/config/autoload.php",
-		"/R/ComputerInfo/application/language/english/computers_lang.php",
-		"/R/ComputerInfo/application/views/printer_view.php",
-		"/R/ComputerInfo/application/language/english/location_lang.php",
-		"/R/ComputerInfo/application/libraries/location.php",
-		"/R/ComputerInfo/application/language/english/printer_lang.php",
-		"/R/ComputerInfo/application/libraries/screen_model.php",
-		"/R/ComputerInfo/application/libraries/screen_series.php",
-		"/R/ComputerInfo/application/libraries/screen_pixel_type.php",
-		"/R/ComputerInfo/application/libraries/printer.php",
-		"/R/ComputerInfo/application/libraries/printer_model.php",
-		"/R/ComputerInfo/application/language/english/device_lang.php",
-		"/R/ComputerInfo/application/libraries/device_model.php",
-		"/R/ComputerInfo/application/views/device_view.php",
-		"/R/ComputerInfo/application/libraries/computer_model.php",
-		"/R/ComputerInfo/application/libraries/device.php"
+		"/R/ComputerInfo/application/language/english/computers_lang.php"
 	],
 	"find":
 	{
@@ -774,6 +734,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"File",
+			"create_project_form",
 			"();\n",
 			"function () {\n								History.pushState(null,null,root); \n							}",
 			"code",
@@ -899,9 +861,7 @@
 			"<option value=\"([a-z]*)\">[a-z]*</option>",
 			"<option value=\"(*.)\">Telugu</option>",
 			"class phpQuery",
-			"phpQuery",
-			"is_null",
-			"Token is "
+			"phpQuery"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1019,155 +979,8 @@
 	"groups":
 	[
 		{
-			"selected": 2,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "application/views/front_view.php",
-					"settings":
-					{
-						"buffer_size": 5798,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5550,
-								5412
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "application/views/templates/project_edit_view.php",
-					"settings":
-					{
-						"buffer_size": 1458,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								260,
-								260
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "assets/js/routes.js",
-					"settings":
-					{
-						"buffer_size": 3455,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1938,
-								1938
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 315.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "application/controllers/api/api_project.php",
-					"settings":
-					{
-						"buffer_size": 2374,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								551,
-								551
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 1425.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "application/language/english/front_lang.php",
-					"settings":
-					{
-						"buffer_size": 612,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								607,
-								607
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1229,8 +1042,44 @@
 		"selected_items":
 		[
 			[
+				"head",
+				"application/views/header_view.php"
+			],
+			[
+				"foo",
+				"application/views/footer_view.php"
+			],
+			[
 				"com_l",
 				"application/language/english/common_lang.php"
+			],
+			[
+				"st_l",
+				"application/libraries/std_library.php"
+			],
+			[
+				"re_c",
+				"application/libraries/REST_Controller.php"
+			],
+			[
+				"pro",
+				"application/libraries/project.php"
+			],
+			[
+				"fun",
+				"assets/js/functions.js"
+			],
+			[
+				"err_l",
+				"application/language/english/errors_lang.php"
+			],
+			[
+				"ap_f",
+				"application/controllers/api/api_file.php"
+			],
+			[
+				"api_p",
+				"application/controllers/api/api_project.php"
 			],
 			[
 				"cre_pr",
@@ -1257,20 +1106,8 @@
 				"assets/js/functions.js"
 			],
 			[
-				"fun",
-				"assets/js/functions.js"
-			],
-			[
 				"error_la",
 				"application/language/english/errors_lang.php"
-			],
-			[
-				"ap_f",
-				"application/controllers/api/api_file.php"
-			],
-			[
-				"api_p",
-				"application/controllers/api/api_project.php"
 			],
 			[
 				"route",
@@ -1438,10 +1275,6 @@
 			],
 			[
 				"foo_v",
-				"application/views/footer_view.php"
-			],
-			[
-				"foo",
 				"application/views/footer_view.php"
 			],
 			[
@@ -1719,26 +1552,6 @@
 			[
 				"home_v",
 				"application/views/home_view.php"
-			],
-			[
-				"comp_v",
-				"application/views/computer_view.php"
-			],
-			[
-				"boo",
-				"assets/bootstrap/js/bootstrap.js"
-			],
-			[
-				"desig",
-				"Designs/design.css"
-			],
-			[
-				"computer_v",
-				"application/views/computer_view.php"
-			],
-			[
-				"settin",
-				"application/views/settings.php"
 			]
 		],
 		"width": 0.0

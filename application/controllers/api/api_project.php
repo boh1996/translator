@@ -62,8 +62,37 @@ class API_Project extends API_Controller {
     	}
 	}
 
+	/**
+	 * This endpoint updates a project with the new data, used for PUT requests, 
+	 * edit operations
+	 * @param integer :id The project to edit
+	 * @since 1.0
+	 * @access public
+	 */
 	public function index_put () {
+		$Project = new Project();
 
+		if ( ! $this->get('id') ) {  
+           	self::error($this->config->item("api_bad_request_code"));
+            return; 
+        }
+
+        if ( ! $Project->Load( $this->get("id") ) ) {
+        	self::error($this->config->item("api_not_found_code"));
+        	return;
+        }
+
+		if ( ! $Project->Import($this->put(),true) ) {
+			self::error($this->config->item("api_bad_request_code"));
+			return;
+		}
+
+		if ( ! $Project->Save() ) {
+			self::error($this->config->item("api_error_while_saving_code"));
+			return;
+		}
+
+		$this->response($Project->Export(), $this->config->item("api_accepted_code"));
 	}
 
 	/**

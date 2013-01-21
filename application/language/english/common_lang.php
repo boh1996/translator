@@ -5,4 +5,6 @@ $lang["common_confirm"] = "Confirm";
 $lang["common_cancel"] = "Cancel";
 $lang["common_project"] = "Project";
 $lang["common_save"] = "Save";
+$lang["common_projects"] = "Projects";
+$lang["common_language"] = "Language";
 ?>

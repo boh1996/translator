@@ -97,7 +97,6 @@ function alert (data, template, templateId, container, mode, closeCallback, time
 	}
 
 	$(alert).bind('closed', function () {
-		console.log("closed");
 		$(this).remove();
 		if (typeof closeCallback == "function") {
 			closeCallback();

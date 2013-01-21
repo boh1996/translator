@@ -91,7 +91,7 @@ class API_File extends API_Controller {
         	return;
         }
 
-		if ( ! $File->Import($this->put()) ) {
+		if ( ! $File->Import($this->put(),true) ) {
 			self::error($this->config->item("api_bad_request_code"));
 			return;
 		}

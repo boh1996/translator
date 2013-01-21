@@ -90,7 +90,7 @@ class API_Translation extends API_Controller {
         	return;
         }
 
-		if ( ! $Translation->Import($this->put()) ) {
+		if ( ! $Translation->Import($this->put(), true) ) {
 			self::error($this->config->item("api_bad_request_code"));
 			return;
 		}

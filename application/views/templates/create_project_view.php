@@ -1,5 +1,5 @@
 <ul class="breadcrumb project-navigation" style="width:50%; min-width:410px; ">
-	<li><a data-target=""><?= $this->lang->line("common_project"); ?></a> <span class="divider">/</span></li>
+	<li><a data-target=""><?= $this->lang->line("common_projects"); ?></a> <span class="divider">/</span></li>
 	<li class="active"><?= $this->lang->line("front_create"); ?></li>
 </ul>
 

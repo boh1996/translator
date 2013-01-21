@@ -19,7 +19,8 @@ class Front extends CI_Controller{
 		$this->load->view("header_view",$this->user_control->ControllerInfo(array(
 			"style_includes" => array(
 				"style.css",
-				"front.css"
+				"front.css",
+				"webkit-form.css"
 			)
 		)));
 		$data = array(

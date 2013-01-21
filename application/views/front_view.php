@@ -6,6 +6,7 @@
 		"error_warining" : '<?php echo $this->lang->line('errors_warning'); ?>',
 		"project_saved" : '<?php echo $this->lang->line('front_project_saved'); ?>',
 		"error_project_found" : '<?php echo $this->lang->line('front_project_error_exists'); ?>',
+		"error_no_project_found" : '<?php echo $this->lang->line('errors_sorry_no_project_found'); ?>',
 	};
 </script>
 
@@ -37,7 +38,7 @@
 			<div class="pull-right">
 				<ul class="nav">
 				  	<li class="dropdown">
-						<a class="dropdown-toggle" href="#" data-toggle="dropdown">{user_name}&nbsp;<strong class="caret"></strong></a>
+						<a class="dropdown-toggle" href="#" data-toggle="dropdown"><?= $this->user_control->user->name; ?>&nbsp;<strong class="caret"></strong></a>
 						<ul class="dropdown-menu" role="menu">
 			  				<li><a tabindex="-1" data-target="settings"><?php echo $this->lang->line('pages_settings'); ?></a></li>
 						    <li class="divider"></li>
@@ -59,7 +60,7 @@
 
 			<?php if ($this->user_control->user->has_one_mode(array("edit","create","view","delete"))) : ?>
 				<div id="project" class="disabled_page">
-					Project {id}
+					
 				</div>
 			<?php endif; ?>
 
@@ -73,53 +74,21 @@
 				<div id="project_create" class="disabled_page">
 					<?= $this->user_control->LoadTemplate("create_project_view"); ?>
 				</div>
+
+				<div class="disabled_page" id="project_add_language">
+					<?= $this->user_control->LoadTemplate("project_add_language_view"); ?>
+				</div>
+
+				<div class="disabled_page" id="project_language">
+					<?= $this->user_control->LoadTemplate("project_language_files_view"); ?>
+				</div>
 			<?php endif; ?>
 
-			<div id="home" class="disabled_page">
-				<section class="project-table">
-					<h2 class="section-header"><?php echo $this->lang->line('pages_projects'); ?>:</h2>
-					<table class="table table-condensed">
-						<thead>
-							<tr>
-								<th>#</th>
-								<th><?php echo $this->lang->line('front_name'); ?></th>
-								<?php if ($this->user_control->user->has_modes("edit")) : ?>
-									<th><?php echo $this->lang->line('front_edit'); ?></th>
-								<?php endif; ?>
-								<?php if ($this->user_control->user->has_modes("delete")) : ?>
-									<th><?php echo $this->lang->line('front_delete'); ?></th>
-								<?php endif; ?>
-							</tr>
-						</thead>
-						<tbody>
-							<?php $i = 0; ?>
-							<?php foreach ($projects as $project) : ?>
-								<?php $i++; ?>
-								<tr>
-									<td><?= $i; ?></td>
-									<td><a data-target="project/<?= $project["id"]; ?>"><?= $project["name"]; ?></a></td>
-									<?php if ($this->user_control->user->has_modes("edit")) : ?>
-										<td><a href="#" data-index="<?= $project["id"]; ?>" data-target="project/edit/<?= $project["id"]; ?>"><?php echo $this->lang->line('front_edit'); ?></a></td>
-									<?php else : ?>
-										<td></td>
-									<?php endif; ?>
-									<?php if ($this->user_control->user->has_modes("delete")) : ?>
-										<td><a href="#" data-index="<?= $project["id"]; ?>" data-target="project/delete/<?= $project["id"]; ?>"><?php echo $this->lang->line('front_delete'); ?></a></td>
-									<?php else : ?>
-										<td></td>
-									<?php endif; ?>
-								</tr>
-			  				<?php endforeach; ?>
-		  				</tbody>
-					</table>
-
-					<?php if ($this->user_control->user->has_modes("create")) : ?>
-						<div class="btn-group">
-							<a class="btn span2" data-target="project/create" style="margin-left:10px;"><?php echo $this->lang->line('front_create_project'); ?></a>
-						</div>
-					<?php endif; ?>
-				</section>
-			</div>
+			<?php if ($this->user_control->user->has_one_mode(array("edit","create","view","delete"))) : ?>
+				<div id="home" class="disabled_page">
+					<?= $this->user_control->LoadTemplate("projects_view"); ?>
+				</div>
+			<?php endif; ?>
 		</div>
 	</div>
 </div>
@@ -142,6 +111,12 @@
 <div style="display:none;">
 	<?= $this->user_control->LoadTemplate("alerts_view"); ?>
 </div>
+
+<?php if ($this->user_control->user->has_one_mode(array("edit","create","view","delete"))) : ?>
+	<script type="mustache/template" id="viewProjectTemplate">
+		<?= $this->user_control->LoadTemplate("project_view"); ?>
+	</script>
+<?php endif; ?>
 
 <?php if ($this->user_control->user->has_modes("edit")) : ?>
 	<script type="mustache/template" id="editProjectViewTemplate">

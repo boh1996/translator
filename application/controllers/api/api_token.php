@@ -89,7 +89,7 @@ class API_Token extends API_Controller {
         	return;
         }
 
-		if ( ! $Token->Import($this->put()) ) {
+		if ( ! $Token->Import($this->put(),true) ) {
 			self::error($this->config->item("api_bad_request_code"));
 			return;
 		}

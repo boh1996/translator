@@ -20,7 +20,9 @@ $(document).ready(function () {
 				$.ajax({
 					url : root + "project",
 					type : "POST",
-					data : data,
+					data : JSON.stringify(data),
+					contentType: 'application/json',
+          			dataType: 'json',
 					success : function () {
 						alert(null,translations.project_saved,"alertsSuccessTemplate", $("#create_project_form"), "prepend" , function () {
 							History.pushState(null,null,root); 
@@ -52,6 +54,44 @@ $(document).ready(function () {
 		    	$("#project_edit").html("");
 		    	$("#project_edit").html(Mustache.render($("#editProjectViewTemplate").html(), data));
 		    	showPage("project_edit");
+		    	$("#edit_project_form").submit(function (event) {
+			    	event.preventDefault();
+					$("#edit_project_form .alert").remove();	
+
+					var data = {
+						"name" : $("#edit_project_name").val()
+					};
+
+					if ($("#edit_project_location").val() != "") {
+						data.location = $("#edit_project_location").val();
+					}
+
+					$.ajax({
+						url : root + "project/"+id,
+						type : "PUT",
+						data : JSON.stringify(data),
+						contentType: 'application/json',
+           				dataType: 'json',
+						success : function () {
+							alert(null,translations.project_saved,"alertsSuccessTemplate", $("#edit_project_form"), "prepend" , function () {
+								History.pushState(null,null,root); 
+							}, 2000); 
+						},
+						error : function (xhr) {
+							if (xhr.status == 403) {
+								alert(null,translations.error_no_permission,"alertsErrorTemplate", $("#edit_project_form"), "prepend", function () {
+									History.pushState(null,null,root); 
+								}, 2000);
+							} else if (xhr.status == 404) {
+								alert(null,translations.error_no_project_found,"alertsErrorTemplate", $("#edit_project_form"), "prepend", function () {
+									History.pushState(null,null,root); 
+								}, 2000);
+							} else {
+								alert(null,translations.error_sorry_error_occured,"alertsErrorTemplate", $("#edit_project_form"), "prepend", null, 2000);
+							}
+						}
+					});
+				});
 		    })
 		    .error(function ( ) {
 		    	History.pushState(null,null,root); 
@@ -60,11 +100,44 @@ $(document).ready(function () {
 	}
 
 	if ($("#project").length > 0) {
+		crossroads.addRoute("project/{{project_id}}/delete/language/{{id}}",function (project_id, language_id) {
+
+		});
+
 		crossroads.addRoute("project/{id}",function (id) {
-			$("#loading-background").show();
-			$("#loading").show();
-			showPage("project");
+			$.ajax({
+				url : root + "project/" + id,
+				success : function (data) {
+					var counter = 1;
+					data["project_id"] = data.id;
+					data["count"] = function () {
+			            return function (text, render) {
+			                return counter++;
+			            }
+			        };
+					$("#project").html(Mustache.render($("#viewProjectTemplate").html(),data));
+					showPage("project");
+				},
+				error : function () {
+
+				}
+			});
 	    });
+
+		crossroads.addRoute("project/{id}/add/language",function (id) {
+			showPage("project_add_language");
+		});
+
+		crossroads.addRoute("project/{id}/{language_id}",function (project_id, language_id) {
+			/**
+			 * data : {
+			 * 	project_id
+			 * 	project_name
+			 * 	language_name
+			 * }
+			 */
+			showPage("project_language");
+		});
 	}
 
 	crossroads.addRoute("",function () {
