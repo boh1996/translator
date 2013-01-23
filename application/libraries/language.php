@@ -26,14 +26,6 @@ class Language extends Std_Library {
 	 */
 	public $name = null;
 
-	/**
-	 * The language directory where the files should be saved
-	 * @since 1.0
-	 * @var string
-	 * @access public
-	 */
-	public $directory = null;
-
 	### Class Settings ###
 
 	/**

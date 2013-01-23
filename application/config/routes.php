@@ -63,7 +63,14 @@ if ( ! empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_R
 	$route["project/(:num)\.(xml|json)"] = "api/api_project/index/id/$1";
 	$route["project/(:num)"] = "api/api_project/index/id/$1";
 
+	#Project Files
+	/*$route["project/(:num)/files\.(xml|json)"] = "api/api_project/files/project/$1";
+	$route["project/(:num)/files"] = "api/api_project/files/project/$1";*/
+
 	#Language
+	$route["language"] = "api/api_language/index";
+	$route["language/(:num)\.(xml|json)"] = "api/api_language/index/id/$1";
+	$route["language/(:num)"] = "api/api_language/index/id/$1";
 
 	#Key
 	
@@ -74,8 +81,8 @@ if ( ! empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_R
 
 	#Access Control Project
 	$route["access/project"] = "api/api_access/project";
-	$route["access/project/(:num)\.(xml|json)"] = "api/api_access/project/project/$1";
-	$route["access/project/(:num)"] = "api/api_access/project/project/$1";
+	$route["access/project/(:num)\.(xml|json)"] = "api/api_access/api_project/project/$1";
+	$route["access/project/(:num)"] = "api/api_access/api_project/project/$1";
 
 /**
  * User Routes

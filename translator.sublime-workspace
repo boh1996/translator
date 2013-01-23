@@ -4,6 +4,46 @@
 		"selected_items":
 		[
 			[
+				"add",
+				"addRoute"
+			],
+			[
+				"language",
+				"language_id"
+			],
+			[
+				"cor",
+				"crossroads"
+			],
+			[
+				"bacl",
+				"background-color"
+			],
+			[
+				"th",
+				"th	Tag"
+			],
+			[
+				"Te",
+				"Temp"
+			],
+			[
+				"array_s",
+				"array_shift"
+			],
+			[
+				"Tem",
+				"TempValues"
+			],
+			[
+				"va",
+				"value"
+			],
+			[
+				"_INTER_LO",
+				"_INTERNAL_LOAD_FROM_CLASS"
+			],
+			[
 				"op",
 				"optgroup	Tag"
 			],
@@ -70,10 +110,6 @@
 			[
 				"marg",
 				"margin-left"
-			],
-			[
-				"th",
-				"th	Tag"
 			],
 			[
 				"inc",
@@ -478,47 +514,51 @@
 			[
 				"array_u",
 				"array_unique"
-			],
-			[
-				"langu",
-				"languageFiles"
-			],
-			[
-				"ba",
-				"batch_load_lang_files"
-			],
-			[
-				"new",
-				"newestVersion"
-			],
-			[
-				"fu",
-				"function"
-			],
-			[
-				"whi",
-				"whitelist"
-			],
-			[
-				"type",
-				"typeahead"
-			],
-			[
-				"data",
-				"data-target"
-			],
-			[
-				"dataTa",
-				"dataTables_length"
-			],
-			[
-				"units",
-				"unitsGenerator"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "assets/js/routes.js",
+			"settings":
+			{
+				"buffer_size": 5728,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/views/front_view.php",
+			"settings":
+			{
+				"buffer_size": 4768,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/views/templates/project_view.php",
+			"settings":
+			{
+				"buffer_size": 1110,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/views/templates/project_language_files_view.php",
+			"settings":
+			{
+				"buffer_size": 1224,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/language/english/front_lang.php",
+			"settings":
+			{
+				"buffer_size": 777,
+				"line_ending": "Windows"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -580,6 +620,27 @@
 	},
 	"file_history":
 	[
+		"/R/translator/application/language/english/front_lang.php",
+		"/R/translator/application/language/english/common_lang.php",
+		"/R/translator/application/views/templates/project_view_language_files.php",
+		"/R/translator/application/views/templates/project_add_language_view.php",
+		"/R/translator/application/controllers/front.php",
+		"/R/translator/application/views/templates/projects_view.php",
+		"/R/translator/assets/css/front.css",
+		"/R/translator/application/libraries/std_library.php",
+		"/R/translator/application/views/templates/project_languages_view.php",
+		"/R/translator/application/views/templates/create_project_view.php",
+		"/R/translator/assets/css/style.css",
+		"/R/translator/application/libraries/key.php",
+		"/R/translator/application/libraries/project.php",
+		"/R/translator/assets/css/webkit-form.css",
+		"/R/translator/application/config/rest.php",
+		"/R/translator/application/controllers/api/api_project.php",
+		"/R/translator/application/config/routes.php",
+		"/R/translator/application/libraries/translation.php",
+		"/R/translator/application/libraries/token.php",
+		"/R/translator/application/libraries/file.php",
+		"/R/translator/application/views/templates/project_edit_view.php",
 		"/C/Users/Bo/Desktop/widgets.css",
 		"/C/Users/Bo/Desktop/index.html",
 		"/R/translator/application/views/front_view.php",
@@ -587,25 +648,15 @@
 		"/R/translator/assets/js/routes.js",
 		"/R/translator/application/views/header_view.php",
 		"/R/translator/application/views/footer_view.php",
-		"/R/translator/application/language/english/common_lang.php",
-		"/R/translator/application/views/templates/project_edit_view.php",
-		"/R/translator/application/views/templates/create_project_view.php",
-		"/R/translator/application/controllers/api/api_project.php",
 		"/R/translator/application/libraries/REST_Controller.php",
 		"/R/translator/application/controllers/api/api_file.php",
 		"/R/translator/application/controllers/api/api_language_key.php",
 		"/R/translator/application/controllers/api/api_token.php",
 		"/R/translator/application/controllers/api/api_translation.php",
 		"/R/translator/application/controllers/api/api_access.php",
-		"/R/translator/application/libraries/std_library.php",
-		"/R/translator/application/libraries/project.php",
-		"/R/translator/application/language/english/front_lang.php",
 		"/R/translator/assets/js/functions.js",
 		"/R/translator/application/language/english/errors_lang.php",
 		"/R/translator/application/views/templates/alerts_view.php",
-		"/R/translator/assets/css/front.css",
-		"/R/translator/assets/css/style.css",
-		"/R/translator/application/config/routes.php",
 		"/R/translator/application/views/templates/alert_error_view.php",
 		"/R/translator/application/views/templates/delete_confirm_view.php",
 		"/R/translator/assets/css/user.css",
@@ -696,18 +747,7 @@
 		"/R/ComputerInfo/system/database/drivers/mysql/mysql_driver.php",
 		"/R/ComputerInfo/application/libraries/std_library.php",
 		"/R/ComputerInfo/application/libraries/user.php",
-		"/R/ComputerInfo/application/controllers/user_management.php",
-		"/R/ComputerInfo/index.php",
-		"/R/ComputerInfo/assets/js/tableGenerator.js",
-		"/R/ComputerInfo/application/language/english/pages_lang.php",
-		"/R/ComputerInfo/assets/js/script.js",
-		"/R/ComputerInfo/assets/js/jquery.dataTables.js",
-		"/R/ComputerInfo/application/views/location_view.php",
-		"/R/ComputerInfo/application/controllers/ui.php",
-		"/R/ComputerInfo/application/views/computer_view.php",
-		"/R/ComputerInfo/application/libraries/user_control.php",
-		"/R/ComputerInfo/application/config/autoload.php",
-		"/R/ComputerInfo/application/language/english/computers_lang.php"
+		"/R/ComputerInfo/application/controllers/user_management.php"
 	],
 	"find":
 	{
@@ -734,6 +774,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"th",
+			"print_r",
+			"echo",
 			"File",
 			"create_project_form",
 			"();\n",
@@ -858,10 +901,7 @@
 			"\\n",
 			"<option value=\"(.*)\">.*</option>",
 			"<option value=\"([a-z]*)\">[a-z]* #[1-]</option>",
-			"<option value=\"([a-z]*)\">[a-z]*</option>",
-			"<option value=\"(*.)\">Telugu</option>",
-			"class phpQuery",
-			"phpQuery"
+			"<option value=\"([a-z]*)\">[a-z]*</option>"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -979,8 +1019,156 @@
 	"groups":
 	[
 		{
+			"selected": 3,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "assets/js/routes.js",
+					"settings":
+					{
+						"buffer_size": 5728,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4360,
+								4360
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1410.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "application/views/front_view.php",
+					"settings":
+					{
+						"buffer_size": 4768,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2977,
+								2977
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 720.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "application/views/templates/project_view.php",
+					"settings":
+					{
+						"buffer_size": 1110,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								341,
+								341
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "application/views/templates/project_language_files_view.php",
+					"settings":
+					{
+						"buffer_size": 1224,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1122,
+								1122
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "application/language/english/front_lang.php",
+					"settings":
+					{
+						"buffer_size": 777,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								743,
+								757
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -1042,6 +1230,106 @@
 		"selected_items":
 		[
 			[
+				"fr_la",
+				"application/language/english/front_lang.php"
+			],
+			[
+				"comm_la",
+				"application/language/english/common_lang.php"
+			],
+			[
+				"fro_l",
+				"application/language/english/front_lang.php"
+			],
+			[
+				"projecs",
+				"application/views/templates/projects_view.php"
+			],
+			[
+				"fron.",
+				"assets/css/front.css"
+			],
+			[
+				"pro_v",
+				"application/views/templates/project_view.php"
+			],
+			[
+				"std_",
+				"application/libraries/std_library.php"
+			],
+			[
+				"std_l",
+				"application/libraries/std_library.php"
+			],
+			[
+				"cre_",
+				"application/views/templates/create_project_view.php"
+			],
+			[
+				"comm_l",
+				"application/language/english/common_lang.php"
+			],
+			[
+				"fr.css",
+				"assets/css/front.css"
+			],
+			[
+				"sty",
+				"assets/css/style.css"
+			],
+			[
+				"fro_v",
+				"application/views/front_view.php"
+			],
+			[
+				"key",
+				"application/libraries/key.php"
+			],
+			[
+				"rest.ph",
+				"application/config/rest.php"
+			],
+			[
+				"api_",
+				"application/controllers/api/api_project.php"
+			],
+			[
+				"rote",
+				"application/config/routes.php"
+			],
+			[
+				"tra",
+				"application/libraries/translation.php"
+			],
+			[
+				"tok",
+				"application/libraries/token.php"
+			],
+			[
+				"fil",
+				"application/libraries/file.php"
+			],
+			[
+				"pro",
+				"application/libraries/project.php"
+			],
+			[
+				"we",
+				"assets/css/webkit-form.css"
+			],
+			[
+				"rout.",
+				"assets/js/routes.js"
+			],
+			[
+				"edi_v",
+				"application/views/templates/project_edit_view.php"
+			],
+			[
+				"fro",
+				"application/controllers/front.php"
+			],
+			[
 				"head",
 				"application/views/header_view.php"
 			],
@@ -1060,10 +1348,6 @@
 			[
 				"re_c",
 				"application/libraries/REST_Controller.php"
-			],
-			[
-				"pro",
-				"application/libraries/project.php"
 			],
 			[
 				"fun",
@@ -1086,20 +1370,12 @@
 				"application/views/templates/create_project_view.php"
 			],
 			[
-				"fro_l",
-				"application/language/english/front_lang.php"
-			],
-			[
 				"err_la",
 				"application/language/english/errors_lang.php"
 			],
 			[
 				".css",
 				"assets/css/front.css"
-			],
-			[
-				"sty",
-				"assets/css/style.css"
 			],
 			[
 				"fu",
@@ -1118,10 +1394,6 @@
 				"application/views/templates/delete_confirm_view.php"
 			],
 			[
-				"fro",
-				"application/language/english/front_lang.php"
-			],
-			[
 				"st",
 				"assets/css/style.css"
 			],
@@ -1136,10 +1408,6 @@
 			[
 				"ro.j",
 				"assets/js/routes.js"
-			],
-			[
-				"fro_v",
-				"application/views/front_view.php"
 			],
 			[
 				"us",
@@ -1202,23 +1470,11 @@
 				"application/libraries/user.php"
 			],
 			[
-				"rote",
-				"application/config/routes.php"
-			],
-			[
 				"api_c",
 				"application/libraries/API_Controller.php"
 			],
 			[
 				"std",
-				"application/libraries/std_library.php"
-			],
-			[
-				"std_",
-				"application/libraries/std_library.php"
-			],
-			[
-				"std_l",
 				"application/libraries/std_library.php"
 			],
 			[
@@ -1248,10 +1504,6 @@
 			[
 				"pro_m",
 				"application/models/projects_model.php"
-			],
-			[
-				"tra",
-				"application/libraries/translation.php"
 			],
 			[
 				"tr",
@@ -1298,10 +1550,6 @@
 				"application/config/rest.php"
 			],
 			[
-				"api_",
-				"application/controllers/api/api_token.php"
-			],
-			[
 				"ap",
 				"application/libraries/API_Controller.php"
 			],
@@ -1316,10 +1564,6 @@
 			[
 				"std_m",
 				"application/models/std_model.php"
-			],
-			[
-				"fil",
-				"application/libraries/file.php"
 			],
 			[
 				"format",
@@ -1351,10 +1595,6 @@
 			],
 			[
 				"ke",
-				"application/libraries/key.php"
-			],
-			[
-				"key",
 				"application/libraries/key.php"
 			],
 			[
@@ -1500,58 +1740,6 @@
 			[
 				"prin_m",
 				"application/libraries/printer_model.php"
-			],
-			[
-				"devce_l",
-				"application/language/english/device_lang.php"
-			],
-			[
-				"printer",
-				"application/libraries/printer.php"
-			],
-			[
-				"device_v",
-				"application/views/device_view.php"
-			],
-			[
-				"device",
-				"application/libraries/device.php"
-			],
-			[
-				"device_m",
-				"application/libraries/device_model.php"
-			],
-			[
-				"ui_l",
-				"application/language/english/ui_table_lang.php"
-			],
-			[
-				"devcei",
-				"application/views/device_view.php"
-			],
-			[
-				"app",
-				"assets/js/application.js"
-			],
-			[
-				"scipt.js",
-				"assets/js/script.js"
-			],
-			[
-				"datatab.",
-				"assets/js/dataTables.bootstrap.js"
-			],
-			[
-				"data.css",
-				"assets/css/dataTables.bootstrap.css"
-			],
-			[
-				"sf",
-				"sftp-config.json"
-			],
-			[
-				"home_v",
-				"application/views/home_view.php"
 			]
 		],
 		"width": 0.0

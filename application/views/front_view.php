@@ -62,6 +62,10 @@
 				<div id="project" class="disabled_page">
 					
 				</div>
+
+				<div class="disabled_page" id="project_language">
+					
+				</div>
 			<?php endif; ?>
 
 			<?php if ($this->user_control->user->has_modes("edit")) : ?>
@@ -75,12 +79,12 @@
 					<?= $this->user_control->LoadTemplate("create_project_view"); ?>
 				</div>
 
-				<div class="disabled_page" id="project_add_language">
-					<?= $this->user_control->LoadTemplate("project_add_language_view"); ?>
+				<div class="disabled_page" id="project_language_add_file">
+					<?= $this->user_control->LoadTemplate("project_language_add_file_view"); ?>
 				</div>
 
-				<div class="disabled_page" id="project_language">
-					<?= $this->user_control->LoadTemplate("project_language_files_view"); ?>
+				<div class="disabled_page" id="project_add_language">
+					<?= $this->user_control->LoadTemplate("project_add_language_view"); ?>
 				</div>
 			<?php endif; ?>
 
@@ -115,6 +119,10 @@
 <?php if ($this->user_control->user->has_one_mode(array("edit","create","view","delete"))) : ?>
 	<script type="mustache/template" id="viewProjectTemplate">
 		<?= $this->user_control->LoadTemplate("project_view"); ?>
+	</script>
+
+	<script type="mustache/template" id="projectLanguageFilesTemplate">
+		<?= $this->user_control->LoadTemplate("project_language_files_view"); ?>
 	</script>
 <?php endif; ?>
 

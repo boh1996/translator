@@ -124,19 +124,63 @@ $(document).ready(function () {
 			});
 	    });
 
+		crossroads.addRoute("project/{{project_id}}/{{language_id}}/{{file_id}}", function (project_id, language_id, file_id) {
+
+		});
+
+		crossroads.addRoute("project/{{project_id}}/{{language_id}}/{{file_id}}/edit", function (project_id, language_id, file_id) {
+
+		});
+
+		crossroads.addRoute("project/{{project_id}}/{{language_id}}/{{file_id}}/delete", function (project_id, language_id, file_id) {
+
+		});
+
+	    crossroads.addRoute("project/{{project_id}}/{{language_id}}/add/file", function (project_id, language_id) {
+	    	showPage("project_language_add_file");
+	    	/**
+	    	 * data {
+	    	 * 	project_id
+	    	 * 	language_id
+	    	 * 	language_name
+	    	 * 	project_name
+	    	 * }
+	    	 */
+	    });
+
 		crossroads.addRoute("project/{id}/add/language",function (id) {
 			showPage("project_add_language");
 		});
 
-		crossroads.addRoute("project/{id}/{language_id}",function (project_id, language_id) {
-			/**
-			 * data : {
-			 * 	project_id
-			 * 	project_name
-			 * 	language_name
-			 * }
-			 */
-			showPage("project_language");
+		crossroads.addRoute("project/{id}/{language_id}",function (project_id, language_id) {		
+			$.ajax({
+				url : root + "language/" + language_id,
+				success : function (language_data) {
+					$.ajax({
+						url : root + "project/" + project_id,
+						success : function (data) {
+							var counter = 1;
+							data["project_id"] = data.id;
+							data["language_id"] = language_id;
+							data["language_name"] = language_data.name;
+							data["count"] = function () {
+					            return function (text, render) {
+					                return counter++;
+					            }
+					        };
+							$("#project_language").html(Mustache.render($("#projectLanguageFilesTemplate").html(),data));
+							showPage("project_language");
+						},
+						error : function () {
+							
+						}
+					});
+				},
+				error : function () {
+					//Show language not found
+					return;
+				}
+			});
 		});
 	}
 

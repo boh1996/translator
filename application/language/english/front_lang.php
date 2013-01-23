@@ -14,4 +14,7 @@
 	$lang["front_add_language"] = "Add Language";
 	$lang["front_file"] = "File";
 	$lang["front_add_file"] = "Add file";
+	$lang["front_add_language_file_to_project"] = "Add language file to {{project_name}}";
+	$lang["front_file_location"] = "File Location";
+	$lang["front_progress"] = "Progress";
  ?>
