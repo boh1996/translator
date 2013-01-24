@@ -47,7 +47,17 @@ class API_File extends API_Controller {
         	return;
         }
 
-        $this->response( $File->Export() );
+        $export = $File->Export();
+
+        $this->load->model("file_model");
+
+        $keys = $this->file_model->language_keys($File->id);
+
+        if ( $keys !== false ) {
+        	$export["keys"] = $keys;
+    	}
+
+        $this->response( $export );
 	}
 
 	/**
@@ -70,6 +80,38 @@ class API_File extends API_Controller {
 
 		$this->response($File->Export(),$this->config->item("api_created_code"));
 
+	}
+
+	/**
+	 * This function returns a language file with all details
+	 * @since 1.0
+	 * @access public
+	 */
+	public function project_file_get () {
+		if ( ! $this->get('file_id') || ! $this->get("project_id") || ! $this->get("language_id") ) {  
+           	self::error($this->config->item("api_bad_request_code"));
+            return; 
+        }
+
+        $File = new File();
+
+        if ( ! $File->Load( $this->get("file_id") ) ) {
+        	self::error($this->config->item("api_not_found_code"));
+        	return;
+        }
+
+        $export = $File->Export();
+
+        $this->load->model("file_model");
+        $this->load->model("project_model");
+
+        $keys = $this->file_model->project_language_keys($File->id, $this->project_model->base_language($this->get("project_id")), $this->get("language_id"));
+
+        if ( $keys !== false ) {
+        	$export["keys"] = $keys;
+    	}
+
+        $this->response( $export );
 	}
 
 	/**

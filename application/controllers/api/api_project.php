@@ -38,6 +38,50 @@ class API_Project extends API_Controller {
 	}
 
 	/**
+	 * This function returns a project and with progress for each language file
+	 * @since 1.0
+	 * @access public
+	 * @param integer :project The project id
+	 * @param integer :language The current language id
+	 */
+	public function language_project_get () {
+
+		if ( ! $this->get('project') || ! $this->get("language") ) {  
+           	self::error($this->config->item("api_bad_request_code"));
+            return; 
+        }
+
+        $Project = new Project();
+
+        if ( ! $Project->Load( $this->get("project") ) ) {
+        	self::error($this->config->item("api_not_found_code"));
+        	return;
+        }
+
+        $export = $Project->Export();
+
+        if ( isset($export["files"]) ) {
+        	$this->load->model("file_model");
+
+        	foreach ( $export["files"] as $key => $file ) {
+        		$progress = $this->file_model->progress($file["id"], $this->get("language"));
+
+        		if ( $progress === false ) {
+        			$progress = array("done" => false, "missing_approval" => false, "missing" => 100, "missing_count" => $progress["count"]);
+        		}
+
+        		$progress["missing"] = round(100 - (($progress["missing_approval"] !== false) ? $progress["missing_approval"] : 0) - (($progress["done"] !== false) ? $progress["done"] : 0));
+
+        		$progress["missing_count"] = $progress["count"] - $progress["done_count"] - $progress["missing_approval_count"];
+
+        		$export["files"][$key]["progress"] = $progress;
+        	}
+        }
+
+        $this->response( $export );
+	}
+
+	/**
 	 * This functuion creates a project, if the user has access to it
 	 * @since 1.0
 	 * @access public

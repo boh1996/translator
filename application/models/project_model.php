@@ -32,5 +32,26 @@ class Project_Model extends CI_Model {
 
 		return ($query->num_rows() > 0);
 	}
+
+	/**
+	 * This function returns a projects standard language
+	 * @since 1.0
+	 * @access public
+	 * @param  integer $project_id The project to find base language for
+	 * @return integer
+	 */
+	public function base_language ( $project_id ) {
+		$this->db->from("projects");
+		$this->db->where(array(
+			"id"	=> $project_id
+		))->select("base_language_id");
+		$query = $this->db->get();
+
+		if ( ! $query->num_rows() ) return 1;
+
+		$row = $query->row();
+
+		return ($row->base_language_id !== false && $row->base_language_id != null) ? $row->base_language_id : 1;
+	}
 }
 ?>

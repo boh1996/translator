@@ -11,14 +11,14 @@
 	    <input type="hidden" value="{id}">
 
 	    <div class="control-group">
-		    <label class="control-label" for="project_name"><?= $this->lang->line("front_name"); ?>:</label>
+		    <label class="control-label" for="edit_project_name"><?= $this->lang->line("front_name"); ?>:</label>
 		    <div class="controls">
 				<input type="text" class="input-large" required value="{{name}}" placeholder="<?= $this->lang->line("front_name"); ?>" name="edit_project_name" id="edit_project_name">
 			</div>
 		</div>
 
 		<div class="control-group">
-			<label class="control-label" for="k"><?= $this->lang->line("front_location"); ?>:</label>
+			<label class="control-label" for="edit_project_location"><?= $this->lang->line("front_location"); ?>:</label>
 			<div class="controls">
 				<input class="input-large" type="text" name="edit_project_location" value="{{location}}" placeholder="<?= $this->lang->line("front_location"); ?>" id="edit_project_location">
 			</div>

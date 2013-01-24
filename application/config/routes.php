@@ -53,10 +53,18 @@ if ( ! empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_R
 	$route["file/(:num)\.(xml|json)"] = "api/api_file/index/id/$1";
 	$route["file/(:num)"] = "api/api_file/index/id/$1";
 
+	#File with base translations
+	$route["project/(:num)/language/(:num)/file/(:num)\.(xml|json)"] = "api/api_file/project_file/project_id/$1/language_id/$2/file_id/$3";
+	$route["project/(:num)/language/(:num)/file/(:num)"] = "api/api_file/project_file/project_id/$1/language_id/$2/file_id/$3";
+
 	#Token
 	$route["token"] = "api/api_token/index";
 	$route["token/(:num)\.(xml|json)"] = "api/api_token/index/id/$1";
 	$route["token/(:num)"] = "api/api_token/index/id/$1";
+
+	#Project with language
+	$route["project/language/(:num)/(:num)\.(xml|json)"] = "api/api_project/language_project/project/$1/language/$2";
+	$route["project/language/(:num)/(:num)"] = "api/api_project/language_project/project/$1/language/$2";
 
 	#Project
 	$route["project"] = "api/api_project/index";

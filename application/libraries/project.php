@@ -50,6 +50,14 @@ class Project extends Std_Library {
 	 */
 	public $languages = null;
 
+	/**
+	 * The standard language for this product
+	 * @since 1.0
+	 * @access public
+	 * @var object
+	 */
+	public $base_language = null;
+
 	### Class Settings ###
 
 	/**
@@ -73,11 +81,15 @@ class Project extends Std_Library {
 		$this->_INTERNAL_LOAD_FROM_CLASS = array(
 			"files" 				=> "File",
 			"languages"				=> "Language",
+			"base_language"			=> "Language"
 		);
 		$this->_INTERNAL_DATABASE_EXPORT_INGNORE = array(
 			"id",
 			"files",
 			"languages"
+		);
+		$this->_INTERNAL_ROW_NAME_CONVERT = array(
+			"base_language_id" => "base_language"
 		);
 		$this->_INTERNAL_SIMPLE_LOAD = 		array(
 			"files" => true,

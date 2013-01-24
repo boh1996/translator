@@ -17,3 +17,42 @@
 .well-white {
 	background-color: #FDFDFD;
 }
+
+.translations {
+	padding-left: 20px;
+}
+
+.key-description {
+	color: #666;
+	margin-top:-10px;
+	padding-left:10px;
+}
+
+.translate-area {
+	max-width:95%;
+	text-align: left;
+	min-width:95%;
+}
+
+.translate-area-container {
+	padding-left: 20px;
+}
+
+.submit-area {
+	padding-left: 20px;
+	width: 95%;
+	margin-right: 20px;
+}
+
+.tokens {
+	padding-left: 30px;
+	padding-top: 10px;
+} 
+
+.tokens-table td {
+	padding-right: 30px;
+}
+
+.tokens-table a {
+	cursor: pointer;
+}

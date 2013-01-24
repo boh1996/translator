@@ -24,7 +24,19 @@
 						<td><a data-target="project/{{project_id}}/{{language_id}}/{{id}}">{{name}}</a></td>
 						<td><a data-target="project/{{project_id}}/{{language_id}}/{{id}}/edit"><?= $this->lang->line("front_edit"); ?></a></td>
 						<td><a data-target="project/{{project_id}}/{{language_id}}/{{id}}/delete"><?= $this->lang->line("front_delete"); ?></a></td>
-						<td></td>
+						<td>
+							<div class="progress">
+								{{#progress.done}}
+									<div class="bar bar-success" style="width: {{progress.done}}%;" rel="tooltip" data-placement="top" data-original-title="<?= $this->lang->line("front_progress_done_tooltip"); ?>"></div>
+								{{/progress.done}}
+								{{#progress.missing_approval}}
+							  		<div class="bar bar-warning" style="width: {{progress.missing_approval}}%;" rel="tooltip" data-placement="top" data-original-title="<?= $this->lang->line("front_progress_missing_approval_tooltip"); ?>"></div>
+							  	{{/progress.missing_approval}}
+							  	{{#progress.missing}}
+							  		<div class="bar bar-danger" style="width: {{progress.missing}}%;" rel="tooltip" data-placement="top" data-original-title="<?= $this->lang->line("front_progress_missing_tooltip"); ?>"></div>
+							  	{{/progress.missing}}
+							</div>
+						</td>
 					</tr>
 				{{/files}}
 			</tbody>
