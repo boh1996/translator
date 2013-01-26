@@ -18,6 +18,7 @@
 				echo '<script type="text/javascript" src="'.$jquery_url.'"></script>';
 			}
 		?>
+		<script type="text/javascript" src="<?php echo $asset_url; ?>js/wysihtml5.js"></script>
 		<script type="text/javascript" src="<?php echo $asset_url; ?>bootstrap/js/bootstrap.js"></script>
 		<script src="<?php echo $asset_url;?>js/mustache.js"></script>
 		<script type="text/javascript" src="<?php echo $asset_url; ?>js/jquery.history.js"></script>

@@ -117,13 +117,13 @@ class File_Model extends CI_Model {
 
 		$query = $this->db->from("language_key_translations")->where_in("language_key_id", $approve_first_keys)->where(array(
 			"approved" => true,
-		))->where_in("language_key_translations.language_id",$languages)->select("translations.translation, language_key_translations.language_key_id, language_key_translations.language_id ")->join("translations", "translations.id = language_key_translations.translation_id")->get();
+		))->where_in("language_key_translations.language_id",$languages)->select("translations.translation, language_key_translations.language_key_id, language_key_translations.language_id, approved, translations.id ")->join("translations", "translations.id = language_key_translations.translation_id")->get();
 
 		if ( $query->num_rows() > 0 ) {
 			$results = $query->result_array();
 		}
 
-		$query = $this->db->from("language_key_translations")->where_in("language_key_id", $other_keys)->where_in("language_key_translations.language_id",$languages)->select("translations.translation, language_key_translations.translation_id, language_key_translations.language_id ")->join("translations", "translations.id = language_key_translations.language_key_id")->get();
+		$query = $this->db->from("language_key_translations")->where_in("language_key_id", $other_keys)->where_in("language_key_translations.language_id",$languages)->select("translations.translation, translations.id, language_key_translations.translation_id, language_key_translations.language_id,approved ")->join("translations", "translations.id = language_key_translations.language_key_id")->get();
 
 		if ( $query->num_rows() > 0 ) {
 			$results = array_merge($results,$query->result_array());
@@ -132,26 +132,26 @@ class File_Model extends CI_Model {
 		$this->db->from("language_key_tokens");
 		$this->db->where_in("language_key_id", array_merge($approve_first_keys, $other_keys));
 		$this->db->join("tokens", "tokens.id = language_key_tokens.token_id");
-		$this->db->select("token,description, language_key_tokens.language_key_id");
+		$this->db->select("token, description, language_key_tokens.language_key_id, tokens.id");
 		$query = $this->db->get();
 
 		if ( $query->num_rows() > 0) {
 			foreach ( $query->result() as $row) {
-				$keys[$row->language_key_id]["tokens"][] = array("token" => $row->token, "description" => $row->description);
+				$keys[$row->language_key_id]["tokens"][] = array("token" => $row->token, "description" => $row->description,"id" => $row->id);
 			}
 		}
 
 		foreach ( $results as $row ) {
-			if ( $row["language_id"] == $base_language_id ) {
+			if ( $row["language_id"] == $base_language_id && $row["language_id"] != $language_id ) {
 				$keys[$row["language_key_id"]]["base_translation"] = $row["translation"];
 			}
 			if ( $row["language_id"] == $language_id ) {
-				$keys[$row["language_key_id"]]["translation"] = $row["translation"];	
+				$keys[$row["language_key_id"]]["translation"] = array("translation" => $row["translation"], "approved" => (bool)$row["approved"], "id" => $row["id"]);	
 			}
 		}
 
 		foreach ( $keys as $index => $key ) {
-			unset($keys[$index]["approve_first"]);
+			$keys[$index]["approve_first"] = (bool)$keys[$index]["approve_first"];
 		}
 
 		return array_values($keys);

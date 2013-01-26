@@ -104,6 +104,22 @@ class API_Translation extends API_Controller {
 	}
 
 	/**
+	 * This endpoint changes the approval status for a translation
+	 * @since 1.0
+	 * @access public
+	 */
+	public function approval_post () {
+		if ( ! $this->get('language_key_id') || ! $this->get("translation_id") || ! $this->post("status") || ! $this->get("language_id") ) {  
+            self::error($this->config->item("api_bad_request_code"));
+            return; 
+        }
+
+        $this->load->model("translation_model");
+
+        $this->translation_model->change_approval($this->get("language_key_id"),$this->get("language_id"),$this->get("translation_id"),$this->post("status"));
+	}
+
+	/**
 	 * This endpoints deletes a Translation, found by it's database :id
 	 * @param integer :id The database id of the translation
 	 * @since 1.0

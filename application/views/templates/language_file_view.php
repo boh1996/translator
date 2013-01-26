@@ -5,12 +5,15 @@
 	<li class="active"><strong>{{name}}</strong></li>
 </ul>
 
+<input type="hidden" id="language_id" value="{{language_id}}">
+<input type="hidden" id="project_id" value="{{project_id}}">
+
 <section class="well well-white" style="width:50%; padding-right:10px; margin-left:15%;">
 	<div class="translations">
 		{{#keys.length}}
 			<form class="form-horizontal" id="translation_form">
 				{{#keys}}
-					<div class="language-key">
+					<div class="language-key" data-index="{{id}}">
 
 						{{#base_translation}}
 							<h3>{{base_translation}}</h3>
@@ -29,7 +32,28 @@
 						{{/description}}
 
 						<div class="translate-area-container">
-							<textarea class="field span12 translate-area" rows="1" placeholder="<?= $this->lang->line("front_enter_translation"); ?>">{{#translation}}{{translation}}{{/translation}}</textarea>
+							<div class="row-fluid">
+								<div class="span10">
+									<textarea class="field span12 translate-field" rows="1" placeholder="<?= $this->lang->line("front_enter_translation"); ?>">{{#translation}}{{translation.translation}}{{/translation}}</textarea>
+								</div>	
+
+								{{#approve_first}}
+								  	<div class="span2">	
+										<div class="btn-group approve-decline" data-toggle="buttons-radio">
+											<!-- Approve access -->
+											{{#translation.approved}}
+												<button type="button" data-key-index="{{id}}" {{#translation}} data-translation-id="{{translation.id}}" {{/translation}} data-toggle="button" class="btn btn-primary approve"><i class="icon-ok icon-white"></i></button>
+												<button type="button" data-key-index="{{id}}" {{#translation}} data-translation-id="{{translation.id}}" {{/translation}} class="btn decline"><i class="icon-ban-circle"></i></button>
+											{{/translation.approved}}
+
+											{{^translation.approved}}
+												<button type="button" data-key-index="{{id}}" {{#translation}} data-translation-id="{{translation.id}}" {{/translation}} class="btn btn-primary approve"><i class="icon-ok icon-white"></i></button>
+												<button type="button" data-key-index="{{id}}" {{#translation}} data-translation-id="{{translation.id}}" {{/translation}} data-toggle="button" class="btn decline active"><i class="icon-ban-circle"></i></button>
+											{{/translation.approved}}
+										</div>
+								  	</div>
+							  	{{/approve_first}}
+							</div>
 						</div>
 
 						{{#tokens.length}}
@@ -37,19 +61,28 @@
 								<table class="tokens-table">
 									{{#tokens}}
 										<tr>
-											<td><a class="token">{{token}}</a></td>
-											<td>-</td>
+											<td><a class="token" data-index="{{id}}" data-token="{{token}}">{{token}}</a></td>
+											<td><strong>-</strong></td>
 											<td><i>{{description}}</i></td>
 										</tr>
 									{{/tokens}}
 								</table>
 							</div>
 						{{/tokens.length}}
+
+						<div class="key">
+							<strong class="space-right"><?= $this->lang->line("front_translation_key"); ?>:</strong><em>{{key}}</em>
+						</div>
+
+						<div class="language-key-edit">
+							<a class="btn" data-target="language/key/{{id}}/edit"><?= $this->lang->line("front_edit"); ?></a>
+							<a class="btn" data-target="language/key/{{id}}/delete"><?= $this->lang->line("front_delete"); ?></a>
+						</div>
 					</div>
+
+					<hr>
 				{{/keys}}
 			</form>
-
-			<hr>
 
 			<div class="submit-area">
 				<div class="form-actions">

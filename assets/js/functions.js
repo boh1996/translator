@@ -22,17 +22,6 @@ function template (string,data, propagate) {
 }
 
 /**
- * This function sets the document title
- * @param {object} data Template data
- */
-function setTitle (data) {
-	var variables = {
-		"brand" : front_translations.brand_title,
-	}
-	document.title = template(front_translations.page_template,application.merge_options(data,variables),true);
-}
-
-/**
  * This function shows a page and change the navbar link properly
  * @param  {string} newPage The name of the page to change too
  */

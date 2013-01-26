@@ -67,6 +67,10 @@
 					
 				</div>
 
+				<div class="disabled_page" id="language_key_edit">
+
+				</div>
+
 				<div class="disabled_page" id="language_file">
 
 				</div>
@@ -137,6 +141,10 @@
 <?php if ($this->user_control->user->has_modes("edit")) : ?>
 	<script type="mustache/template" id="editProjectViewTemplate">
 		<?= $this->user_control->LoadTemplate("project_edit_view"); ?>
+	</script>
+
+	<script type="mustache/template" id="editLanguageKeyTemplate">
+		<?= $this->user_control->LoadTemplate("edit_language_key_view"); ?>
 	</script>
 <?php endif; ?>
 

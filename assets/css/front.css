@@ -22,6 +22,10 @@
 	padding-left: 20px;
 }
 
+.disabled-token {
+	display: none;
+}
+
 .key-description {
 	color: #666;
 	margin-top:-10px;
@@ -29,13 +33,18 @@
 }
 
 .translate-area {
-	max-width:95%;
-	text-align: left;
-	min-width:95%;
+	max-width: 86%;
+	min-width: 86%;
+	display: inline-block;
 }
 
 .translate-area-container {
 	padding-left: 20px;
+}
+
+.translate-field {
+	max-width: 100%;
+	min-width: 100%;
 }
 
 .submit-area {
@@ -55,4 +64,23 @@
 
 .tokens-table a {
 	cursor: pointer;
+}
+
+.approve-container {
+	display: inline-block;
+	width: auto;
+}
+
+.key {
+	padding-top: 10px;
+	padding-left: 20px;
+}
+
+.space-right {
+	margin-right: 5px; 
+}
+
+.language-key-edit {
+	padding-top: 10px;
+	padding-left: 20px;
 }

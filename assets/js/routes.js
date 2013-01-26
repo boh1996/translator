@@ -148,6 +148,25 @@ $(document).ready(function () {
 									data["language_name"] = language_data.name;
 									$("#language_file").html(Mustache.render($("#languageFileTemplate").html(),data));
 									showPage("language_file");
+									$('[data-toggle="button"]').button('toggle');
+									$('.translate-field').wysihtml5({
+										"stylesheets": [],
+										"font-styles": false,
+										"emphasis": false,
+										"lists": false,
+										"html": false,
+										"link": false,
+										"image": false,
+										"color": false
+									});
+									$(".translate-field").each(function(index, element) {
+										var editor = $(element).data("wysihtml5").editor;
+									    editor.observe("load", function() {
+								            editor.composer.element.addEventListener("keyup", function() {
+								            	checkTokens(element);
+								            });
+							            });
+									});
 								},
 								error : function () {
 									// Show project not found
@@ -166,6 +185,16 @@ $(document).ready(function () {
 					return;
 				}
 			});
+		});
+
+		crossroads.addRoute("language/key/{language_key_id}/edit",function ( language_key_id ) {
+			var data = {};
+			$("#language_key_edit").html(Mustache.render($("#editLanguageKeyTemplate").html(),data));
+			showPage("language_key_edit");
+		});
+
+		crossroads.addRoute("language/key/{language_key_id}/delete",function ( language_key_id ) {
+			//showPage("language_key_edit");
 		});
 
 		crossroads.addRoute("project/{project_id}/{language_id}/{file_id}/edit", function (project_id, language_id, file_id) {

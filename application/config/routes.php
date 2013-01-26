@@ -89,8 +89,11 @@ if ( ! empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_R
 
 	#Access Control Project
 	$route["access/project"] = "api/api_access/project";
-	$route["access/project/(:num)\.(xml|json)"] = "api/api_access/api_project/project/$1";
-	$route["access/project/(:num)"] = "api/api_access/api_project/project/$1";
+	$route["access/project/(:num)\.(xml|json)"] = "api/api_access/project/$1";
+	$route["access/project/(:num)"] = "api/api_access/project/$1";
+
+	#Change approval
+	$route["change/approval/(:num)/(:num)/(:num)"] = "api/api_translation/approval/language_key_id/$1/language_id/$2/translation_id/$3";
 
 /**
  * User Routes

@@ -20,6 +20,10 @@
 	$lang["front_progress"] = "Progress";
 	$lang["front_no_keys_available"] = "No keys available";
 	$lang["front_enter_translation"] = "Enter translation for '{{key}}'";
+	$lang["front_translation_key"] = "Key";
+	$lang["front_edit_language_key_title"] = "Edit {{key}}";
+	$lang["front_edit_language_key"] = "Edit Language Key";
+	$lang["front_key"] = "Key";
 
 	########### Progress #############
 	$lang["front_progress_missing_approval_tooltip"] = "Missing approval: {{progress.missing_approval_count}}";
