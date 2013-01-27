@@ -100,6 +100,7 @@ class Translation extends Std_Library {
 		$this->_INTERNAL_FORCE_ARRAY = 	array(
 			"tokens",
 		);
+		$this->_INTERNAL_OVERWRITE_ON_DUBLICATE = true;
 		$this->_INTERNAL_CREATED_USER_PROPERTY 		= "user";
 		$this->_INTERNAL_CREATED_USER_PROPERTY 		= "user";
 		$this->_INTERNAL_ROW_NAME_CONVERT = array(

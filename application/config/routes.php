@@ -48,6 +48,9 @@ if ( ! empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_R
 	$route["translation/(:num)\.(xml|json)"] = "api/api_translation/index/id/$1";
 	$route["translation/(:num)"] = "api/api_translation/index/id/$1";
 
+	#Translations
+	$route["translations"] = "api/api_translation/translations";
+
 	#File
 	$route["file"] = "api/api_file/index";
 	$route["file/(:num)\.(xml|json)"] = "api/api_file/index/id/$1";
@@ -70,10 +73,6 @@ if ( ! empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_R
 	$route["project"] = "api/api_project/index";
 	$route["project/(:num)\.(xml|json)"] = "api/api_project/index/id/$1";
 	$route["project/(:num)"] = "api/api_project/index/id/$1";
-
-	#Project Files
-	/*$route["project/(:num)/files\.(xml|json)"] = "api/api_project/files/project/$1";
-	$route["project/(:num)/files"] = "api/api_project/files/project/$1";*/
 
 	#Language
 	$route["language"] = "api/api_language/index";

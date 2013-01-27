@@ -23,5 +23,45 @@ class Translation_Model extends CI_Model {
 
 		return $this->db->affected_rows() > 0;
 	}
+
+	/**
+	 * This function adds a link between the language_key, translation for the specific language
+	 * @since 1.0
+	 * @access public
+	 * @param  integer $language_key_id
+	 * @param  integer $translation_id
+	 * @param  integer $language_id
+	 * @param  boolean $approved
+	 */
+	public function link_translation ( $language_key_id, $translation_id, $language_id, $approved ) {
+		if ( ! self::link_exists($language_key_id, $translation_id, $language_id) ) {
+			$this->db->insert("language_key_translations", array(
+				"language_key_id" => $language_key_id,
+				"translation_id" => $translation_id,
+				"language_id" => $language_id,
+				"approved" => (int)$approved
+			));
+		}
+	}
+
+	/**
+	 * This function checks if a link between the language_key, translation and language_id already exists
+	 * @param  integer $language_key_id
+	 * @param  integer $translation_id
+	 * @param  integer $language_id
+	 * @since 1.0
+	 * @access public
+	 * @return boolean
+	 */
+	public function link_exists ( $language_key_id, $translation_id, $language_id ) {
+		$this->db->from("language_key_translations");
+		$this->db->where(array(
+			"language_key_id" => $language_key_id,
+			"language_id" => $language_id,
+			"translation_id" => $translation_id
+		));
+		$query = $this->db->get();
+		return ( $query->num_rows() > 0);
+	}
 }
 ?>

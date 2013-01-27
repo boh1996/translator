@@ -119,20 +119,12 @@ $(document).ready(function () {
 					showPage("project");
 				},
 				error : function () {
-
+					//Project not found
 				}
 			});
 	    });
 
 		crossroads.addRoute("project/{project_id}/{language_id}/{file_id}", function (project_id, language_id, file_id) {
-			/**
-			 * data {
-			 * 	project_id
-			 * 	project_name,
-			 * 	language_name,
-			 * 	language_id
-			 * }
-			  */
 			$.ajax({
 				url : root + "language/" + language_id,
 				success : function (language_data) {
@@ -148,6 +140,9 @@ $(document).ready(function () {
 									data["language_name"] = language_data.name;
 									$("#language_file").html(Mustache.render($("#languageFileTemplate").html(),data));
 									showPage("language_file");
+									$(".language-key").each(function (index, element) {
+										checkTokenState(element);
+									});
 									$('[data-toggle="button"]').button('toggle');
 									$('.translate-field').wysihtml5({
 										"stylesheets": [],
@@ -157,7 +152,12 @@ $(document).ready(function () {
 										"html": false,
 										"link": false,
 										"image": false,
-										"color": false
+										"color": false,
+										"events" : {
+											"change" : function () {
+												checkTokens(this.textareaElement);
+											}
+										}
 									});
 									$(".translate-field").each(function(index, element) {
 										var editor = $(element).data("wysihtml5").editor;
@@ -242,7 +242,7 @@ $(document).ready(function () {
 							$('[rel="tooltip"]').tooltip();
 						},
 						error : function () {
-							
+							//Project Language not found
 						}
 					});
 				},
@@ -287,7 +287,7 @@ $(document).ready(function () {
 					});
 				},
 				error : function () {
-
+					//An error occured while saving
 				}
 			});
 	    });

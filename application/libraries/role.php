@@ -63,7 +63,9 @@ class Role extends Std_Library {
 			"name",
 		);
 		$this->_INTERNAL_DATABASE_EXPORT_INGNORE = array(
-			"id",
+			"id"
+		);
+		$this->_INTERNAL_DATABASE_SAVE_IGNORE = array(
 			"modes"
 		);
 		$this->_INTERNAL_FORCE_ARRAY = 	array(

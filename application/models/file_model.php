@@ -123,7 +123,9 @@ class File_Model extends CI_Model {
 			$results = $query->result_array();
 		}
 
-		$query = $this->db->from("language_key_translations")->where_in("language_key_id", $other_keys)->where_in("language_key_translations.language_id",$languages)->select("translations.translation, translations.id, language_key_translations.translation_id, language_key_translations.language_id,approved ")->join("translations", "translations.id = language_key_translations.language_key_id")->get();
+		$query = $this->db->from("language_key_translations")->where_in("language_key_id", $approve_first_keys)->where_in("language_key_translations.language_id",$languages)->select("translations.translation, language_key_translations.language_key_id, language_key_translations.language_id, approved, translations.id ")->join("translations", "translations.id = language_key_translations.translation_id")->get();
+
+		$query = $this->db->from("language_key_translations")->where_in("language_key_id", $other_keys)->where_in("language_key_translations.language_id",$languages)->select("translations.translation, language_key_translations.language_key_id, language_key_translations.language_id, approved, translations.id ")->join("translations", "translations.id = language_key_translations.translation_id")->get();
 
 		if ( $query->num_rows() > 0 ) {
 			$results = array_merge($results,$query->result_array());

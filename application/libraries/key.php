@@ -103,7 +103,7 @@ class Key extends Std_Library {
 			"file" => true
 		);
 		$this->_INTERNAL_ROW_NAME_CONVERT = array(
-			"file_id" 				=> "file",
+			"language_file_id" 				=> "file",
 		);
 		$this->_INTERNAL_LINK_PROPERTIES = array(
 			"tokens"			=> array("language_key_tokens",	array("language_key_id" => "id"),array("token_id"), array("token_id","language_key_id")),

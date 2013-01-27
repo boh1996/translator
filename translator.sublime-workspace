@@ -4,6 +4,98 @@
 		"selected_items":
 		[
 			[
+				"html",
+				"htmlspecialchars"
+			],
+			[
+				"Tra",
+				"TranslationObject"
+			],
+			[
+				"err",
+				"errors"
+			],
+			[
+				"str",
+				"strrpos"
+			],
+			[
+				"trans",
+				"translation"
+			],
+			[
+				"lang",
+				"language_key_id"
+			],
+			[
+				"link_",
+				"link_exists"
+			],
+			[
+				"tras",
+				"translation_id"
+			],
+			[
+				"to",
+				"tokens"
+			],
+			[
+				"erro",
+				"errorTranslations"
+			],
+			[
+				"res",
+				"response"
+			],
+			[
+				"Error",
+				"errorTranslations"
+			],
+			[
+				"_INTERNAL_",
+				"_INTERNAL_LOADED"
+			],
+			[
+				"er",
+				"errors"
+			],
+			[
+				"langu",
+				"language_id"
+			],
+			[
+				"tra",
+				"translationData"
+			],
+			[
+				"lan",
+				"languageKey"
+			],
+			[
+				"get",
+				"getApprovalStatus"
+			],
+			[
+				"re",
+				"removeClass"
+			],
+			[
+				"la",
+				"language-key"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"ins",
+				"insertText"
+			],
+			[
+				"ho",
+				"hoverElem"
+			],
+			[
 				"iF",
 				"iframeWindow"
 			],
@@ -14,14 +106,6 @@
 			[
 				"di",
 				"div"
-			],
-			[
-				"trans",
-				"translation_id"
-			],
-			[
-				"lang",
-				"language_key_id"
 			],
 			[
 				"language",
@@ -48,10 +132,6 @@
 				"padding-top"
 			],
 			[
-				"res",
-				"results"
-			],
-			[
 				"trnas",
 				"translations"
 			],
@@ -72,19 +152,11 @@
 				"token"
 			],
 			[
-				"langu",
-				"language_key_id"
-			],
-			[
 				"appr",
 				"approve_first_keys"
 			],
 			[
 				"langua",
-				"language_key_id"
-			],
-			[
-				"lan",
 				"language_key_id"
 			],
 			[
@@ -106,10 +178,6 @@
 			[
 				"appro",
 				"approve_first"
-			],
-			[
-				"la",
-				"language_keys"
 			],
 			[
 				"padding",
@@ -134,10 +202,6 @@
 			[
 				"ke",
 				"keys"
-			],
-			[
-				"tra",
-				"translations"
 			],
 			[
 				"tr",
@@ -258,10 +322,6 @@
 			[
 				"scr",
 				"script_includes"
-			],
-			[
-				"tras",
-				"translation"
 			],
 			[
 				"error",
@@ -454,76 +514,16 @@
 			[
 				"for",
 				"for	for (…) {…}"
-			],
-			[
-				"gene",
-				"generators"
-			],
-			[
-				"ge",
-				"generator"
-			],
-			[
-				"ini",
-				"initializedGenerators"
-			],
-			[
-				"initi",
-				"initialized"
-			],
-			[
-				"initial",
-				"initialize"
-			],
-			[
-				"show",
-				"showPage"
-			],
-			[
-				"obje",
-				"objectTitlePrefix"
-			],
-			[
-				"dis",
-				"disabled_page"
-			],
-			[
-				"path",
-				"pathArray"
-			],
-			[
-				"loca",
-				"location"
-			],
-			[
-				"max-",
-				"max-height"
-			],
-			[
-				"im",
-				"important"
-			],
-			[
-				"margin",
-				"margin-bottom"
-			],
-			[
-				"vide",
-				"video_architecture"
-			],
-			[
-				"network",
-				"network_cards"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "application/views/front_view.php",
+			"file": "assets/js/translate.js",
 			"settings":
 			{
-				"buffer_size": 5425,
+				"buffer_size": 7052,
 				"line_ending": "Windows"
 			}
 		},
@@ -531,15 +531,7 @@
 			"file": "application/views/templates/language_file_view.php",
 			"settings":
 			{
-				"buffer_size": 4151,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "assets/js/translate.js",
-			"settings":
-			{
-				"buffer_size": 4739,
+				"buffer_size": 4313,
 				"line_ending": "Windows"
 			}
 		},
@@ -547,15 +539,39 @@
 			"file": "assets/js/routes.js",
 			"settings":
 			{
-				"buffer_size": 9283,
+				"buffer_size": 9497,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "assets/css/front.css",
+			"file": "application/controllers/api/api_translation.php",
 			"settings":
 			{
-				"buffer_size": 1034,
+				"buffer_size": 8761,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/language/english/errors_lang.php",
+			"settings":
+			{
+				"buffer_size": 951,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/language/english/front_lang.php",
+			"settings":
+			{
+				"buffer_size": 1721,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/models/file_model.php",
+			"settings":
+			{
+				"buffer_size": 5930,
 				"line_ending": "Windows"
 			}
 		}
@@ -620,6 +636,24 @@
 	},
 	"file_history":
 	[
+		"/R/translator/application/libraries/translation.php",
+		"/R/translator/application/views/front_view.php",
+		"/R/translator/assets/css/front.css",
+		"/R/translator/application/config/routes.php",
+		"/R/translator/application/libraries/std_library.php",
+		"/R/translator/assets/js/functions.js",
+		"/R/translator/application/views/templates/alerts_view.php",
+		"/R/translator/application/models/translation_model.php",
+		"/R/translator/application/libraries/role.php",
+		"/R/translator/application/libraries/user.php",
+		"/R/translator/application/controllers/api/api_translation.php",
+		"/R/translator/application/libraries/key.php",
+		"/R/translator/application/language/english/errors_lang.php",
+		"/R/translator/application/libraries/mustache.php",
+		"/R/translator/application/libraries/Mustache/Loader/StringLoader.php",
+		"/R/translator/application/libraries/Mustache/Loader/FilesystemLoader.php",
+		"/R/translator/application/libraries/Mustache/Loader/ArrayLoader.php",
+		"/C/Users/Bo/Desktop/organnavn.php",
 		"/R/translator/assets/js/wysihtml5.js",
 		"/R/IllutionBootstrap/bootstrap/js/extra/bootstrap-wysihtml5.js",
 		"/R/IllutionBootstrap/bootstrap/js/extra/wysiwyg/locales/bootstrap-wysihtml5.da-DK.js",
@@ -636,17 +670,11 @@
 		"/C/Users/Bo/Desktop/old_js.js",
 		"/R/translator/assets/js/urlhandling.js",
 		"/R/translator/application/views/templates/project_edit_view.php",
-		"/R/translator/assets/css/front.css",
 		"/R/translator/application/models/file_model.php",
-		"/R/translator/application/config/routes.php",
-		"/R/translator/application/models/translation_model.php",
-		"/R/translator/application/controllers/api/api_translation.php",
-		"/R/translator/assets/js/functions.js",
 		"/R/translator/assets/js/routes.js",
 		"/R/translator/application/views/header_view.php",
 		"/R/translator/application/config/rest.php",
 		"/R/translator/application/controllers/api/api_access.php",
-		"/R/translator/application/libraries/user.php",
 		"/R/IllutionBootstrap/bootstrap/js/core/bootstrap-button.js",
 		"/R/translator/application/controllers/api/api_file.php",
 		"/C/Users/Bo/Desktop/AdministrativeUnit/AdministrativeUnit.gml",
@@ -656,7 +684,6 @@
 		"/R/translator/application/models/project_model.php",
 		"/R/translator/application/config/config.php",
 		"/R/translator/application/views/templates/projects_view.php",
-		"/R/translator/application/libraries/key.php",
 		"/R/translator/application/libraries/file.php",
 		"/R/translator/application/views/templates/project_add_language_view.php",
 		"/R/translator/application/libraries/project.php",
@@ -673,17 +700,12 @@
 		"/R/translator/application/views/templates/create_project_view.php",
 		"/R/translator/application/language/english/common_lang.php",
 		"/R/translator/application/views/templates/project_view_language_files.php",
-		"/R/translator/application/libraries/std_library.php",
 		"/R/translator/application/views/templates/project_languages_view.php",
 		"/R/translator/assets/css/webkit-form.css",
-		"/R/translator/application/libraries/translation.php",
 		"/R/translator/application/libraries/token.php",
 		"/C/Users/Bo/Desktop/widgets.css",
-		"/R/translator/application/views/front_view.php",
 		"/R/translator/application/libraries/REST_Controller.php",
 		"/R/translator/application/controllers/api/api_token.php",
-		"/R/translator/application/language/english/errors_lang.php",
-		"/R/translator/application/views/templates/alerts_view.php",
 		"/R/translator/application/views/templates/alert_error_view.php",
 		"/R/translator/application/views/templates/delete_confirm_view.php",
 		"/R/translator/assets/css/user.css",
@@ -741,13 +763,7 @@
 		"/C/xampp/htdocs/codeigniter/application/libraries/Format.php",
 		"/R/ComputerInfo/application/libraries/computer.php",
 		"/C/xampp/htdocs/codeigniter/application/controllers/api/translation.php",
-		"/C/xampp/htdocs/codeigniter/application/helpers/http_helper.php",
-		"/R/ComputerInfo/application/libraries/api/api_response.php",
-		"/C/xampp/htdocs/codeigniter/application/libraries/key.php",
-		"/C/xampp/htdocs/codeigniter/application/controllers/language/api/home.php",
-		"/C/xampp/htdocs/codeigniter/application/core/MY_Router.php",
-		"/C/xampp/htdocs/codeigniter/system/core/Router.php",
-		"/C/xampp/htdocs/codeigniter/application/core/MY_Lang.php"
+		"/C/xampp/htdocs/codeigniter/application/helpers/http_helper.php"
 	],
 	"find":
 	{
@@ -775,6 +791,19 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"OVERWRITE",
+			"die",
+			"[type]",
+			"save_ignore",
+			"mustcahe",
+			"$translation->language_key_id",
+			"key",
+			"$key",
+			"key",
+			"frame",
+			"null",
+			"r.",
+			"r",
 			"element",
 			"change",
 			"events",
@@ -889,20 +918,7 @@
 			"length",
 			"this.length_menu",
 			"length_menu",
-			"firstElement",
-			"height",
-			"x",
-			"y",
-			"2",
-			"pos.x",
-			"lineStart",
-			"pos.y",
-			"lineHeight",
-			"{/sup}",
-			"{sup}",
-			"left+lastX",
-			"bugged",
-			"30"
+			"firstElement"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1020,110 +1036,23 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 6,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "application/views/front_view.php",
-					"settings":
-					{
-						"buffer_size": 5425,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2669,
-								2669
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 540.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "application/views/templates/language_file_view.php",
-					"settings":
-					{
-						"buffer_size": 4151,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								828,
-								816
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 540.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
 					"file": "assets/js/translate.js",
 					"settings":
 					{
-						"buffer_size": 4739,
+						"buffer_size": 7052,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								833,
-								833
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "assets/js/routes.js",
-					"settings":
-					{
-						"buffer_size": 9283,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5533,
-								5533
+								1225,
+								1225
 							]
 						],
 						"settings":
@@ -1135,25 +1064,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1937.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "assets/css/front.css",
+					"buffer": 1,
+					"file": "application/views/templates/language_file_view.php",
 					"settings":
 					{
-						"buffer_size": 1034,
+						"buffer_size": 4313,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								322,
-								308
+								850,
+								850
 							]
 						],
 						"settings":
@@ -1161,11 +1090,160 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "assets/js/routes.js",
+					"settings":
+					{
+						"buffer_size": 9497,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								9259,
+								9259
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3060.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "application/controllers/api/api_translation.php",
+					"settings":
+					{
+						"buffer_size": 8761,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6290,
+								6290
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2088.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "application/language/english/errors_lang.php",
+					"settings":
+					{
+						"buffer_size": 951,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								857,
+								893
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "application/language/english/front_lang.php",
+					"settings":
+					{
+						"buffer_size": 1721,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1342,
+								1367
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "application/models/file_model.php",
+					"settings":
+					{
+						"buffer_size": 5930,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4711,
+								4711
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1395.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1231,6 +1309,114 @@
 		"selected_items":
 		[
 			[
+				"file_m",
+				"application/models/file_model.php"
+			],
+			[
+				"tras",
+				"application/libraries/translation.php"
+			],
+			[
+				"std_",
+				"application/libraries/std_library.php"
+			],
+			[
+				"fron_l",
+				"application/language/english/front_lang.php"
+			],
+			[
+				"aler_",
+				"application/views/templates/alerts_view.php"
+			],
+			[
+				"tran.ph",
+				"application/libraries/translation.php"
+			],
+			[
+				"std_li",
+				"application/libraries/std_library.php"
+			],
+			[
+				"alert",
+				"application/views/templates/alerts_view.php"
+			],
+			[
+				"fun",
+				"assets/js/functions.js"
+			],
+			[
+				"std_l",
+				"application/libraries/std_library.php"
+			],
+			[
+				"err_la",
+				"application/language/english/errors_lang.php"
+			],
+			[
+				"tran_m",
+				"application/models/translation_model.php"
+			],
+			[
+				"api_tr",
+				"application/controllers/api/api_translation.php"
+			],
+			[
+				"trans_",
+				"application/models/translation_model.php"
+			],
+			[
+				"tras_m",
+				"application/models/translation_model.php"
+			],
+			[
+				"std",
+				"application/libraries/std_library.php"
+			],
+			[
+				"user",
+				"application/libraries/user.php"
+			],
+			[
+				"role",
+				"application/libraries/role.php"
+			],
+			[
+				"tra",
+				"application/libraries/translation.php"
+			],
+			[
+				"key",
+				"application/libraries/key.php"
+			],
+			[
+				"ke",
+				"application/libraries/key.php"
+			],
+			[
+				"traslatio",
+				"application/libraries/translation.php"
+			],
+			[
+				"mus",
+				"application/libraries/mustache.php"
+			],
+			[
+				"erro_la",
+				"application/language/english/errors_lang.php"
+			],
+			[
+				"translatio",
+				"application/libraries/translation.php"
+			],
+			[
+				"rote",
+				"application/config/routes.php"
+			],
+			[
+				"tr",
+				"application/libraries/translation.php"
+			],
+			[
 				"fr.css",
 				"assets/css/front.css"
 			],
@@ -1267,16 +1453,8 @@
 				"application/language/english/front_lang.php"
 			],
 			[
-				"file_m",
-				"application/models/file_model.php"
-			],
-			[
 				"_mode",
 				"application/models/file_model.php"
-			],
-			[
-				"fun",
-				"assets/js/functions.js"
 			],
 			[
 				"func",
@@ -1297,14 +1475,6 @@
 			[
 				"api_acc",
 				"application/controllers/api/api_access.php"
-			],
-			[
-				"rote",
-				"application/config/routes.php"
-			],
-			[
-				"api_tr",
-				"application/controllers/api/api_translation.php"
 			],
 			[
 				"r.php",
@@ -1331,10 +1501,6 @@
 				"application/views/templates/projects_view.php"
 			],
 			[
-				"key",
-				"application/libraries/key.php"
-			],
-			[
 				"rote.php",
 				"application/config/routes.php"
 			],
@@ -1349,10 +1515,6 @@
 			[
 				"file",
 				"application/libraries/file.php"
-			],
-			[
-				"ke",
-				"application/libraries/key.php"
 			],
 			[
 				"pro",
@@ -1427,14 +1589,6 @@
 				"assets/css/front.css"
 			],
 			[
-				"std_",
-				"application/libraries/std_library.php"
-			],
-			[
-				"std_l",
-				"application/libraries/std_library.php"
-			],
-			[
 				"cre_",
 				"application/views/templates/create_project_view.php"
 			],
@@ -1453,10 +1607,6 @@
 			[
 				"api_",
 				"application/controllers/api/api_project.php"
-			],
-			[
-				"tra",
-				"application/libraries/translation.php"
 			],
 			[
 				"tok",
@@ -1505,10 +1655,6 @@
 			[
 				"cre_pr",
 				"application/views/templates/create_project_view.php"
-			],
-			[
-				"err_la",
-				"application/language/english/errors_lang.php"
 			],
 			[
 				".css",
@@ -1591,32 +1737,16 @@
 				"assets/js/routes.js"
 			],
 			[
-				"user",
-				"application/libraries/user.php"
-			],
-			[
 				"api_c",
 				"application/libraries/API_Controller.php"
-			],
-			[
-				"std",
-				"application/libraries/std_library.php"
 			],
 			[
 				"stdli",
 				"application/libraries/std_library.php"
 			],
 			[
-				"std_li",
-				"application/libraries/std_library.php"
-			],
-			[
 				"std_mo",
 				"application/models/std_model.php"
-			],
-			[
-				"role",
-				"application/libraries/role.php"
 			],
 			[
 				"role.ph",
@@ -1625,10 +1755,6 @@
 			[
 				"rol",
 				"application/config/roles.php"
-			],
-			[
-				"tr",
-				"application/libraries/translation.php"
 			],
 			[
 				"set",
@@ -1693,54 +1819,6 @@
 			[
 				"htt",
 				"application/helpers/http_helper.php"
-			],
-			[
-				"rest_",
-				"application/libraries/REST_Controller.php"
-			],
-			[
-				"ho",
-				"application/config/hooks.php"
-			],
-			[
-				"my_",
-				"application/core/MY_Lang.php"
-			],
-			[
-				"my",
-				"application/core/MY_Router.php"
-			],
-			[
-				"commo",
-				"system/core/Common.php"
-			],
-			[
-				"rout",
-				"application/config/routes.php"
-			],
-			[
-				"data",
-				"application/config/database.php"
-			],
-			[
-				"sc",
-				"assets/js/script.js"
-			],
-			[
-				"com_secu",
-				"application/libraries/computerinfo_security.php"
-			],
-			[
-				"secu",
-				"system/core/Security.php"
-			],
-			[
-				"com_se",
-				"application/libraries/computer_series.php"
-			],
-			[
-				"drivers/my",
-				"system/database/drivers/mysql/mysql_driver.php"
 			]
 		],
 		"width": 0.0

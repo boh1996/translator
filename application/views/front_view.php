@@ -7,6 +7,9 @@
 		"project_saved" : '<?php echo $this->lang->line('front_project_saved'); ?>',
 		"error_project_found" : '<?php echo $this->lang->line('front_project_error_exists'); ?>',
 		"error_no_project_found" : '<?php echo $this->lang->line('errors_sorry_no_project_found'); ?>',
+		"error_no_translation" : '<?php echo $this->lang->line('errors_translation_empty'); ?>',
+		"error_multiple_translation_fields_empty" : '<?php echo $this->lang->line('errors_one_or_more_translation_empty'); ?>',
+		"data_saved" : '<?php echo $this->lang->line('front_data_has_been_saved'); ?>',
 	};
 </script>
 
@@ -53,11 +56,9 @@
   </div>
 </div>
 
-<!--<div id="error_container"></div>-->
 <div class="wrapper">
 	<div id="page">
 		<div class="page-container">
-
 			<?php if ($this->user_control->user->has_one_mode(array("edit","create","view","delete"))) : ?>
 				<div id="project" class="disabled_page">
 					

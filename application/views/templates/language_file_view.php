@@ -42,7 +42,7 @@
 										<div class="btn-group approve-decline" data-toggle="buttons-radio">
 											<!-- Approve access -->
 											{{#translation.approved}}
-												<button type="button" data-key-index="{{id}}" {{#translation}} data-translation-id="{{translation.id}}" {{/translation}} data-toggle="button" class="btn btn-primary approve"><i class="icon-ok icon-white"></i></button>
+												<button type="button" data-key-index="{{id}}" {{#translation}} data-translation-id="{{translation.id}}" {{/translation}} data-toggle="button" class="btn btn-primary approve active"><i class="icon-ok icon-white"></i></button>
 												<button type="button" data-key-index="{{id}}" {{#translation}} data-translation-id="{{translation.id}}" {{/translation}} class="btn decline"><i class="icon-ban-circle"></i></button>
 											{{/translation.approved}}
 
@@ -60,7 +60,7 @@
 							<div class="tokens">
 								<table class="tokens-table">
 									{{#tokens}}
-										<tr>
+										<tr class="active-token">
 											<td><a class="token" data-index="{{id}}" data-token="{{token}}">{{token}}</a></td>
 											<td><strong>-</strong></td>
 											<td><i>{{description}}</i></td>
@@ -75,6 +75,7 @@
 						</div>
 
 						<div class="language-key-edit">
+							<a class="btn save-translation btn-primary" data-index="{{id}}"><?= $this->lang->line("common_save"); ?></a>
 							<a class="btn" data-target="language/key/{{id}}/edit"><?= $this->lang->line("front_edit"); ?></a>
 							<a class="btn" data-target="language/key/{{id}}/delete"><?= $this->lang->line("front_delete"); ?></a>
 						</div>
@@ -86,7 +87,7 @@
 
 			<div class="submit-area">
 				<div class="form-actions">
-					<button class="btn btn-primary"><?= $this->lang->line("common_save"); ?></button>
+					<button class="btn btn-primary save-translations"><?= $this->lang->line("common_save"); ?></button>
 				  	<a class="btn" data-target="project/{{project_id}}/{{language_id}}" ><?= $this->lang->line("common_cancel"); ?></a>
 				</div>
 			</div>

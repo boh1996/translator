@@ -24,6 +24,7 @@
 	$lang["front_edit_language_key_title"] = "Edit {{key}}";
 	$lang["front_edit_language_key"] = "Edit Language Key";
 	$lang["front_key"] = "Key";
+	$lang["front_data_has_been_saved"] = "The data has been saved";
 
 	########### Progress #############
 	$lang["front_progress_missing_approval_tooltip"] = "Missing approval: {{progress.missing_approval_count}}";
