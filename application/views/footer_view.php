@@ -1,9 +1,9 @@
-		<div class="navbar navbar-fixed-bottom">
+		<div class="navbar navbar-fixed-bottom fixed">
 		  <div class="navbar-inner">
 		    <div class="container">
 		 
 		      	<!-- Be sure to leave the brand out there if you want it shown -->
-		      	<a class="brand">
+		      	<a class="brand pull-right">
 		      		<?php echo $this->lang->line('ui_copyright_line'); ?>
 		      	</a>
 		    </div>

@@ -34,7 +34,9 @@ class API_Project extends API_Controller {
         	return;
         }
 
-        $this->response( $Project->Export() );
+        $export = $Project->Export();
+
+        $this->response( $export );
 	}
 
 	/**
@@ -166,19 +168,4 @@ class API_Project extends API_Controller {
     		self::error($this->config->item("api_forbidden_error"));
     	}
 	}
-
-	/*public function files_get () {
-		$this->load->model("project_model");
-		$this->load->model("language_model");
-
-		if ( ! $this->get('project') ) {  
-            self::error($this->config->item("api_bad_request_code"));
-            return; 
-        }
-
-        if ( ! $this->project_model->project_exists($this->get("project")) ) {
-        	self::error($this->config->item("api_not_found_code"));
-	        return;
-        }
-	}*/
 }

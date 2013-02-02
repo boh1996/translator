@@ -1,11 +1,11 @@
-<ul class="breadcrumb project-navigation" style="width:50%; min-width:410px; ">
+<ul class="breadcrumb project-navigation view-navigation view-navigation-view-padding">
 	<li><a data-target=""><?= $this->lang->line("common_projects"); ?></a> <span class="divider">/</span></li>
 	<li><a data-target="project/{{project_id}}">{{project_name}}</a> <span class="divider">/</span></li>
 	<li><a data-target="project/{{project_id}}/{{language_id}}">{{language_name}}</a> <span class="divider">/</span></li>
 	<li class="active"><?= $this->lang->line("front_add_file"); ?></li>
 </ul>
 
-<section class="well well-white" style="width:50%; padding-right:10px; margin-left:15%;">
+<section class="well well-white inner-view view-padding">
 	<form class="form-horizontal" id="create_project_form">
 	    <legend><?= $this->lang->line("front_add_language_file_to_project"); ?></legend>
 

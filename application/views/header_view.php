@@ -10,7 +10,6 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo $asset_url; ?>bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo $asset_url; ?>bootstrap/css/bootstrap-responsive.min.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo $asset_url; ?>css/style.css">
-		<link rel="stylesheet" type="text/css" href="<?php echo $asset_url; ?>css/loading.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo $asset_url; ?>css/scrollbar.css">
 		<?php
 			if ( isset($style_includes) ) {

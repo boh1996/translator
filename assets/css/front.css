@@ -1,10 +1,42 @@
 .project-table {
-	width: 600px;
-	margin-left: 200px;
 	padding-right:5px;
 	padding-left:5px;
 	min-height: 200px;
 	padding-bottom: 10px;
+}
+
+@media (max-width: 838px) {
+	.project-table {
+		width: 80%;
+		margin-left: 10%;
+	}
+}
+
+@media (min-width: 839px) {
+	.project-table {
+		width: 600px;
+		margin-left: 200px;
+	}
+}
+
+.view-navigation-view-padding {
+	margin-right: 12%;
+}
+
+.view-padding {
+	padding-right:10px;
+}
+
+.view-navigation {
+	width:70% !important; 
+	min-width:410px !important;
+}
+
+.inner-view {
+	width:70%; 
+	margin-left:15%; 
+	min-width:400px; 
+	margin-right:5%;
 }
 
 .project-navigation {

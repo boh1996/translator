@@ -13,52 +13,11 @@
 	};
 </script>
 
-<!--<div class="navbar navbar-fixed-top navbar-inverse">-->
-<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
- 
-	      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-        	<span class="icon-bar"></span>
-        	<span class="icon-bar"></span>
-        	<span class="icon-bar"></span>
-      	</a>
- 
-      	<!-- Be sure to leave the brand out there if you want it shown -->
-      	<a class="brand" href="#">
-      		<?php echo $this->lang->line('ui_brand_name'); ?>
-      	</a>
-
-	    <!-- Everything you want hidden at 940px or less, place within here -->
-	    <div class="nav-collapse">
-	     	<ul class="nav">
-	     		<li class="active">
-		    		<a data-target="home" href="#"><?php echo $this->lang->line('pages_home'); ?></a>
-		  		</li>
-			</ul>
-
-			<div class="pull-right">
-				<ul class="nav">
-				  	<li class="dropdown">
-						<a class="dropdown-toggle" href="#" data-toggle="dropdown"><?= $this->user_control->user->name; ?>&nbsp;<strong class="caret"></strong></a>
-						<ul class="dropdown-menu" role="menu">
-			  				<li><a tabindex="-1" data-target="settings"><?php echo $this->lang->line('pages_settings'); ?></a></li>
-						    <li class="divider"></li>
-						    <li><a href="<?php echo $base_url; ?>logout"><?php echo $this->lang->line('user_logout'); ?></a></li>
-			  			</ul>
-					</li>
-				</ul>
-			</div>
-      	</div>
- 
-    </div>
-  </div>
-</div>
+<?= $this->load->view("nav_view",true); ?>
 
 <div class="wrapper">
 	<div id="page">
-		<div class="page-container">
+		<div class="container page-container">
 			<?php if ($this->user_control->user->has_one_mode(array("edit","create","view","delete"))) : ?>
 				<div id="project" class="disabled_page">
 					
@@ -80,6 +39,10 @@
 			<?php if ($this->user_control->user->has_modes("edit")) : ?>
 				<div id="project_edit" class="disabled_page">
 					
+				</div>
+
+				<div id="add_language_key" class="disabled_page">
+
 				</div>
 			<?php endif; ?>
 
@@ -106,20 +69,7 @@
 	</div>
 </div>
 
-<div id="loading" style="display:none;">
-	<div id="floatingCirclesG">
-		<div class="f_circleG" id="frotateG_01"></div>
-		<div class="f_circleG" id="frotateG_02"></div>
-		<div class="f_circleG" id="frotateG_03"></div>
-		<div class="f_circleG" id="frotateG_04"></div>
-		<div class="f_circleG" id="frotateG_05"></div>
-		<div class="f_circleG" id="frotateG_06"></div>
-		<div class="f_circleG" id="frotateG_07"></div>
-		<div class="f_circleG" id="frotateG_08"></div>
-	</div>
-</div>
-
-<div class="modal-backdrop in" style="display:none;" id="loading-background"></div>
+<?= $this->load->view("loading_view",true); ?>
 
 <div style="display:none;">
 	<?= $this->user_control->LoadTemplate("alerts_view"); ?>
@@ -142,6 +92,10 @@
 <?php if ($this->user_control->user->has_modes("edit")) : ?>
 	<script type="mustache/template" id="editProjectViewTemplate">
 		<?= $this->user_control->LoadTemplate("project_edit_view"); ?>
+	</script>
+
+	<script type="mustache/template" id="addLanguageKeyTemplate">
+		<?= $this->user_control->LoadTemplate("add_language_key_view"); ?>
 	</script>
 
 	<script type="mustache/template" id="editLanguageKeyTemplate">

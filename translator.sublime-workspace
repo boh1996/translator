@@ -4,6 +4,46 @@
 		"selected_items":
 		[
 			[
+				"show",
+				"showPage"
+			],
+			[
+				"pad",
+				"padding-right"
+			],
+			[
+				"i",
+				"i	Tag"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"im",
+				"important"
+			],
+			[
+				"htm",
+				"htmlentities"
+			],
+			[
+				"file_",
+				"file_get_contents"
+			],
+			[
+				"exp",
+				"explode"
+			],
+			[
+				"mysql_s",
+				"mysql_select_db"
+			],
+			[
+				"simple",
+				"simplexml_load_file"
+			],
+			[
 				"html",
 				"htmlspecialchars"
 			],
@@ -128,20 +168,12 @@
 				"max-width"
 			],
 			[
-				"padd",
-				"padding-top"
-			],
-			[
 				"trnas",
 				"translations"
 			],
 			[
 				"base_la",
 				"base_language_id"
-			],
-			[
-				"pad",
-				"padding-left"
 			],
 			[
 				"key",
@@ -482,56 +514,24 @@
 			[
 				"pr",
 				"printer"
-			],
-			[
-				"preg_ma",
-				"preg_match_all"
-			],
-			[
-				"str_re",
-				"str_replace"
-			],
-			[
-				"mysq_s",
-				"mysql_select_db"
-			],
-			[
-				"mysql",
-				"mysql_connect"
-			],
-			[
-				"com",
-				"computers"
-			],
-			[
-				"var",
-				"variable"
-			],
-			[
-				"inde",
-				"indexOf"
-			],
-			[
-				"for",
-				"for	for (…) {…}"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "assets/js/translate.js",
+			"file": "application/controllers/api/api_project.php",
 			"settings":
 			{
-				"buffer_size": 7052,
+				"buffer_size": 4718,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "application/views/templates/language_file_view.php",
+			"file": "application/models/project_model.php",
 			"settings":
 			{
-				"buffer_size": 4313,
+				"buffer_size": 1881,
 				"line_ending": "Windows"
 			}
 		},
@@ -539,23 +539,7 @@
 			"file": "assets/js/routes.js",
 			"settings":
 			{
-				"buffer_size": 9497,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "application/controllers/api/api_translation.php",
-			"settings":
-			{
-				"buffer_size": 8761,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "application/language/english/errors_lang.php",
-			"settings":
-			{
-				"buffer_size": 951,
+				"buffer_size": 9848,
 				"line_ending": "Windows"
 			}
 		},
@@ -563,15 +547,23 @@
 			"file": "application/language/english/front_lang.php",
 			"settings":
 			{
-				"buffer_size": 1721,
+				"buffer_size": 1758,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "application/models/file_model.php",
+			"file": "application/views/templates/language_file_view.php",
 			"settings":
 			{
-				"buffer_size": 5930,
+				"buffer_size": 4432,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/views/templates/add_language_key_view.php",
+			"settings":
+			{
+				"buffer_size": 523,
 				"line_ending": "Windows"
 			}
 		}
@@ -636,19 +628,61 @@
 	},
 	"file_history":
 	[
-		"/R/translator/application/libraries/translation.php",
 		"/R/translator/application/views/front_view.php",
+		"/R/translator/application/views/templates/add_language_key_view.php",
+		"/R/translator/application/views/templates/project_language_files_view.php",
+		"/R/translator/application/language/english/front_lang.php",
 		"/R/translator/assets/css/front.css",
-		"/R/translator/application/config/routes.php",
-		"/R/translator/application/libraries/std_library.php",
+		"/R/translator/application/views/templates/project_view.php",
+		"/R/translator/application/views/templates/project_language_add_file_view.php",
+		"/R/translator/application/views/templates/create_project_view.php",
+		"/R/translator/application/views/templates/language_file_view.php",
+		"/R/translator/application/views/templates/project_edit_view.php",
+		"/R/translator/application/controllers/front.php",
+		"/R/translator/application/views/templates/edit_language_key_view.php",
+		"/R/translator/application/views/nav_view.php",
+		"/R/translator/application/views/header_view.php",
+		"/R/translator/application/views/loading_view.php",
 		"/R/translator/assets/js/functions.js",
+		"/R/translator/assets/bootstrap/node_modules/grunt-contrib-less/node_modules/less/test/css/functions.css",
+		"/R/translator/assets/css/loading.css",
+		"/R/translator/application/views/footer_view.php",
+		"/R/translator/assets/js/routes.js",
+		"/R/IllutionBootstrap/bootstrap/less/extra/font-awesome-ie7.less",
+		"/R/IllutionBootstrap/bootstrap/less/extra/font-awesome.less",
+		"/R/translator/assets/css/style.css",
+		"/R/IllutionBootstrap/bootstrap/less/core/scaffolding.less",
+		"/R/IllutionBootstrap/bootstrap/less/core/responsive-utilities.less",
+		"/R/IllutionBootstrap/bootstrap/less/core/responsive-navbar.less",
+		"/R/IllutionBootstrap/bootstrap/less/core/responsive-767px-max.less",
+		"/R/IllutionBootstrap/bootstrap/less/core/responsive.less",
+		"/R/IllutionBootstrap/bootstrap/less/core/reset.less",
+		"/R/IllutionBootstrap/bootstrap/less/core/variables.less",
+		"/R/IllutionBootstrap/bootstrap/less/core/bootstrap.less",
+		"/R/translator/assets/js/urlhandling.js",
+		"/R/translator/application/views/templates/projects_view.php",
+		"/C/xampp/htdocs/data.php",
+		"/C/xampp/htdocs/data_teacher.php",
+		"/C/Users/Bo/Desktop/bootstrap-typeahead-ext-master/bootstrap-typeahead-ext-master/bootstrap-typeahead.js",
+		"/C/xampp/htdocs/Data/HTX Lærere.js",
+		"/C/Users/Bo/Desktop/lal.js",
+		"/C/Users/Bo/AppData/Local/Google/Chrome/User Data/Default/Extensions/liajalnjelpdmdbfbmpiconpenfbpgln/1.9.1.5_0/manifest.json",
+		"/C/Users/Bo/AppData/Local/Google/Chrome/User Data/Default/Extensions/liajalnjelpdmdbfbmpiconpenfbpgln/1.9.1.5_0/background/sync.js",
+		"/R/translator/assets/js/translate.js",
+		"/R/translator/application/language/english/errors_lang.php",
+		"/R/translator/application/controllers/api/api_project.php",
+		"/R/translator/application/models/project_model.php",
+		"/C/Users/Bo/AppData/Local/Google/Chrome/User Data/Default/Extensions/liajalnjelpdmdbfbmpiconpenfbpgln/1.9.1.5_0/language/settings-da.json",
+		"/R/translator/application/libraries/std_library.php",
+		"/R/translator/application/config/routes.php",
+		"/R/translator/application/controllers/api/api_translation.php",
+		"/R/translator/application/models/file_model.php",
+		"/R/translator/application/libraries/translation.php",
 		"/R/translator/application/views/templates/alerts_view.php",
 		"/R/translator/application/models/translation_model.php",
 		"/R/translator/application/libraries/role.php",
 		"/R/translator/application/libraries/user.php",
-		"/R/translator/application/controllers/api/api_translation.php",
 		"/R/translator/application/libraries/key.php",
-		"/R/translator/application/language/english/errors_lang.php",
 		"/R/translator/application/libraries/mustache.php",
 		"/R/translator/application/libraries/Mustache/Loader/StringLoader.php",
 		"/R/translator/application/libraries/Mustache/Loader/FilesystemLoader.php",
@@ -657,22 +691,12 @@
 		"/R/translator/assets/js/wysihtml5.js",
 		"/R/IllutionBootstrap/bootstrap/js/extra/bootstrap-wysihtml5.js",
 		"/R/IllutionBootstrap/bootstrap/js/extra/wysiwyg/locales/bootstrap-wysihtml5.da-DK.js",
-		"/R/translator/assets/css/style.css",
 		"/R/IllutionBootstrap/bootstrap/js/extra/wysiwyg/locales/bootstrap-wysihtml5.de-DE.js",
 		"/R/IllutionBootstrap/bootstrap/js/extra/wysiwyg/locales/bootstrap-wysihtml5.ca-CT.js",
 		"/C/Users/Bo/Desktop/bootstrap-wysihtml5-master/bootstrap-wysihtml5-master/src/locales/bootstrap-wysihtml5.ko-KR.js",
-		"/R/translator/application/views/templates/edit_language_key_view.php",
-		"/R/translator/application/views/footer_view.php",
-		"/R/translator/application/controllers/front.php",
-		"/R/translator/application/language/english/front_lang.php",
 		"/C/Users/Bo/Desktop/index.html",
 		"/R/IllutionBootstrap/bootstrap/less/extra/wysiwyg/wysiwyg-color.less",
 		"/C/Users/Bo/Desktop/old_js.js",
-		"/R/translator/assets/js/urlhandling.js",
-		"/R/translator/application/views/templates/project_edit_view.php",
-		"/R/translator/application/models/file_model.php",
-		"/R/translator/assets/js/routes.js",
-		"/R/translator/application/views/header_view.php",
 		"/R/translator/application/config/rest.php",
 		"/R/translator/application/controllers/api/api_access.php",
 		"/R/IllutionBootstrap/bootstrap/js/core/bootstrap-button.js",
@@ -681,23 +705,16 @@
 		"/C/Users/Bo/Desktop/AdministrativeUnitV2/AdministrativeUnit.gml",
 		"/C/Users/Bo/Desktop/curl-1.2.1/config/autoload.php",
 		"/C/Users/Bo/Desktop/curl-1.2.1/libraries/Curl.php",
-		"/R/translator/application/models/project_model.php",
 		"/R/translator/application/config/config.php",
-		"/R/translator/application/views/templates/projects_view.php",
 		"/R/translator/application/libraries/file.php",
 		"/R/translator/application/views/templates/project_add_language_view.php",
 		"/R/translator/application/libraries/project.php",
-		"/R/translator/application/views/templates/project_language_files_view.php",
-		"/R/translator/application/controllers/api/api_project.php",
 		"/R/translator/application/models/projects_model.php",
-		"/R/translator/application/views/templates/project_language_add_file_view.php",
 		"/R/translator/application/controllers/api/api_language_key.php",
 		"/R/translator/application/controllers/api/api_language.php",
 		"/R/translator/application/models/language_model.php",
 		"/R/translator/application/models/std_model.php",
 		"/R/translator/application/libraries/language.php",
-		"/R/translator/application/views/templates/project_view.php",
-		"/R/translator/application/views/templates/create_project_view.php",
 		"/R/translator/application/language/english/common_lang.php",
 		"/R/translator/application/views/templates/project_view_language_files.php",
 		"/R/translator/application/views/templates/project_languages_view.php",
@@ -738,32 +755,7 @@
 		"/C/xampp/htdocs/codeigniter/application/libraries/translation.php",
 		"/C/xampp/htdocs/codeigniter/application/controllers/api/api_token.php",
 		"/C/xampp/htdocs/codeigniter/application/controllers/api/api_language_key.php",
-		"/C/xampp/htdocs/codeigniter/application/controllers/api/api_translation.php",
-		"/C/xampp/htdocs/codeigniter/application/config/settings.php",
-		"/C/xampp/htdocs/codeigniter/application/views/header_view.php",
-		"/C/xampp/htdocs/codeigniter/application/language/english/info_lang.php",
-		"/C/xampp/htdocs/codeigniter/application/language/english/pages_lang.php",
-		"/C/xampp/htdocs/codeigniter/application/language/english/user_lang.php",
-		"/C/xampp/htdocs/codeigniter/application/views/footer_view.php",
-		"/C/xampp/htdocs/codeigniter/application/views/front_view.php",
-		"/C/xampp/htdocs/codeigniter/application/models/language_old/model_language.php",
-		"/C/xampp/htdocs/codeigniter/application/config/rest.php",
-		"/C/xampp/htdocs/codeigniter/assets/css/user.css",
-		"/C/xampp/htdocs/codeigniter/assets/css/form.css",
-		"/C/xampp/htdocs/codeigniter/application/views/front_view.ph.html",
-		"/C/xampp/htdocs/codeigniter/application/controllers/home.php",
-		"/C/xampp/htdocs/codeigniter/application/config/hooks.php",
-		"/R/ComputerInfo/application/views/front_view.php",
-		"/C/xampp/htdocs/codeigniter/application/controllers/ui.php",
-		"/R/ComputerInfo/application/config/settings.php",
-		"/C/xampp/htdocs/codeigniter/application/controllers/api/home.php",
-		"/C/xampp/htdocs/codeigniter/application/libraries/file.php",
-		"/C/xampp/htdocs/codeigniter/system/database/drivers/mysql/mysql_driver.php",
-		"/C/xampp/htdocs/codeigniter/application/libraries/REST_Controller.php",
-		"/C/xampp/htdocs/codeigniter/application/libraries/Format.php",
-		"/R/ComputerInfo/application/libraries/computer.php",
-		"/C/xampp/htdocs/codeigniter/application/controllers/api/translation.php",
-		"/C/xampp/htdocs/codeigniter/application/helpers/http_helper.php"
+		"/C/xampp/htdocs/codeigniter/application/controllers/api/api_translation.php"
 	],
 	"find":
 	{
@@ -771,7 +763,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 90.0,
+		"height": 0.0,
 		"where_history":
 		[
 			"R:\\translator\\assets",
@@ -791,6 +783,22 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"lalalalala",
+			"\"init\":",
+			"\"name\":",
+			"init:",
+			"name",
+			",}",
+			",name",
+			": \"",
+			"\\n",
+			")",
+			" (",
+			"\n\n",
+			"\n",
+			"\n\n",
+			"	",
+			"  ",
 			"OVERWRITE",
 			"die",
 			"[type]",
@@ -902,23 +910,7 @@
 			"->line(",
 			"->line(\"(.*)\",",
 			"static ",
-			"location",
-			"computer",
-			"identifier",
-			"Screen",
-			"Device",
-			"Id",
-			"Device",
-			"id",
-			"Id",
-			"Screen",
-			"model",
-			"device",
-			"length_select",
-			"length",
-			"this.length_menu",
-			"length_menu",
-			"firstElement"
+			"location"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -926,6 +918,22 @@
 		"regex": false,
 		"replace_history":
 		[
+			"\"init\":",
+			"init\"name\":",
+			"\"name\":",
+			"lalalalala",
+			"\"init\":",
+			"\"name\"",
+			"},",
+			"\" ,name",
+			"\" : \"",
+			"\\n{init: \"",
+			"\",}",
+			",name: \"",
+			"\\n",
+			"\\n\\r",
+			"\\n",
+			"",
 			"{/sup}",
 			"{sub}",
 			"",
@@ -1036,23 +1044,23 @@
 	"groups":
 	[
 		{
-			"selected": 6,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "assets/js/translate.js",
+					"file": "application/controllers/api/api_project.php",
 					"settings":
 					{
-						"buffer_size": 7052,
+						"buffer_size": 4718,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1225,
-								1225
+								0,
+								0
 							]
 						],
 						"settings":
@@ -1060,29 +1068,28 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"syntax": "Packages/PHP/PHP.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 180.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "application/views/templates/language_file_view.php",
+					"file": "application/models/project_model.php",
 					"settings":
 					{
-						"buffer_size": 4313,
+						"buffer_size": 1881,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								850,
-								850
+								1131,
+								1131
 							]
 						],
 						"settings":
@@ -1104,15 +1111,15 @@
 					"file": "assets/js/routes.js",
 					"settings":
 					{
-						"buffer_size": 9497,
+						"buffer_size": 9848,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								9259,
-								9259
+								6779,
+								6779
 							]
 						],
 						"settings":
@@ -1124,25 +1131,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 3060.0,
+						"translation.y": 2835.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 3,
-					"file": "application/controllers/api/api_translation.php",
+					"file": "application/language/english/front_lang.php",
 					"settings":
 					{
-						"buffer_size": 8761,
+						"buffer_size": 1758,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6290,
-								6290
+								1407,
+								1420
 							]
 						],
 						"settings":
@@ -1154,25 +1161,55 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2088.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "application/language/english/errors_lang.php",
+					"file": "application/views/templates/language_file_view.php",
 					"settings":
 					{
-						"buffer_size": 951,
+						"buffer_size": 4432,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								857,
-								893
+								4214,
+								4214
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1215.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "application/views/templates/add_language_key_view.php",
+					"settings":
+					{
+						"buffer_size": 523,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								481,
+								481
 							]
 						],
 						"settings":
@@ -1184,66 +1221,6 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "application/language/english/front_lang.php",
-					"settings":
-					{
-						"buffer_size": 1721,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1342,
-								1367
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "application/models/file_model.php",
-					"settings":
-					{
-						"buffer_size": 5930,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								4711,
-								4711
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 1395.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1309,6 +1286,146 @@
 		"selected_items":
 		[
 			[
+				"add_la",
+				"application/views/templates/add_language_key_view.php"
+			],
+			[
+				"fro_v",
+				"application/views/front_view.php"
+			],
+			[
+				"lan_f_v",
+				"application/views/templates/language_file_view.php"
+			],
+			[
+				"fro_l",
+				"application/language/english/front_lang.php"
+			],
+			[
+				"rote.js",
+				"assets/js/routes.js"
+			],
+			[
+				"fro.css",
+				"assets/css/front.css"
+			],
+			[
+				"fro.cs",
+				"assets/css/front.css"
+			],
+			[
+				"fro",
+				"application/controllers/front.php"
+			],
+			[
+				"nav_v",
+				"application/views/nav_view.php"
+			],
+			[
+				"header_v",
+				"application/views/header_view.php"
+			],
+			[
+				"load_v",
+				"application/views/loading_view.php"
+			],
+			[
+				"function",
+				"assets/js/functions.js"
+			],
+			[
+				"fuc",
+				"assets/bootstrap/node_modules/grunt-contrib-less/node_modules/less/test/css/functions.css"
+			],
+			[
+				"load",
+				"assets/css/loading.css"
+			],
+			[
+				"head_",
+				"application/views/header_view.php"
+			],
+			[
+				"foo_v",
+				"application/views/footer_view.php"
+			],
+			[
+				"rou",
+				"assets/js/routes.js"
+			],
+			[
+				"loadi_v",
+				"application/views/loading_view.php"
+			],
+			[
+				"nav",
+				"application/views/nav_view.php"
+			],
+			[
+				"sty",
+				"assets/css/style.css"
+			],
+			[
+				"ur",
+				"assets/js/urlhandling.js"
+			],
+			[
+				"head_v",
+				"application/views/header_view.php"
+			],
+			[
+				"fr.cs",
+				"assets/css/front.css"
+			],
+			[
+				"styl",
+				"assets/css/style.css"
+			],
+			[
+				"pros_v",
+				"application/views/templates/projects_view.php"
+			],
+			[
+				"fr_v",
+				"application/views/footer_view.php"
+			],
+			[
+				"foot_v",
+				"application/views/footer_view.php"
+			],
+			[
+				"func",
+				"assets/js/functions.js"
+			],
+			[
+				"pro_v",
+				"application/views/templates/project_view.php"
+			],
+			[
+				"pro_m",
+				"application/models/project_model.php"
+			],
+			[
+				"api_p",
+				"application/controllers/api/api_project.php"
+			],
+			[
+				"std",
+				"application/libraries/std_library.php"
+			],
+			[
+				"rote",
+				"application/config/routes.php"
+			],
+			[
+				"pro_la",
+				"application/views/templates/project_language_files_view.php"
+			],
+			[
+				"proje_v",
+				"application/views/templates/project_view.php"
+			],
+			[
 				"file_m",
 				"application/models/file_model.php"
 			],
@@ -1369,10 +1486,6 @@
 				"application/models/translation_model.php"
 			],
 			[
-				"std",
-				"application/libraries/std_library.php"
-			],
-			[
 				"user",
 				"application/libraries/user.php"
 			],
@@ -1409,10 +1522,6 @@
 				"application/libraries/translation.php"
 			],
 			[
-				"rote",
-				"application/config/routes.php"
-			],
-			[
 				"tr",
 				"application/libraries/translation.php"
 			],
@@ -1421,16 +1530,8 @@
 				"assets/css/front.css"
 			],
 			[
-				"sty",
-				"assets/css/style.css"
-			],
-			[
 				"footer_v",
 				"application/views/footer_view.php"
-			],
-			[
-				"fro",
-				"application/controllers/front.php"
 			],
 			[
 				"url",
@@ -1445,28 +1546,8 @@
 				"application/language/english/front_lang.php"
 			],
 			[
-				"rote.js",
-				"assets/js/routes.js"
-			],
-			[
-				"fro_l",
-				"application/language/english/front_lang.php"
-			],
-			[
 				"_mode",
 				"application/models/file_model.php"
-			],
-			[
-				"func",
-				"assets/js/functions.js"
-			],
-			[
-				"header_v",
-				"application/views/header_view.php"
-			],
-			[
-				"fro.cs",
-				"assets/css/front.css"
 			],
 			[
 				"ret.ph",
@@ -1491,14 +1572,6 @@
 			[
 				"con",
 				"application/config/config.php"
-			],
-			[
-				"pro_m",
-				"application/models/project_model.php"
-			],
-			[
-				"pro_v",
-				"application/views/templates/projects_view.php"
 			],
 			[
 				"rote.php",
@@ -1531,10 +1604,6 @@
 			[
 				"projec_v",
 				"application/views/templates/project_language_files_view.php"
-			],
-			[
-				"api_p",
-				"application/controllers/api/api_project.php"
 			],
 			[
 				"ro",
@@ -1595,10 +1664,6 @@
 			[
 				"comm_l",
 				"application/language/english/common_lang.php"
-			],
-			[
-				"fro_v",
-				"application/views/front_view.php"
 			],
 			[
 				"rest.ph",
@@ -1731,94 +1796,6 @@
 			[
 				"user_c",
 				"application/libraries/user_control.php"
-			],
-			[
-				"rou",
-				"assets/js/routes.js"
-			],
-			[
-				"api_c",
-				"application/libraries/API_Controller.php"
-			],
-			[
-				"stdli",
-				"application/libraries/std_library.php"
-			],
-			[
-				"std_mo",
-				"application/models/std_model.php"
-			],
-			[
-				"role.ph",
-				"application/libraries/role.php"
-			],
-			[
-				"rol",
-				"application/config/roles.php"
-			],
-			[
-				"set",
-				"application/config/settings.php"
-			],
-			[
-				"he_v",
-				"application/views/header_view.php"
-			],
-			[
-				"styl",
-				"assets/css/style.css"
-			],
-			[
-				"head_v",
-				"application/views/header_view.php"
-			],
-			[
-				"foo_v",
-				"application/views/footer_view.php"
-			],
-			[
-				"au",
-				"application/config/autoload.php"
-			],
-			[
-				"hoe.",
-				"application/controllers/home.php"
-			],
-			[
-				"h",
-				"application/config/hooks.php"
-			],
-			[
-				"home",
-				"application/controllers/home.php"
-			],
-			[
-				"ap",
-				"application/libraries/API_Controller.php"
-			],
-			[
-				"mysql",
-				"system/database/drivers/mysql/mysql_driver.php"
-			],
-			[
-				"std_m",
-				"application/models/std_model.php"
-			],
-			[
-				"format",
-				"application/libraries/Format.php"
-			],
-			[
-				"std_b",
-				"application/libraries/std_library.php"
-			],
-			[
-				"res",
-				"application/libraries/REST_Controller.php"
-			],
-			[
-				"htt",
-				"application/helpers/http_helper.php"
 			]
 		],
 		"width": 0.0
@@ -1835,6 +1812,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": false,
-	"side_bar_width": 246.0,
+	"side_bar_width": 416.0,
 	"status_bar_visible": true
 }

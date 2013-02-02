@@ -138,6 +138,7 @@ $(document).ready(function () {
 									data["language_id"] = language_id;
 									data["project_name"] = project_data.name;
 									data["language_name"] = language_data.name;
+									data["file_id"] = file_id;
 									$("#language_file").html(Mustache.render($("#languageFileTemplate").html(),data));
 									showPage("language_file");
 									$(".language-key").each(function (index, element) {
@@ -181,7 +182,7 @@ $(document).ready(function () {
 					});
 				},
 				error : function () {
-					//Show language not found
+					//Show language not error_no_project_found
 					return;
 				}
 			});
@@ -197,6 +198,20 @@ $(document).ready(function () {
 			//showPage("language_key_edit");
 		});
 
+		crossroads.addRoute("project/{project_id}/{{language_id}}/{file_id}/add/key",function ( project_id, language_id, file_id ) {
+			/**
+			 * data {
+			 *  project_id
+			 *  file_id
+			 *  language_name
+			 *  file_name
+			 *  project_name
+			 * 	language_id
+			 * }
+			 */
+			showPage("add_language_key");
+		});
+
 		crossroads.addRoute("project/{project_id}/{language_id}/{file_id}/edit", function (project_id, language_id, file_id) {
 
 		});
@@ -205,7 +220,7 @@ $(document).ready(function () {
 
 		});
 
-	    crossroads.addRoute("project/{project_id}/{language_id}/add/file", function (project_id, language_id) {
+	    crossroads.addRoute("project/{project_id}/add/file", function (project_id, language_id) {
 	    	showPage("project_language_add_file");
 	    	/**
 	    	 * data {

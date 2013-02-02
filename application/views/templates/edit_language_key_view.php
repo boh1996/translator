@@ -1,8 +1,8 @@
-<ul class="breadcrumb project-navigation" style="width:50%; min-width:410px; ">
+<ul class="breadcrumb project-navigation view-nagivation">
 	<li class="active"><strong><?= $this->lang->line("front_edit_language_key_title"); ?></strong></li>
 </ul>
 
-<section class="well" style="width:400px; margin-left:15%;">
+<section class="well inner-view">
 	
 	<form class="form-horizontal" id="edit_language_key_form">
 	    <legend><?= $this->lang->line("front_edit_language_key"); ?></legend>

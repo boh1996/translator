@@ -1,9 +1,9 @@
-<ul class="breadcrumb project-navigation" style="width:50%; min-width:410px; ">
+<ul class="breadcrumb project-navigation view-nagivation">
 	<li><a data-target=""><?= $this->lang->line("common_projects"); ?></a> <span class="divider">/</span></li>
 	<li class="active"><?= $this->lang->line("front_edit_project_title"); ?></li>
 </ul>
 
-<section class="well" style="width:400px; margin-left:15%;">
+<section class="well inner-view">
 	
 	<form class="form-horizontal" id="edit_project_form">
 	    <legend><?= $this->lang->line("front_edit_project"); ?></legend>

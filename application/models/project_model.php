@@ -53,5 +53,24 @@ class Project_Model extends CI_Model {
 
 		return ($row->base_language_id !== false && $row->base_language_id != null) ? $row->base_language_id : 1;
 	}
+
+	public function project_file_keys () {
+		
+	}
+
+	public function project_languages_progress ( Project $Project, $languages ) {
+		if ( isset($Project->files) && is_array($Project->files) && count($Project->files) > 0 ) {
+
+		} else {
+			return array(
+				"done" => 100,
+				"missing_approval" => 0,
+				"missing" => 0,
+				"done_count" => 0,
+				"missing_approval_count" => 0,
+				"missing_count" => 0
+			);
+		}
+	}
 }
 ?>

@@ -1,4 +1,4 @@
-<ul class="breadcrumb project-navigation" style="width:50%; min-width:410px; ">
+<ul class="breadcrumb project-navigation view-nagivation view-navigation-view-padding">
 	<li><a data-target=""><?= $this->lang->line("common_projects"); ?></a> <span class="divider">/</span></li>
 	<li><a data-target="project/{{project_id}}">{{project_name}}</a> <span class="divider">/</span></li>
 	<li><a data-target="project/{{project_id}}/{{language_id}}">{{language_name}}</a> <span class="divider">/</span></li>
@@ -8,7 +8,7 @@
 <input type="hidden" id="language_id" value="{{language_id}}">
 <input type="hidden" id="project_id" value="{{project_id}}">
 
-<section class="well well-white" style="width:50%; padding-right:10px; margin-left:15%;">
+<section class="well well-white inner-view view-padding">
 	<div class="translations">
 		{{#keys.length}}
 			<form class="form-horizontal" id="translation_form">
@@ -89,6 +89,7 @@
 				<div class="form-actions">
 					<button class="btn btn-primary save-translations"><?= $this->lang->line("common_save"); ?></button>
 				  	<a class="btn" data-target="project/{{project_id}}/{{language_id}}" ><?= $this->lang->line("common_cancel"); ?></a>
+				  	<a class="btn" data-target="project/{{project_id}}/{{language_id}}/{{file_id}}/add/key" ><?= $this->lang->line("front_add_key"); ?></a>
 				</div>
 			</div>
 		{{/keys.length}}
