@@ -198,18 +198,42 @@ $(document).ready(function () {
 			//showPage("language_key_edit");
 		});
 
-		crossroads.addRoute("project/{project_id}/{{language_id}}/{file_id}/add/key",function ( project_id, language_id, file_id ) {
-			/**
-			 * data {
-			 *  project_id
-			 *  file_id
-			 *  language_name
-			 *  file_name
-			 *  project_name
-			 * 	language_id
-			 * }
-			 */
-			showPage("add_language_key");
+		crossroads.addRoute("project/{project_id}/{language_id}/{file_id}/add/key",function ( project_id, language_id, file_id ) {
+			$.ajax({
+				url : root + "language/" + language_id,
+				success : function (language_data) {
+					$.ajax({
+						url : root + "project/"+project_id,
+						success : function (project_data) {
+							$.ajax({
+								url: root + "file/"+file_id,
+								success : function ( file_data ) {
+									var data = {	
+										"file" : file_data,
+										"language" : language_data,
+										"project" : project_data
+									};
+									$("#add_language_key").html(Mustache.render($("#addLanguageKeyTemplate").html(),data));
+									showPage("add_language_key");
+									$('[data-toggle="button"]').button('toggle');
+								},
+								error : function () {
+									// Show error file not found
+									return;
+								}
+							});
+						},
+						error : function () {
+							// Show project not found
+							return;
+						}
+					});
+				},
+				error : function () {
+					//Show language not found
+					return;
+				}
+			});
 		});
 
 		crossroads.addRoute("project/{project_id}/{language_id}/{file_id}/edit", function (project_id, language_id, file_id) {
@@ -236,7 +260,7 @@ $(document).ready(function () {
 			showPage("project_add_language");
 		});
 
-		crossroads.addRoute("project/{id}/{language_id}",function (project_id, language_id) {		
+		crossroads.addRoute(/^project\/([0-9]+)\/([0-9]+)$/,function (project_id, language_id) {		
 			$.ajax({
 				url : root + "language/" + language_id,
 				success : function (language_data) {
@@ -278,7 +302,7 @@ $(document).ready(function () {
 	});
 
 	if ( $("#deleteProjectConfirmModalTemplate").length > 0) {
-		crossroads.addRoute("project/delete/{id}",function (id) {
+		crossroads.addRoute(/^project\/delete\/([0-9]+)/,function (id) {
 			$.ajax({
 				url : root + "project/" + id,
 				success : function (data) {
@@ -291,18 +315,18 @@ $(document).ready(function () {
 						History.pushState(null,null,root); 
 					});
 
-					$("#deleteProjectConfirmModal").find(".btn-primary").live("click", function () {
+					$("#deleteProjectConfirmModal").on("click",".btn-primary", function () {
 						$.ajax({
 							url : root + "project/"+id,
 							type : "DELETE",
 							success : function () {
-								$('[data-index="'+id+'"]').parent("tr").remove();
+								$("#home").find('[data-index="'+id+'"]').parent("td").parent("tr").remove();
 							}
 						});
 					});
 				},
 				error : function () {
-					//An error occured while saving
+					//An error occurred while saving
 				}
 			});
 	    });

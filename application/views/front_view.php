@@ -10,6 +10,8 @@
 		"error_no_translation" : '<?php echo $this->lang->line('errors_translation_empty'); ?>',
 		"error_multiple_translation_fields_empty" : '<?php echo $this->lang->line('errors_one_or_more_translation_empty'); ?>',
 		"data_saved" : '<?php echo $this->lang->line('front_data_has_been_saved'); ?>',
+		"create_token_missing_token_name" : '<?php echo $this->lang->line('front_create_token_missing_token_name'); ?>',
+		"token_created" : '<?php echo $this->lang->line('front_token_created'); ?>'
 	};
 </script>
 
@@ -108,3 +110,11 @@
 		<?= $this->user_control->LoadTemplate("delete_confirm_view"); ?>
 	</script>
 <?php endif; ?>
+
+<script type="musctache/template" id="tokenTemplate">
+	<?= $this->user_control->LoadTemplate("token_view"); ?>
+</script>
+
+<script type="musctache/template" id="createTokenModalTemplate">
+	<?= $this->user_control->LoadTemplate("create_token_modal_view"); ?>
+</script>

@@ -66,7 +66,23 @@ class Key extends Std_Library {
 	 * @since 1.0
 	 * @access public
 	 */
-	public $approve_first = true;
+	public $approve_first = null;
+
+	/**
+	 * The UNIX timestamp when the language key was created
+	 * @since 1.0
+	 * @access public
+	 * @var integer
+	 */
+	public $time_created = null;
+
+	/**
+	 * The UNIX timestamp when the language key last was updated
+	 * @since 1.0
+	 * @access public
+	 * @var integer
+	 */
+	public $last_updated = null;
 
 	### Class Settings ###
 
@@ -104,6 +120,12 @@ class Key extends Std_Library {
 		);
 		$this->_INTERNAL_ROW_NAME_CONVERT = array(
 			"language_file_id" 				=> "file",
+		);
+		$this->_INTERNAL_LAST_UPDATED_PROPERTY 		= "last_updated";
+		$this->_INTERNAL_CREATED_TIME_PROPERTY 		= "time_created";
+		$this->_INTERNAL_EXPORT_FORMATING = array(
+			"time_created" => array("date","d/m-Y - H:i:s"),
+			"last_updated" => array("date","d/m-Y - H:i:s")
 		);
 		$this->_INTERNAL_LINK_PROPERTIES = array(
 			"tokens"			=> array("language_key_tokens",	array("language_key_id" => "id"),array("token_id"), array("token_id","language_key_id")),

@@ -25,7 +25,18 @@
 	$lang["front_edit_language_key"] = "Edit Language Key";
 	$lang["front_key"] = "Key";
 	$lang["front_data_has_been_saved"] = "The data has been saved";
-	$lang["front_add_key"] = "Add key";
+	$lang["front_add_key"] = "Add Language key";
+	$lang["front_add_language_key_to_project"] = "Add Language Key to {{project.name}}";
+	$lang["front_description"] = "Description";
+	$lang["front_token"] = "Token";
+	$lang["front_approve_first"] = "Approve first";
+	$lang["front_create_token"] = "Create token";
+	$lang["front_search_token"] = "Search for token";
+	$lang["front_edit_token"] = "Edit token";
+	$lang["front_create_token"] = "Create token";
+	$lang["front_delete_token"] = "Delete token";
+	$lang["front_create_token_missing_token_name"] = "Missing token name";
+	$lang["front_token_created"] = "Token created";
 
 	########### Progress #############
 	$lang["front_progress_missing_approval_tooltip"] = "Missing approval: {{progress.missing_approval_count}}";

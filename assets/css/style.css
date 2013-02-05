@@ -15,8 +15,22 @@
   overflow: hidden;
 }
 
+input {
+    max-width: 100%;
+} 
+
+* {
+  outline: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  outline-color: transparent;
+  outline-style: none;
+}
 .fixed {
   position: fixed !important;
+}
+
+.space {
+  margin-left: 40px;
 }
 
 select:focus {
@@ -35,6 +49,7 @@ a[data-target] {
   position: absolute; 
   top: 50%; 
   left: 50%; 
+  clear:both;
   margin-top: -32px; 
   margin-left: -32px;
   width: 64px;

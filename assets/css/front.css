@@ -19,6 +19,22 @@
 	}
 }
 
+.spacing-left {
+	padding-left: 5px;
+}
+
+.pull-down {
+	margin-bottom: 10px;
+}
+
+.pointer{
+	cursor: pointer;
+}
+
+.no-resize { 
+    resize: none; 
+}
+
 .view-navigation-view-padding {
 	margin-right: 12%;
 }
@@ -34,6 +50,13 @@
 
 .inner-view {
 	width:70%; 
+	margin-left:15%; 
+	min-width:400px; 
+	margin-right:5%;
+}
+
+.inner-view-short {
+	width:40%; 
 	margin-left:15%; 
 	min-width:400px; 
 	margin-right:5%;

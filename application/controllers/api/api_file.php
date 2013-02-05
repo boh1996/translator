@@ -169,4 +169,53 @@ class API_File extends API_Controller {
 
         $File->Delete();
 	}
+
+	/**
+	 * This function creates a language key for a file
+	 * @since 1.0
+	 * @access public
+	 * @param integer :file_id The id of the file to create the key for
+	 */
+	public function add_language_key_post () {
+		if ( ! $this->get('file_id') ) {  
+            self::error($this->config->item("api_bad_request_code"));
+            return; 
+        }
+
+        $File = new File();
+
+        if ( ! $File->Load($this->get("file_id")) ) {
+        	self::error($this->config->item("api_not_found_code"));
+        	return;
+        }
+
+        $this->load->library("key");
+
+        $Key = new Key();
+
+        $data = $this->post();
+        $data["file"] = $File->id;
+
+        if ( isset($data["approve_first"]) ) {
+        	$approve_first = ($data["approve_first"] == "true") ? true : false;
+    	} else {
+    		$approve_first = false;
+    	}
+
+    	unset($data["approve_first"]);
+
+        if ( ! $Key->Import($data) ) {
+        	self::error($this->config->item("api_bad_request_code"));
+			return;
+        }
+
+        $Key->approve_first = $approve_first;
+
+       	if ( ! $Key->Save() ) {
+        	self::error($this->config->item("api_error_while_saving_code"));
+			return;
+        }
+
+        $this->response($Key->Export(),$this->config->item("api_created_code"));
+	}
 }

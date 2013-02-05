@@ -56,6 +56,10 @@ if ( ! empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_R
 	$route["file/(:num)\.(xml|json)"] = "api/api_file/index/id/$1";
 	$route["file/(:num)"] = "api/api_file/index/id/$1";
 
+	#File Language Key
+	$route["file/(:num)/add/key\.(xml|json)"] = "api/api_file/add_language_key/file_id/$1";
+	$route["file/(:num)/add/key"] = "api/api_file/add_language_key/file_id/$1";
+
 	#File with base translations
 	$route["project/(:num)/language/(:num)/file/(:num)\.(xml|json)"] = "api/api_file/project_file/project_id/$1/language_id/$2/file_id/$3";
 	$route["project/(:num)/language/(:num)/file/(:num)"] = "api/api_file/project_file/project_id/$1/language_id/$2/file_id/$3";

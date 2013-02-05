@@ -9,8 +9,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 		<link rel="stylesheet" type="text/css" href="<?php echo $asset_url; ?>bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo $asset_url; ?>bootstrap/css/bootstrap-responsive.min.css">
-		<link rel="stylesheet" type="text/css" href="<?php echo $asset_url; ?>css/style.css">
 		<link rel="stylesheet" type="text/css" href="<?php echo $asset_url; ?>css/scrollbar.css">
+		<script>if (location.hostname == "127.0.0.1") { document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=2"></' + 'script>') }</script>
 		<?php
 			if ( isset($style_includes) ) {
 				foreach ($style_includes as $include) {

@@ -7,4 +7,5 @@ $lang["common_project"] = "Project";
 $lang["common_save"] = "Save";
 $lang["common_projects"] = "Projects";
 $lang["common_language"] = "Language";
+$lang["common_create"] = "Create";
 ?>

@@ -57,7 +57,7 @@ class API_Token extends API_Controller {
 	public function index_post () {
 		$Token = new Token();
 
-		if ( ! $Token->Import($token->post()) ) {
+		if ( ! $Token->Import($this->post()) ) {
 			self::error($this->config->item("api_bad_request_code"));
 			return;
 		}
