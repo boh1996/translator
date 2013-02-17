@@ -204,6 +204,8 @@ class API_File extends API_Controller {
 
     	unset($data["approve_first"]);
 
+    	$data["tokens"] = array_unique($data["tokens"]);
+
         if ( ! $Key->Import($data) ) {
         	self::error($this->config->item("api_bad_request_code"));
 			return;

@@ -37,6 +37,12 @@
 	$lang["front_delete_token"] = "Delete token";
 	$lang["front_create_token_missing_token_name"] = "Missing token name";
 	$lang["front_token_created"] = "Token created";
+	$lang["front_edit_token"] = "Edit '{{token}}'";
+	$lang["front_search_for_token"] = "Search for token";
+	$lang["front_language_key_created"] = "Success, the language key was created!";
+	$lang["front_token_updated"] = "The token has been updated";
+	$lang["front_token_added"] = "The selected token has been added";
+	$lang["front_token_not_found"] = "The token wasn't found!";
 
 	########### Progress #############
 	$lang["front_progress_missing_approval_tooltip"] = "Missing approval: {{progress.missing_approval_count}}";

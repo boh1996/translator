@@ -1,8 +1,8 @@
-<input type="hidden" id="language_key_fproject_id" value="{{project.id}}">
-<input type="hidden" id="language_key_flanguage_id" value="{{language.id}}">
+<input type="hidden" id="language_key_project_id" value="{{project.id}}">
+<input type="hidden" id="language_key_language_id" value="{{language.id}}">
 <input type="hidden" id="language_key_file_id" value="{{file.id}}">
 
-<div class="container-fluid">
+<div class="container-fluid" id="create_language_key_container">
  	<div class="row-fluid">
 		<div class="span12">
 			<ul class="breadcrumb">
@@ -55,11 +55,20 @@
 
 		<div class="span5 offset1">
 			<div class="well">
-				<table class="tokens pull-down" id="create_language_key_tokens" cellspacing="10">
-					<tr data-index="1"></tr>
-					<tr data-index="2"></tr>
-				</table>
-				<a class="btn btn-primary btn-block" id="add_language_keycreate_token_button"><?= $this->lang->line("front_create_token"); ?></a>
+				<div class="row">
+					<div class="span11 offset1">
+						<table class="tokens fixed-table add-language-key-tokens pull-down" id="create_language_key_tokens" cellspacing="0" cellpadding="0">
+						</table>
+					</div>
+				</div>
+				<div class="row">
+					<div class="span5 offset1">
+						<a class="btn btn-primary btn-block" id="add_language_keycreate_token_button"><?= $this->lang->line("front_create_token"); ?></a>
+					</div>
+					<div class="span6">
+						<a class="btn btn btn-block" id="add_language_search_token"><?= $this->lang->line("front_search_for_token"); ?></a>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

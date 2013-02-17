@@ -11,8 +11,16 @@
 		"error_multiple_translation_fields_empty" : '<?php echo $this->lang->line('errors_one_or_more_translation_empty'); ?>',
 		"data_saved" : '<?php echo $this->lang->line('front_data_has_been_saved'); ?>',
 		"create_token_missing_token_name" : '<?php echo $this->lang->line('front_create_token_missing_token_name'); ?>',
-		"token_created" : '<?php echo $this->lang->line('front_token_created'); ?>'
+		"token_created" : '<?php echo $this->lang->line('front_token_created'); ?>',
+		"language_key_created" : '<?php echo $this->lang->line('front_language_key_created'); ?>',
+		"token_updated" : '<?php echo $this->lang->line('front_token_updated'); ?>',
+		"token_added" : '<?php echo $this->lang->line('front_token_added'); ?>',
+		"token_not_found" : '<?php echo $this->lang->line('front_token_not_found'); ?>'
 	};
+</script>
+
+<script type="text/javascript">
+	document.write('<script src="'+ location.origin + ':35729/livereload.js?snipver=2"><' + '/script>');
 </script>
 
 <?= $this->load->view("nav_view",true); ?>
@@ -117,4 +125,12 @@
 
 <script type="musctache/template" id="createTokenModalTemplate">
 	<?= $this->user_control->LoadTemplate("create_token_modal_view"); ?>
+</script>
+
+<script type="musctache/template" id="editTokenModalTemplate">
+	<?= $this->user_control->LoadTemplate("edit_token_view"); ?>
+</script>
+
+<script type="musctache/template" id="searchTokenModalTemplate">
+	<?= $this->user_control->LoadTemplate("search_for_token_modal_view"); ?>
 </script>

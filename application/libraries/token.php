@@ -34,6 +34,14 @@ class Token extends Std_Library {
 	 */
 	public $description = null;
 
+	/**
+	 * The project that owns the token
+	 * @since 1.0
+	 * @access public
+	 * @var object
+	 */
+	public $project = null;
+
 	### Class Settings ###
 
 	/**
@@ -53,10 +61,18 @@ class Token extends Std_Library {
 		$this->_INTERNAL_NOT_ALLOWED_DUBLICATE_ROWS_ABORT_ON_NULL = true;
 		$this->_INTERNAL_NOT_ALLOWED_DUBLICATE_ROWS = 	array(
 			"token",
-			"description"
+			"description",
+			"project"
 		);
+		$this->_INTERNAL_OVERWRITE_ON_DUBLICATE = true;
 		$this->_INTERNAL_DATABASE_EXPORT_INGNORE = array(
 			"id"
+		);
+		$this->_INTERNAL_ROW_NAME_CONVERT = array(
+			"project_id" 				=> "project",
+		);
+		$this->_INTERNAL_LOAD_FROM_CLASS = array(
+			"Project" 				=> "Project",
 		);
 		parent::__construct();
 	}

@@ -99,6 +99,8 @@ class API_Token extends API_Controller {
 			return;
 		}
 
+		//Revalidate translations
+
 		$this->response($Token->Export(), $this->config->item("api_accepted_code"));
 	}
 
@@ -122,5 +124,35 @@ class API_Token extends API_Controller {
         }
 
         $Token->Delete();
+	}
+
+	/**
+	 * This function outputs all the available tokens for a project
+	 * @since 1.0
+	 * @access public
+	 */
+	public function get_tokens_get () {
+		if ( ! $this->get('project_id') ) {  
+           	self::error($this->config->item("api_bad_request_code"));
+            return; 
+        }
+
+        $this->load->model("project_model");
+
+        if ( ! $this->project_model->project_exists($this->get("project_id")) ) {
+        	self::error($this->config->item("api_not_found_code"));
+        	return;
+        }
+
+        $this->load->model("token_model");
+
+        $result = $this->token_model->get_project_tokens($this->get("project_id"));
+
+        if ( ! $result ) {
+        	self::error($this->config->item("api_not_found_code"));
+        	return;
+        }
+
+        $this->response($result);
 	}
 }

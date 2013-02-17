@@ -69,6 +69,10 @@ if ( ! empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_R
 	$route["token/(:num)\.(xml|json)"] = "api/api_token/index/id/$1";
 	$route["token/(:num)"] = "api/api_token/index/id/$1";
 
+	#Get project tokens
+	$route["token/get/(:num)\.(xml|json)"] = "api/api_token/get_tokens/project_id/$1";
+	$route["token/get/(:num)"] = "api/api_token/get_tokens/project_id/$1";
+
 	#Project with language
 	$route["project/language/(:num)/(:num)\.(xml|json)"] = "api/api_project/language_project/project/$1/language/$2";
 	$route["project/language/(:num)/(:num)"] = "api/api_project/language_project/project/$1/language/$2";

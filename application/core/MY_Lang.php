@@ -24,7 +24,7 @@ class MY_Lang extends CI_Lang {
             $value = $this->_ni_line($value, $params); 
         }
 
-		return is_array($value) ? $value : stripslashes($value);
+		return is_array($value) ? $value : addslashes($value);
 	}
 
 	   /**

@@ -19,6 +19,23 @@
 	}
 }
 
+#search_token_body {
+	height: 180px;
+}
+
+.add-language-key-tokens .token-description {
+	display: none;
+}
+
+.add-language-key-tokens td:nth-child(2) {
+	display: none;
+}
+
+.token-property-divider {
+	padding-right: 0px;
+	padding-left: 5px;
+}
+
 .spacing-left {
 	padding-left: 5px;
 }
