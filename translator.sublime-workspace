@@ -4,8 +4,68 @@
 		"selected_items":
 		[
 			[
+				"_Get",
+				"_Get_Current_Time"
+			],
+			[
+				"_pa",
+				"_patch_args"
+			],
+			[
+				"val",
+				"value"
+			],
+			[
+				"add",
+				"addslashes"
+			],
+			[
+				"to",
+				"tokens"
+			],
+			[
+				"array_u",
+				"array_unique"
+			],
+			[
+				"pro",
+				"property"
+			],
+			[
 				"for",
 				"for	for (…) {…}"
+			],
+			[
+				"res",
+				"result"
+			],
+			[
+				"proj",
+				"project_id"
+			],
+			[
+				"mi",
+				"min-width"
+			],
+			[
+				"fi",
+				"fixed-table"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"f",
+				"fixed-table"
+			],
+			[
+				"mar",
+				"margin-left"
 			],
 			[
 				"margi",
@@ -34,10 +94,6 @@
 			[
 				"lan",
 				"lang"
-			],
-			[
-				"pro",
-				"project_data"
 			],
 			[
 				"show",
@@ -108,16 +164,8 @@
 				"translation_id"
 			],
 			[
-				"to",
-				"tokens"
-			],
-			[
 				"erro",
 				"errorTranslations"
-			],
-			[
-				"res",
-				"response"
 			],
 			[
 				"Error",
@@ -168,20 +216,12 @@
 				"textarea"
 			],
 			[
-				"di",
-				"div"
-			],
-			[
 				"language",
 				"language_id"
 			],
 			[
 				"marg",
 				"margin-bottom"
-			],
-			[
-				"in",
-				"input	Tag"
 			],
 			[
 				"max",
@@ -264,10 +304,6 @@
 				"project_model"
 			],
 			[
-				"add",
-				"addRoute"
-			],
-			[
 				"cor",
 				"crossroads"
 			],
@@ -306,10 +342,6 @@
 			[
 				"li",
 				"link	Tag"
-			],
-			[
-				"mar",
-				"margin-left"
 			],
 			[
 				"tem",
@@ -482,38 +514,6 @@
 			[
 				"wi",
 				"width"
-			],
-			[
-				"widt",
-				"widthCalculated"
-			],
-			[
-				"of",
-				"offset"
-			],
-			[
-				"col",
-				"columns"
-			],
-			[
-				"c",
-				"childs"
-			],
-			[
-				"ca",
-				"calculateSize"
-			],
-			[
-				"row",
-				"rowsCalculated"
-			],
-			[
-				"co",
-				"columnsCalculated"
-			],
-			[
-				"ro",
-				"rowsCalculated"
 			]
 		]
 	},
@@ -523,31 +523,7 @@
 			"file": "application/views/front_view.php",
 			"settings":
 			{
-				"buffer_size": 4748,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "application/views/templates/add_language_key_view.php",
-			"settings":
-			{
-				"buffer_size": 3178,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "application/views/templates/search_token_modal_view.php",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "application/views/templates/token_view.php",
-			"settings":
-			{
-				"buffer_size": 399,
+				"buffer_size": 5124,
 				"line_ending": "Windows"
 			}
 		},
@@ -555,7 +531,7 @@
 			"file": "assets/js/application.js",
 			"settings":
 			{
-				"buffer_size": 3627,
+				"buffer_size": 9206,
 				"line_ending": "Windows"
 			}
 		},
@@ -563,15 +539,39 @@
 			"file": "application/language/english/front_lang.php",
 			"settings":
 			{
-				"buffer_size": 2472,
+				"buffer_size": 2711,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "assets/css/front.css",
+			"file": "application/controllers/api/api_language_key.php",
 			"settings":
 			{
-				"buffer_size": 1666,
+				"buffer_size": 2742,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/controllers/api/api_project.php",
+			"settings":
+			{
+				"buffer_size": 4718,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/config/routes.php",
+			"settings":
+			{
+				"buffer_size": 4321,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "application/core/MY_Router.php",
+			"settings":
+			{
+				"buffer_size": 4249,
 				"line_ending": "Windows"
 			}
 		}
@@ -640,35 +640,55 @@
 	},
 	"file_history":
 	[
-		"/R/translator/assets/js/urlhandling.js",
-		"/R/translator/application/views/templates/create_token_modal_view.php",
-		"/R/translator/application/libraries/token.php",
+		"/R/translator/application/core/MY_Lang.php",
+		"/R/translator/application/config/rest.php",
+		"/R/translator/application/config/autoload.php",
+		"/C/Users/Bo/Desktop/rest.txt",
+		"/R/codeigniter-restserver/application/libraries/REST_Controller.php",
+		"/R/translator/application/libraries/REST_Controller.php",
+		"/R/translator/application/libraries/std_library.php",
+		"/R/ClickThisORM/libraries/std_library.php",
+		"/R/translator/application/controllers/api/api_project.php",
 		"/R/translator/application/controllers/api/api_token.php",
+		"/R/translator/application/controllers/api/api_language.php",
+		"/R/translator/application/controllers/api/api_access.php",
+		"/R/translator/application/controllers/api/api_file.php",
+		"/R/translator/application/views/templates/create_token_modal_view.php",
+		"/R/translator/application/views/templates/add_language_key_view.php",
+		"/R/IllutionBootstrap/bootstrap/js/extra/typeaheadmap.js",
+		"/R/translator/application/controllers/api/api_language_key.php",
+		"/R/translator/application/views/templates/edit_token_view.php",
+		"/R/translator/assets/css/front.css",
+		"/R/translator/application/views/templates/search_for_token_modal_view.php",
+		"/R/translator/application/views/templates/search_for_token.php",
+		"/R/translator/application/views/templates/token_view.php",
+		"/R/translator/application/models/token_model.php",
+		"/R/translator/application/models/project_model.php",
+		"/R/translator/application/models/file_model.php",
+		"/R/translator/application/config/routes.php",
+		"/R/IllutionBootstrap/bootstrap/js/core/bootstrap-typeahead.js",
+		"/R/IllutionBootstrap/bootstrap/less/extra/extra.less",
+		"/R/translator/application/libraries/token.php",
+		"/R/translator/application/libraries/key.php",
+		"/R/translator/application/views/templates/project_view.php",
+		"/R/translator/application/language/english/common_lang.php",
+		"/R/translator/application/views/templates/search_token_modal_view.php",
+		"/R/translator/assets/js/urlhandling.js",
 		"/R/translator/assets/js/routes.js",
 		"/R/translator/application/views/templates/alerts_view.php",
-		"/R/translator/application/config/routes.php",
-		"/R/translator/application/controllers/api/api_file.php",
 		"/R/translator/application/language/english/front_lang.php",
-		"/R/translator/application/language/english/common_lang.php",
-		"/R/translator/application/libraries/key.php",
 		"/R/translator/application/libraries/translation.php",
 		"/R/translator/assets/js/translate.js",
 		"/R/translator/assets/css/style.css",
-		"/R/translator/application/models/project_model.php",
 		"/R/translator/application/views/templates/projects_view.php",
-		"/R/translator/application/views/templates/add_language_key_view.php",
-		"/R/translator/application/views/templates/token_view.php",
 		"/R/translator/application/views/templates/language_file_view.php",
 		"/R/translator/application/views/header_view.php",
-		"/R/translator/assets/css/front.css",
 		"/R/translator/application/views/templates/project_language_add_file_view.php",
-		"/R/translator/application/controllers/api/api_project.php",
 		"/R/translator/application/config/config.php",
 		"/R/translator/application/controllers/front.php",
 		"/C/Users/Bo/Desktop/flatstrap-master/flatstrap-master/assets/css/bootstrap.css",
 		"/R/translator/application/views/front_view.php",
 		"/R/translator/application/views/templates/project_language_files_view.php",
-		"/R/translator/application/views/templates/project_view.php",
 		"/R/translator/application/views/templates/create_project_view.php",
 		"/R/translator/application/views/templates/project_edit_view.php",
 		"/R/translator/application/views/templates/edit_language_key_view.php",
@@ -697,9 +717,7 @@
 		"/C/Users/Bo/AppData/Local/Google/Chrome/User Data/Default/Extensions/liajalnjelpdmdbfbmpiconpenfbpgln/1.9.1.5_0/background/sync.js",
 		"/R/translator/application/language/english/errors_lang.php",
 		"/C/Users/Bo/AppData/Local/Google/Chrome/User Data/Default/Extensions/liajalnjelpdmdbfbmpiconpenfbpgln/1.9.1.5_0/language/settings-da.json",
-		"/R/translator/application/libraries/std_library.php",
 		"/R/translator/application/controllers/api/api_translation.php",
-		"/R/translator/application/models/file_model.php",
 		"/R/translator/application/models/translation_model.php",
 		"/R/translator/application/libraries/role.php",
 		"/R/translator/application/libraries/user.php",
@@ -717,8 +735,6 @@
 		"/C/Users/Bo/Desktop/index.html",
 		"/R/IllutionBootstrap/bootstrap/less/extra/wysiwyg/wysiwyg-color.less",
 		"/C/Users/Bo/Desktop/old_js.js",
-		"/R/translator/application/config/rest.php",
-		"/R/translator/application/controllers/api/api_access.php",
 		"/R/IllutionBootstrap/bootstrap/js/core/bootstrap-button.js",
 		"/C/Users/Bo/Desktop/AdministrativeUnit/AdministrativeUnit.gml",
 		"/C/Users/Bo/Desktop/AdministrativeUnitV2/AdministrativeUnit.gml",
@@ -728,8 +744,6 @@
 		"/R/translator/application/views/templates/project_add_language_view.php",
 		"/R/translator/application/libraries/project.php",
 		"/R/translator/application/models/projects_model.php",
-		"/R/translator/application/controllers/api/api_language_key.php",
-		"/R/translator/application/controllers/api/api_language.php",
 		"/R/translator/application/models/language_model.php",
 		"/R/translator/application/models/std_model.php",
 		"/R/translator/application/libraries/language.php",
@@ -737,7 +751,6 @@
 		"/R/translator/application/views/templates/project_languages_view.php",
 		"/R/translator/assets/css/webkit-form.css",
 		"/C/Users/Bo/Desktop/widgets.css",
-		"/R/translator/application/libraries/REST_Controller.php",
 		"/R/translator/application/views/templates/alert_error_view.php",
 		"/R/translator/application/views/templates/delete_confirm_view.php",
 		"/R/translator/assets/css/user.css",
@@ -754,20 +767,7 @@
 		"/C/xampp/htdocs/codeigniter/application/config/routes.php",
 		"/C/xampp/htdocs/codeigniter/application/config/config.php",
 		"/C/xampp/htdocs/codeigniter/application/views/modals_view.php",
-		"/C/xampp/htdocs/codeigniter/application/libraries/std_library.php",
-		"/C/xampp/htdocs/codeigniter/application/libraries/user.php",
-		"/C/xampp/htdocs/codeigniter/application/models/user_roles_model.php",
-		"/C/xampp/htdocs/codeigniter/application/controllers/api/api_access.php",
-		"/C/xampp/htdocs/codeigniter/application/libraries/API_Controller.php",
-		"/C/xampp/htdocs/codeigniter/application/libraries/role.php",
-		"/C/xampp/htdocs/codeigniter/application/models/std_model.php",
-		"/C/xampp/htdocs/codeigniter/application/config/roles.php",
-		"/C/xampp/htdocs/codeigniter/assets/css/front.css",
-		"/C/xampp/htdocs/codeigniter/assets/css/style.css",
-		"/C/xampp/htdocs/codeigniter/assets/js/routes.js",
-		"/C/xampp/htdocs/codeigniter/application/language/english/front_lang.php",
-		"/C/xampp/htdocs/codeigniter/application/models/projects_model.php",
-		"/C/xampp/htdocs/codeigniter/application/libraries/translation.php"
+		"/C/xampp/htdocs/codeigniter/application/libraries/std_library.php"
 	],
 	"find":
 	{
@@ -795,6 +795,32 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"time()",
+			"put",
+			"PUT",
+			"_options_args",
+			"options",
+			"OPTIONS",
+			"get",
+			"GET",
+			"Project",
+			"i",
+			"token_name",
+			"token",
+			"results",
+			"num",
+			"key",
+			"id",
+			"{{token}}",
+			"{{description}}",
+			"{{token}}",
+			"{{id}}",
+			"margin",
+			"{{token}}",
+			"{{id}}",
+			"create_token_modal",
+			"{{id}}",
+			"token_name",
 			"pull-down",
 			"front_key",
 			"id",
@@ -896,33 +922,7 @@
 			"a",
 			"button",
 			"File",
-			"api_token",
-			"File",
-			"id",
-			"index",
-			"api_token",
-			"token",
-			"_INTERNAL_LINKED_MERGE_RESULTS",
-			"_INTERNAL_LINKED_MERGER_RESULTS",
-			"[type]",
-			"th",
-			"p",
-			"div",
-			"th",
-			"ui",
-			"Translation",
-			"file",
-			" =",
-			"file",
-			"404",
-			"400",
-			"Translation",
-			"translation",
-			"REST",
-			"_error",
-			"language_key_id",
-			"created_time",
-			"translation_id"
+			"api_token"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1064,15 +1064,15 @@
 					"file": "application/views/front_view.php",
 					"settings":
 					{
-						"buffer_size": 4748,
+						"buffer_size": 5124,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								4715,
-								4715
+								1482,
+								1482
 							]
 						],
 						"settings":
@@ -1084,111 +1084,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 45.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "application/views/templates/add_language_key_view.php",
-					"settings":
-					{
-						"buffer_size": 3178,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2805,
-								2805
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 360.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "application/views/templates/search_token_modal_view.php",
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "application/views/templates/token_view.php",
-					"settings":
-					{
-						"buffer_size": 399,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								399,
-								399
-							]
-						],
-						"settings":
-						{
-							"incomplete_sync": null,
-							"remote_loading": false,
-							"synced": false,
-							"syntax": "Packages/PHP/PHP.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
 					"file": "assets/js/application.js",
 					"settings":
 					{
-						"buffer_size": 3627,
+						"buffer_size": 9206,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1804,
-								1804
+								219,
+								219
 							]
 						],
 						"settings":
@@ -1200,25 +1114,25 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 180.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 2,
 					"file": "application/language/english/front_lang.php",
 					"settings":
 					{
-						"buffer_size": 2472,
+						"buffer_size": 2711,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2044,
-								2022
+								2378,
+								2378
 							]
 						],
 						"settings":
@@ -1236,19 +1150,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "assets/css/front.css",
+					"buffer": 3,
+					"file": "application/controllers/api/api_language_key.php",
 					"settings":
 					{
-						"buffer_size": 1666,
+						"buffer_size": 2742,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								313,
-								313
+								985,
+								985
 							]
 						],
 						"settings":
@@ -1256,8 +1170,97 @@
 							"incomplete_sync": null,
 							"remote_loading": false,
 							"synced": false,
-							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 242.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "application/controllers/api/api_project.php",
+					"settings":
+					{
+						"buffer_size": 4718,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								171,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "application/config/routes.php",
+					"settings":
+					{
+						"buffer_size": 4321,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4161,
+								4161
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1385.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "application/core/MY_Router.php",
+					"settings":
+					{
+						"buffer_size": 4249,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								96,
+								96
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -1326,16 +1329,144 @@
 		"selected_items":
 		[
 			[
-				"ur",
-				"assets/js/urlhandling.js"
+				"my_r",
+				"application/core/MY_Router.php"
+			],
+			[
+				"my",
+				"application/core/MY_Lang.php"
+			],
+			[
+				"aut",
+				"application/config/autoload.php"
+			],
+			[
+				"rest",
+				"application/config/rest.php"
+			],
+			[
+				"std",
+				"application/libraries/std_library.php"
+			],
+			[
+				"rote",
+				"application/config/routes.php"
+			],
+			[
+				"re",
+				"application/libraries/REST_Controller.php"
+			],
+			[
+				"cre",
+				"application/views/templates/create_token_modal_view.php"
+			],
+			[
+				"my_",
+				"application/core/MY_Lang.php"
+			],
+			[
+				"api_f",
+				"application/controllers/api/api_file.php"
+			],
+			[
+				"api_key",
+				"application/controllers/api/api_language_key.php"
+			],
+			[
+				"api_t",
+				"application/controllers/api/api_token.php"
+			],
+			[
+				"ed",
+				"application/views/templates/edit_token_view.php"
+			],
+			[
+				"sear_t",
+				"application/views/templates/search_for_token_modal_view.php"
+			],
+			[
+				"cre_t",
+				"application/views/templates/create_token_modal_view.php"
+			],
+			[
+				"sear_f",
+				"application/views/templates/search_for_token_modal_view.php"
+			],
+			[
+				"tok_",
+				"application/views/templates/token_view.php"
+			],
+			[
+				"to_m",
+				"application/models/token_model.php"
+			],
+			[
+				"pro_m",
+				"application/models/project_model.php"
+			],
+			[
+				"fil_m",
+				"application/models/file_model.php"
+			],
+			[
+				"_mod",
+				"application/models/file_model.php"
+			],
+			[
+				"rot",
+				"application/config/routes.php"
+			],
+			[
+				"ke",
+				"application/libraries/key.php"
+			],
+			[
+				"to",
+				"application/libraries/token.php"
+			],
+			[
+				"std_",
+				"application/libraries/std_library.php"
+			],
+			[
+				"fro.cs",
+				"assets/css/front.css"
+			],
+			[
+				"fr.c",
+				"assets/css/front.css"
+			],
+			[
+				"toke_v",
+				"application/views/templates/token_view.php"
+			],
+			[
+				"toj_v",
+				"application/views/templates/project_view.php"
+			],
+			[
+				"edi_t",
+				"application/views/templates/edit_token_view.php"
 			],
 			[
 				"to_v",
 				"application/views/templates/token_view.php"
 			],
 			[
-				"fro.cs",
-				"assets/css/front.css"
+				"tok_v",
+				"application/views/templates/token_view.php"
+			],
+			[
+				"comm",
+				"application/language/english/common_lang.php"
+			],
+			[
+				"toke_",
+				"application/views/templates/token_view.php"
+			],
+			[
+				"ur",
+				"assets/js/urlhandling.js"
 			],
 			[
 				"aler_",
@@ -1344,10 +1475,6 @@
 			[
 				"ap_t",
 				"application/controllers/api/api_token.php"
-			],
-			[
-				"rote",
-				"application/config/routes.php"
 			],
 			[
 				"rote.js",
@@ -1386,10 +1513,6 @@
 				"assets/js/routes.js"
 			],
 			[
-				"api_f",
-				"application/controllers/api/api_file.php"
-			],
-			[
 				"rotes",
 				"application/config/routes.php"
 			],
@@ -1408,10 +1531,6 @@
 			[
 				"transla.j",
 				"assets/js/translate.js"
-			],
-			[
-				"toke_v",
-				"application/views/templates/token_view.php"
 			],
 			[
 				"language_f",
@@ -1558,16 +1677,8 @@
 				"application/views/templates/project_view.php"
 			],
 			[
-				"pro_m",
-				"application/models/project_model.php"
-			],
-			[
 				"api_p",
 				"application/controllers/api/api_project.php"
-			],
-			[
-				"std",
-				"application/libraries/std_library.php"
 			],
 			[
 				"pro_la",
@@ -1580,10 +1691,6 @@
 			[
 				"tras",
 				"application/libraries/translation.php"
-			],
-			[
-				"std_",
-				"application/libraries/std_library.php"
 			],
 			[
 				"fron_l",
@@ -1636,10 +1743,6 @@
 			[
 				"role",
 				"application/libraries/role.php"
-			],
-			[
-				"ke",
-				"application/libraries/key.php"
 			],
 			[
 				"traslatio",
@@ -1736,106 +1839,6 @@
 			[
 				"api_pr",
 				"application/controllers/api/api_project.php"
-			],
-			[
-				"api_l",
-				"application/controllers/api/api_language_key.php"
-			],
-			[
-				"proje_m",
-				"application/models/projects_model.php"
-			],
-			[
-				"_mo",
-				"application/models/std_model.php"
-			],
-			[
-				"rest",
-				"application/config/rest.php"
-			],
-			[
-				"langua_v",
-				"application/views/templates/project_add_language_view.php"
-			],
-			[
-				"lan",
-				"application/libraries/language.php"
-			],
-			[
-				"crea_p",
-				"application/views/templates/create_project_view.php"
-			],
-			[
-				"fr_la",
-				"application/language/english/front_lang.php"
-			],
-			[
-				"comm_la",
-				"application/language/english/common_lang.php"
-			],
-			[
-				"projecs",
-				"application/views/templates/projects_view.php"
-			],
-			[
-				"fron.",
-				"assets/css/front.css"
-			],
-			[
-				"cre_",
-				"application/views/templates/create_project_view.php"
-			],
-			[
-				"comm_l",
-				"application/language/english/common_lang.php"
-			],
-			[
-				"rest.ph",
-				"application/config/rest.php"
-			],
-			[
-				"api_",
-				"application/controllers/api/api_project.php"
-			],
-			[
-				"we",
-				"assets/css/webkit-form.css"
-			],
-			[
-				"rout.",
-				"assets/js/routes.js"
-			],
-			[
-				"edi_v",
-				"application/views/templates/project_edit_view.php"
-			],
-			[
-				"foo",
-				"application/views/footer_view.php"
-			],
-			[
-				"st_l",
-				"application/libraries/std_library.php"
-			],
-			[
-				"re_c",
-				"application/libraries/REST_Controller.php"
-			],
-			[
-				"err_l",
-				"application/language/english/errors_lang.php"
-			],
-			[
-				"ap_f",
-				"application/controllers/api/api_file.php"
-			],
-			[
-				"cre_pr",
-				"application/views/templates/create_project_view.php"
-			],
-			[
-				".css",
-				"assets/css/front.css"
 			]
 		],
 		"width": 0.0

@@ -38,6 +38,8 @@
 |
 */
 
+$route["test"] = "api/api_project/test";
+
 /**
  * API Routes
  */
