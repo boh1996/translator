@@ -574,6 +574,30 @@
 				"buffer_size": 4249,
 				"line_ending": "Windows"
 			}
+		},
+		{
+			"file": "application/controllers/front.php",
+			"settings":
+			{
+				"buffer_size": 1109,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/views/header_view.php",
+			"settings":
+			{
+				"buffer_size": 1159,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "application/views/footer_view.php",
+			"settings":
+			{
+				"buffer_size": 1393,
+				"line_ending": "Windows"
+			}
 		}
 	],
 	"build_system": "",
@@ -640,6 +664,9 @@
 	},
 	"file_history":
 	[
+		"/R/translator/application/views/loading_view.php",
+		"/R/translator/application/views/footer_view.php",
+		"/R/translator/application/controllers/front.php",
 		"/R/translator/application/core/MY_Lang.php",
 		"/R/translator/application/config/rest.php",
 		"/R/translator/application/config/autoload.php",
@@ -685,7 +712,6 @@
 		"/R/translator/application/views/header_view.php",
 		"/R/translator/application/views/templates/project_language_add_file_view.php",
 		"/R/translator/application/config/config.php",
-		"/R/translator/application/controllers/front.php",
 		"/C/Users/Bo/Desktop/flatstrap-master/flatstrap-master/assets/css/bootstrap.css",
 		"/R/translator/application/views/front_view.php",
 		"/R/translator/application/views/templates/project_language_files_view.php",
@@ -693,11 +719,9 @@
 		"/R/translator/application/views/templates/project_edit_view.php",
 		"/R/translator/application/views/templates/edit_language_key_view.php",
 		"/R/translator/application/views/nav_view.php",
-		"/R/translator/application/views/loading_view.php",
 		"/R/translator/assets/js/functions.js",
 		"/R/translator/assets/bootstrap/node_modules/grunt-contrib-less/node_modules/less/test/css/functions.css",
 		"/R/translator/assets/css/loading.css",
-		"/R/translator/application/views/footer_view.php",
 		"/R/IllutionBootstrap/bootstrap/less/extra/font-awesome-ie7.less",
 		"/R/IllutionBootstrap/bootstrap/less/extra/font-awesome.less",
 		"/R/IllutionBootstrap/bootstrap/less/core/scaffolding.less",
@@ -1056,7 +1080,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 9,
 			"sheets":
 			[
 				{
@@ -1190,8 +1214,8 @@
 						"selection":
 						[
 							[
-								171,
-								0
+								221,
+								221
 							]
 						],
 						"settings":
@@ -1267,6 +1291,96 @@
 						"zoom_level": 1.0
 					},
 					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "application/controllers/front.php",
+					"settings":
+					{
+						"buffer_size": 1109,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "application/views/header_view.php",
+					"settings":
+					{
+						"buffer_size": 1159,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								933,
+								933
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "application/views/footer_view.php",
+					"settings":
+					{
+						"buffer_size": 1393,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1393,
+								1393
+							]
+						],
+						"settings":
+						{
+							"incomplete_sync": null,
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
 				}
 			]
 		}
@@ -1328,6 +1442,34 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"foo_v",
+				"application/views/footer_view.php"
+			],
+			[
+				"load_v",
+				"application/views/loading_view.php"
+			],
+			[
+				"fro",
+				"application/controllers/front.php"
+			],
+			[
+				"head_v",
+				"application/views/header_view.php"
+			],
+			[
+				"fo",
+				"application/views/footer_view.php"
+			],
+			[
+				"fro.",
+				"application/controllers/front.php"
+			],
+			[
+				"load_",
+				"application/views/loading_view.php"
+			],
 			[
 				"my_r",
 				"application/core/MY_Router.php"
@@ -1593,10 +1735,6 @@
 				"application/views/header_view.php"
 			],
 			[
-				"fro",
-				"application/controllers/front.php"
-			],
-			[
 				"co",
 				"application/config/config.php"
 			],
@@ -1613,10 +1751,6 @@
 				"application/views/header_view.php"
 			],
 			[
-				"load_v",
-				"application/views/loading_view.php"
-			],
-			[
 				"function",
 				"assets/js/functions.js"
 			],
@@ -1629,10 +1763,6 @@
 				"assets/css/loading.css"
 			],
 			[
-				"foo_v",
-				"application/views/footer_view.php"
-			],
-			[
 				"rou",
 				"assets/js/routes.js"
 			],
@@ -1643,10 +1773,6 @@
 			[
 				"nav",
 				"application/views/nav_view.php"
-			],
-			[
-				"head_v",
-				"application/views/header_view.php"
 			],
 			[
 				"fr.cs",
@@ -1827,18 +1953,6 @@
 			[
 				"fil",
 				"application/libraries/file.php"
-			],
-			[
-				"projec_v",
-				"application/views/templates/project_language_files_view.php"
-			],
-			[
-				"ro",
-				"application/config/routes.php"
-			],
-			[
-				"api_pr",
-				"application/controllers/api/api_project.php"
 			]
 		],
 		"width": 0.0

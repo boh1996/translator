@@ -189,7 +189,7 @@ abstract class REST_Controller extends CI_Controller
 		}
 
 		// Set up our GET variables
-		$this->_get_args = array_merge($this->_get_args, $this->uri->ruri_to_assoc());
+		$this->_get_args = array_merge($_GET, $this->uri->ruri_to_assoc(),$this->_get_args);
 
 		$this->load->library('security');
 
@@ -259,7 +259,7 @@ abstract class REST_Controller extends CI_Controller
 		}
 
 		// Checking for keys? GET TO WORK!
-		if (config_item('rest_enable_keys'))
+		if ( config_item('rest_enable_keys') )
 		{
 			$this->_allow = $this->_detect_api_key();
 		}
@@ -270,7 +270,7 @@ abstract class REST_Controller extends CI_Controller
 			$this->response(array('status' => false, 'error' => 'Only AJAX requests are accepted.'), 505);
 		}
 	}
-
+	
 	/**
 	 * Remap
 	 *
@@ -283,6 +283,7 @@ abstract class REST_Controller extends CI_Controller
 	 */
 	public function _remap($object_called, $arguments)
 	{
+
 		// Should we answer if not over SSL?
 		if (config_item('force_https') AND !$this->_detect_ssl())
 		{
@@ -351,9 +352,16 @@ abstract class REST_Controller extends CI_Controller
 			$this->_log_request($authorized = TRUE);
 		}
 
+		$this->before_method();
+
 		// And...... GO!
 		$this->_fire_method(array($this, $controller_method), $arguments);
 	}
+
+	/**
+	 * Override this method, it's called just before the controller method is called
+	 */
+	protected function before_method () {}
 
 	/**
 	 * Fire Method
@@ -440,6 +448,8 @@ abstract class REST_Controller extends CI_Controller
 		header('HTTP/1.1: ' . $http_code);
 		header('Status: ' . $http_code);
 
+		$this->before_output($output);
+
 		// If zlib.output_compression is enabled it will compress the output,
 		// but it will not modify the content-length header to compensate for
 		// the reduction, causing the browser to hang waiting for more data.
@@ -451,6 +461,12 @@ abstract class REST_Controller extends CI_Controller
 
 		exit($output);
 	}
+
+	/**
+	 * Override this with your own method to send headers etc
+	 * @param string &$output The output being sent
+	 */
+	protected function before_output ( &$output ) {}
 
 	/*
 	 * Detect SSL use
@@ -603,6 +619,16 @@ abstract class REST_Controller extends CI_Controller
 	}
 
 	/**
+	 * This can be extended to include extra key checks
+	 * 
+	 * @param  object  $row The database row
+	 * @return boolean      Return if the key is valid
+	 */
+	protected function _is_key_valid ( $row ) {
+		return true;
+	}
+
+	/**
 	 * Detect API Key
 	 *
 	 * See if the user has provided an API key
@@ -624,12 +650,13 @@ abstract class REST_Controller extends CI_Controller
 
 		// Find the key from server or arguments
 		if (($key = isset($this->_args[$api_key_variable]) ? $this->_args[$api_key_variable] : $this->input->server($key_name)))
-		{
+		{	
 			if ( ! ($row = $this->rest->db->where(config_item('rest_key_column'), $key)->get(config_item('rest_keys_table'))->row()))
 			{
 				return FALSE;
 			}
 
+			if ( ! $this->_is_key_valid($row) ) return false;
 			$this->rest->key = $row->{config_item('rest_key_column')};
 
 			isset($row->user_id) AND $this->rest->user_id = $row->user_id;

@@ -20,6 +20,10 @@
 </script>
 
 <script type="text/javascript">
+	var token = "LAL123";
+</script>
+
+<script type="text/javascript">
 	document.write('<script src="'+ location.origin + ':35729/livereload.js?snipver=2"><' + '/script>');
 </script>
 
@@ -28,53 +32,45 @@
 <div class="wrapper">
 	<div id="page">
 		<div class="container page-container">
-			<?php if ($this->user_control->user->has_one_mode(array("edit","create","view","delete"))) : ?>
-				<div id="project" class="disabled_page">
-					
-				</div>
+			<div id="project" class="disabled_page">
+				
+			</div>
 
-				<div class="disabled_page" id="project_language">
-					
-				</div>
+			<div class="disabled_page" id="project_language">
+				
+			</div>
 
-				<div class="disabled_page" id="language_key_edit">
+			<div class="disabled_page" id="language_key_edit">
 
-				</div>
+			</div>
 
-				<div class="disabled_page" id="language_file">
+			<div class="disabled_page" id="language_file">
 
-				</div>
-			<?php endif; ?>
+			</div>
 
-			<?php if ($this->user_control->user->has_modes("edit")) : ?>
-				<div id="project_edit" class="disabled_page">
-					
-				</div>
+			<div id="project_edit" class="disabled_page">
+				
+			</div>
 
-				<div id="add_language_key" class="disabled_page">
+			<div id="add_language_key" class="disabled_page">
 
-				</div>
-			<?php endif; ?>
+			</div>
 
-			<?php if ($this->user_control->user->has_modes("create")) : ?>
-				<div id="project_create" class="disabled_page">
-					<?= $this->user_control->LoadTemplate("create_project_view"); ?>
-				</div>
+			<div id="project_create" class="disabled_page">
+				<?= $this->user_control->LoadTemplate("create_project_view"); ?>
+			</div>
 
-				<div class="disabled_page" id="project_language_add_file">
-					<?= $this->user_control->LoadTemplate("project_language_add_file_view"); ?>
-				</div>
+			<div class="disabled_page" id="project_language_add_file">
+				<?= $this->user_control->LoadTemplate("project_language_add_file_view"); ?>
+			</div>
 
-				<div class="disabled_page" id="project_add_language">
-					<?= $this->user_control->LoadTemplate("project_add_language_view"); ?>
-				</div>
-			<?php endif; ?>
+			<div class="disabled_page" id="project_add_language">
+				<?= $this->user_control->LoadTemplate("project_add_language_view"); ?>
+			</div>
 
-			<?php if ($this->user_control->user->has_one_mode(array("edit","create","view","delete"))) : ?>
-				<div id="home" class="disabled_page">
-					<?= $this->user_control->LoadTemplate("projects_view"); ?>
-				</div>
-			<?php endif; ?>
+			<div id="home" class="disabled_page">
+				
+			</div>
 		</div>
 	</div>
 </div>
@@ -85,39 +81,37 @@
 	<?= $this->user_control->LoadTemplate("alerts_view"); ?>
 </div>
 
-<?php if ($this->user_control->user->has_one_mode(array("edit","create","view","delete"))) : ?>
-	<script type="mustache/template" id="viewProjectTemplate">
-		<?= $this->user_control->LoadTemplate("project_view"); ?>
-	</script>
+<script type="mustache/template" id="projectsTemplate">
+	<?= $this->user_control->LoadTemplate("projects_view"); ?>
+</script>
 
-	<script type="mustache/template" id="projectLanguageFilesTemplate">
-		<?= $this->user_control->LoadTemplate("project_language_files_view"); ?>
-	</script>
+<script type="mustache/template" id="viewProjectTemplate">
+	<?= $this->user_control->LoadTemplate("project_view"); ?>
+</script>
 
-	<script type="mustache/template" id="languageFileTemplate">
-		<?= $this->user_control->LoadTemplate("language_file_view"); ?>
-	</script>
-<?php endif; ?>
+<script type="mustache/template" id="projectLanguageFilesTemplate">
+	<?= $this->user_control->LoadTemplate("project_language_files_view"); ?>
+</script>
 
-<?php if ($this->user_control->user->has_modes("edit")) : ?>
-	<script type="mustache/template" id="editProjectViewTemplate">
-		<?= $this->user_control->LoadTemplate("project_edit_view"); ?>
-	</script>
+<script type="mustache/template" id="languageFileTemplate">
+	<?= $this->user_control->LoadTemplate("language_file_view"); ?>
+</script>
 
-	<script type="mustache/template" id="addLanguageKeyTemplate">
-		<?= $this->user_control->LoadTemplate("add_language_key_view"); ?>
-	</script>
+<script type="mustache/template" id="editProjectViewTemplate">
+	<?= $this->user_control->LoadTemplate("project_edit_view"); ?>
+</script>
 
-	<script type="mustache/template" id="editLanguageKeyTemplate">
-		<?= $this->user_control->LoadTemplate("edit_language_key_view"); ?>
-	</script>
-<?php endif; ?>
+<script type="mustache/template" id="addLanguageKeyTemplate">
+	<?= $this->user_control->LoadTemplate("add_language_key_view"); ?>
+</script>
 
-<?php if ($this->user_control->user->has_modes("delete")) : ?>
-	<script type="mustache/template" id="deleteProjectConfirmModalTemplate">
-		<?= $this->user_control->LoadTemplate("delete_confirm_view"); ?>
-	</script>
-<?php endif; ?>
+<script type="mustache/template" id="editLanguageKeyTemplate">
+	<?= $this->user_control->LoadTemplate("edit_language_key_view"); ?>
+</script>
+
+<script type="mustache/template" id="deleteProjectConfirmModalTemplate">
+	<?= $this->user_control->LoadTemplate("delete_confirm_view"); ?>
+</script>
 
 <script type="musctache/template" id="tokenTemplate">
 	<?= $this->user_control->LoadTemplate("token_view"); ?>

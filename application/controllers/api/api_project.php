@@ -1,8 +1,8 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-require(APPPATH.'libraries/API_Controller.php');  
+require(APPPATH.'libraries/api/T_API_Controller.php');  
 
-class API_Project extends API_Controller {
+class API_Project extends T_API_Controller {
 
 	/**
 	 * This function is called on any request send to this endpoint,
@@ -13,6 +13,7 @@ class API_Project extends API_Controller {
 	public function __construct () {
 		parent::__construct();
 		$this->load->library("project");
+		$this->load->model("user_roles_model");
 	}
 
 	/**
@@ -28,6 +29,12 @@ class API_Project extends API_Controller {
         }
 
         $Project = new Project();
+
+        $modes = $this->user_roles_model->get_user_project_modes( $this->user->id, $this->get("id"));
+
+        if (count($modes) == 0 ) {
+        	self::error(403);
+        }
 
         if ( ! $Project->Load( $this->get("id") ) ) {
         	self::error($this->config->item("api_not_found_code"));
@@ -60,6 +67,12 @@ class API_Project extends API_Controller {
         	return;
         }
 
+        $modes = $this->user_roles_model->get_user_project_modes( $this->user->id, $Project->id);
+
+        if (count($modes) == 0 ) {
+        	self::error(403);
+        }
+
         $export = $Project->Export();
 
         if ( isset($export["files"]) ) {
@@ -89,23 +102,19 @@ class API_Project extends API_Controller {
 	 * @access public
 	 */
 	public function index_post () {
-		if ( $this->user->has_one_mode("create") ) {
-			$Project = new Project();
+		$Project = new Project();
 
-			if ( ! $Project->Import($this->post()) ) {
-				self::error($this->config->item("api_bad_request_code"));
-				return;
-			}
+		if ( ! $Project->Import($this->post()) ) {
+			self::error($this->config->item("api_bad_request_code"));
+			return;
+		}
 
-			if ( ! $Project->Save() ) {
-				self::error($this->config->item("api_error_while_saving_code"));
-				return;
-			}
+		if ( ! $Project->Save() ) {
+			self::error($this->config->item("api_error_while_saving_code"));
+			return;
+		}
 
-			$this->response($Project->Export(),$this->config->item("api_created_code"));
-		} else {
-    		self::error($this->config->item("api_forbidden_error"));
-    	}
+		$this->response($Project->Export(),$this->config->item("api_created_code"));
 	}
 
 	/**
@@ -128,6 +137,12 @@ class API_Project extends API_Controller {
         	return;
         }
 
+        $modes = $this->user_roles_model->get_user_project_modes( $this->user->id, $Project->id);
+
+        if ( ! in_array("edit", $modes) ) {
+        	self::error(403);
+        }
+
 		if ( ! $Project->Import($this->put(),true) ) {
 			self::error($this->config->item("api_bad_request_code"));
 			return;
@@ -148,24 +163,26 @@ class API_Project extends API_Controller {
 	 * @access public
 	 */
 	public function index_delete () {
-		if ( $this->user->has_one_mode("delete") ) {
-			if ( ! $this->get('id') ) {  
-	            self::error($this->config->item("api_bad_request_code"));
-	            return; 
-	        }
+		if ( ! $this->get('id') ) {  
+            self::error($this->config->item("api_bad_request_code"));
+            return; 
+        }
 
-	        $Project = new Project();
+        $Project = new Project();
 
-	        if ( ! $Project->Load( $this->get("id") ) ) {
-	        	self::error($this->config->item("api_not_found_code"));
-	        	return;
-	        }
+        if ( ! $Project->Load( $this->get("id") ) ) {
+        	self::error($this->config->item("api_not_found_code"));
+        	return;
+        }
 
-	        $Project->Delete();
-	        
-		    $this->response = array();
-    	} else {
-    		self::error($this->config->item("api_forbidden_error"));
-    	}
+        $modes = $this->user_roles_model->get_user_project_modes( $this->user->id, $Project->id);
+
+        if ( ! in_array("delete", $modes) ) {
+        	self::error(403);
+        }
+
+        $Project->Delete();
+        
+	    $this->response = array();
 	}
 }

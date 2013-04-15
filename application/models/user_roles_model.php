@@ -9,7 +9,7 @@ class User_Roles_Model extends CI_Model {
 	 * @param integer $project_id The project to retrieve the users roles for
 	 * @return array An array containing "Role"'s objects
 	 */
-	public function get_user_project_roles ($user_id,$project_id) {
+	public function get_user_project_roles ( $user_id, $project_id ) {
 		$this->load->library("role");
 
 		$query = $this->db->from("user_project_roles")->where(array(
@@ -38,14 +38,16 @@ class User_Roles_Model extends CI_Model {
 	 * @param integer $project_id The project to retrieve modes for
 	 * @return array<string> An array containing the different permissons
 	 */
-	public function get_user_project_modes ($user_id,$project_id) {
-		$roles = self::Get_User_Project_Roles($user_id,$project_id);
+	public function get_user_project_modes ( $user_id, $project_id ) {
+		$roles = self::get_user_project_roles($user_id,$project_id);
 
 		$modes = array();
 
-		if (count($roles) > 0) {
-			foreach ($roles as $role) {
-				$modes = array_merge($modes, $role->modes);
+		if ( count($roles) > 0 ) {
+			foreach ( $roles as $role ) {
+				if ( is_array($role->modes) ) {
+					$modes = array_merge($modes, $role->modes);
+				}
 			}
 			return array_unique($modes);
 		} else {
@@ -68,7 +70,7 @@ class User_Roles_Model extends CI_Model {
 			"user_id"		=> $user_id
 		);
 
-		if (! self::exists($data)) {
+		if ( ! self::exists($data) ) {
 			$this->db->insert("user_project_rolest",$data);
 		}
 	}
@@ -100,10 +102,10 @@ class User_Roles_Model extends CI_Model {
 	public function exists($where,$table){
 	    $this->db->where($where);
 	    $query = $this->db->get($table);
-	    if ($query->num_rows() > 0){
+
+	    if ( $query->num_rows() > 0 ){
 	        return true;
-	    }
-	    else{
+	    } else {
 	        return false;
 	    }
 	}

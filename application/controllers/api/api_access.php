@@ -1,6 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-require(APPPATH.'libraries/API_Controller.php');  
+require(APPPATH.'libraries/api/T_API_Controller.php');  
 
 /**
  * Access control API
@@ -14,7 +14,7 @@ require(APPPATH.'libraries/API_Controller.php');
  * @author        	Bo Thomsen
  * @version 		1.0
  */
-class API_Access extends API_Controller {
+class API_Access extends T_API_Controller {
 
 	/**
 	 * This function is called on any request send to this endpoint,

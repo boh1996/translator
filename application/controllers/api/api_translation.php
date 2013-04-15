@@ -1,6 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-require(APPPATH.'libraries/API_Controller.php');  
+require(APPPATH.'libraries/api/API_Controller.php');  
 
 /**
  * Translation Object Controller
@@ -14,7 +14,7 @@ require(APPPATH.'libraries/API_Controller.php');
  * @author        	Bo Thomsen
  * @version 		1.0
  */
-class API_Translation extends API_Controller {
+class API_Translation extends T_API_Controller {
 
 	/**
 	 * This function is called on any request send to this endpoint,

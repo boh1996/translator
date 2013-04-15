@@ -1,8 +1,8 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-require(APPPATH.'libraries/API_Controller.php');  
+require(APPPATH.'libraries/api/T_API_Controller.php');  
 
-class API_Language extends API_Controller {
+class API_Language extends T_API_Controller {
 
 	/**
 	 * This function is called on any request send to this endpoint,

@@ -26,15 +26,6 @@ class User extends Std_Library {
 	 */
 	public $name = null;
 
-	/**
-	 * The users overall access level,
-	 * if the user has rights to create a project etc
-	 * @since 1.0
-	 * @access public
-	 * @var object
-	 */
-	public $role = null;
-
 	### Class Settings ###
 
 	/**

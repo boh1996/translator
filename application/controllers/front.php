@@ -18,9 +18,9 @@ class Front extends CI_Controller{
 		$language = $this->user_control->language;
 		$this->load->view("header_view",$this->user_control->ControllerInfo(array(
 			"style_includes" => array(
-				"style.css",
-				"front.css",
-				"webkit-form.css"
+				"css/style.css",
+				"css/front.css",
+				"css/webkit-form.css"
 			)
 		)));
 		$data = array(

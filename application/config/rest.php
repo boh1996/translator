@@ -47,7 +47,7 @@ $config['enable_emulate_request'] = TRUE;
 |	E.g: My Secret REST API
 |
 */
-$config['rest_realm'] = 'REST API';
+$config['rest_realm'] = 'T_API';
 
 /*
 |--------------------------------------------------------------------------
@@ -163,7 +163,7 @@ $config['rest_database_group'] = 'default';
 |	'keys'
 |
 */
-$config['rest_keys_table'] = 'keys';
+$config['rest_keys_table'] = 'api_tokens';
 
 /*
 |--------------------------------------------------------------------------
@@ -187,7 +187,7 @@ $config['rest_keys_table'] = 'keys';
 	) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 |
 */
-$config['rest_enable_keys'] = FALSE;
+$config['rest_enable_keys'] = TRUE;
 
 /*
 |--------------------------------------------------------------------------
@@ -198,7 +198,7 @@ $config['rest_enable_keys'] = FALSE;
 | name of the db column that holds the api key value?
 |
 */
-$config['rest_key_column'] = 'key';
+$config['rest_key_column'] = 'token';
 
 /*
 |--------------------------------------------------------------------------
@@ -223,7 +223,7 @@ $config['rest_key_length'] = 40;
 | Default: X-API-KEY
 |
 */
-$config['rest_key_name'] = 'X-API-KEY';
+$config['rest_key_name'] = 'token';
 
 /*
 |--------------------------------------------------------------------------

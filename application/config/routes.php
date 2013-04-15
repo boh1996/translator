@@ -104,6 +104,9 @@ if ( ! empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_R
 	#Change approval
 	$route["change/approval/(:num)/(:num)/(:num)"] = "api/api_translation/approval/language_key_id/$1/language_id/$2/translation_id/$3";
 
+	### User Project Access ###
+	$route["me"] = "api/api_user/index";
+
 /**
  * User Routes
  */

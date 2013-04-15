@@ -18,7 +18,7 @@ $(document).ready(function () {
 				}
 
 				$.ajax({
-					url : root + "project",
+					url : root + "project" + "?token="+token,
 					type : "POST",
 					data : JSON.stringify(data),
 					contentType: 'application/json',
@@ -49,8 +49,9 @@ $(document).ready(function () {
 	if ($("#project_edit").length > 0) {
 		crossroads.addRoute("project/edit/{id}",function (id) {
 
-			var jqxhr = $.get(root + "project/"+id)
+			var jqxhr = $.get(root + "project/"+id + "?token="+token)
 			 .success(function(data) { 
+			 	data = data.result;
 		    	$("#project_edit").html("");
 		    	$("#project_edit").html(Mustache.render($("#editProjectViewTemplate").html(), data));
 		    	showPage("project_edit");
@@ -67,7 +68,7 @@ $(document).ready(function () {
 					}
 
 					$.ajax({
-						url : root + "project/"+id,
+						url : root + "project/"+id + "?token="+token,
 						type : "PUT",
 						data : JSON.stringify(data),
 						contentType: 'application/json',
@@ -106,8 +107,9 @@ $(document).ready(function () {
 
 		crossroads.addRoute("project/{id}",function (id) {
 			$.ajax({
-				url : root + "project/" + id,
+				url : root + "project/" + id + "?token="+token,
 				success : function (data) {
+					data = data.result;
 					var counter = 1;
 					data["project_id"] = data.id;
 					data["count"] = function () {
@@ -115,6 +117,7 @@ $(document).ready(function () {
 			                return counter++;
 			            }
 			        };
+
 					$("#project").html(Mustache.render($("#viewProjectTemplate").html(),data));
 					showPage("project");
 				},
@@ -126,14 +129,17 @@ $(document).ready(function () {
 
 		crossroads.addRoute("project/{project_id}/{language_id}/{file_id}", function (project_id, language_id, file_id) {
 			$.ajax({
-				url : root + "language/" + language_id,
+				url : root + "language/" + language_id + "?token="+token,
 				success : function (language_data) {
+					language_data = language_data.result;
 					$.ajax({
-						url : root + "project/"+project_id,
+						url : root + "project/"+project_id + "?token="+token,
 						success : function (project_data) {
+							project_data = project_data.result;
 							$.ajax({
-								url : root + "project/"+project_id+"/language/"+language_id+"/file/"+file_id,
+								url : root + "project/"+project_id+"/language/"+language_id+"/file/"+file_id + "?token="+token,
 								success : function (data) {
+									data = data.result;
 									data["project_id"] = project_data.id;
 									data["language_id"] = language_id;
 									data["project_name"] = project_data.name;
@@ -200,14 +206,17 @@ $(document).ready(function () {
 
 		crossroads.addRoute("project/{project_id}/{language_id}/{file_id}/add/key",function ( project_id, language_id, file_id ) {
 			$.ajax({
-				url : root + "language/" + language_id,
+				url : root + "language/" + language_id + "?token="+token,
 				success : function (language_data) {
+					language_data = language_data.result;
 					$.ajax({
-						url : root + "project/"+project_id,
+						url : root + "project/"+project_id + "?token="+token,
 						success : function (project_data) {
+							project_data = project_data.result;
 							$.ajax({
-								url: root + "file/"+file_id,
+								url: root + "file/"+file_id + "?token="+token,
 								success : function ( file_data ) {
+									file_data = file_data.result;
 									var data = {	
 										"file" : file_data,
 										"language" : language_data,
@@ -262,11 +271,13 @@ $(document).ready(function () {
 
 		crossroads.addRoute(/^project\/([0-9]+)\/([0-9]+)$/,function (project_id, language_id) {		
 			$.ajax({
-				url : root + "language/" + language_id,
+				url : root + "language/" + language_id + "?token="+token,
 				success : function (language_data) {
+					language_data = language_data.result;
 					$.ajax({
-						url : root + "project/language/" + project_id+"/"+language_id,
+						url : root + "project/language/" + project_id+"/"+language_id + "?token="+token,
 						success : function (data) {
+							data = data.result;
 							var counter = 1;
 							data["project_id"] = data.id;
 							data["language_id"] = language_id;
@@ -294,18 +305,19 @@ $(document).ready(function () {
 	}
 
 	crossroads.addRoute("",function () {
-		showPage("home");
+		homePage();
 	});
 
 	crossroads.addRoute("home",function () {
-		showPage("home");
+		homePage();		
 	});
 
 	if ( $("#deleteProjectConfirmModalTemplate").length > 0) {
 		crossroads.addRoute(/^project\/delete\/([0-9]+)/,function (id) {
 			$.ajax({
-				url : root + "project/" + id,
+				url : root + "project/" + id + "?token="+token,
 				success : function (data) {
+					data = data.result;
 					if ($("#deleteProjectConfirmModal").length == 0) {
 						$("body").append('<div id="deleteProjectConfirmModal"></div>');
 					}
@@ -317,7 +329,7 @@ $(document).ready(function () {
 
 					$("#deleteProjectConfirmModal").on("click",".btn-primary", function () {
 						$.ajax({
-							url : root + "project/"+id,
+							url : root + "project/"+id + "?token="+token,
 							type : "DELETE",
 							success : function () {
 								$("#home").find('[data-index="'+id+'"]').parent("td").parent("tr").remove();
@@ -341,3 +353,62 @@ $(document).ready(function () {
 		});*/
 	});
 });
+
+function homePage () {
+	$.ajax({
+		url : root + "me?token=" + token,
+		success : function ( data ) {
+			data = data.result;
+			var number = 0;
+
+			data.number = function () {
+				return function () {
+					number++;
+					return number;
+				}
+			}
+
+			data.create = function () {
+				return oneMode("create", this);
+			}
+
+			data.delete = function () {
+				return oneMode("delete", this);
+			}
+
+			data.edit = function () {
+				return oneMode("edit", this);
+			}
+
+			$("#home").html(Mustache.render($("#projectsTemplate").html(),data));
+
+			showPage("home");
+		},
+		error : function () {
+			// Sorry No projects found
+		}
+	});
+}
+
+/**
+ * Checks user project access mode,
+ * if one of the selected modes are found,
+ * true is returned
+ * 
+ * @param  {string} modes  A commaseperated string
+ * @param  {object} object The Project object
+ * @return {boolean}
+ */
+function oneMode ( modes, object ) {
+	var modes = modes.split(",");
+
+	if ( typeof object.modes == "undefined" ) return false;
+
+	for (var i = 0; i < modes.length; i++) {
+		if ( object.modes.indexOf(modes[i]) !== -1 ) {
+			return true;
+		}
+	};
+	
+	return false;
+}

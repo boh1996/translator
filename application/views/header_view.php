@@ -14,7 +14,7 @@
 		<?php
 			if ( isset($style_includes) ) {
 				foreach ($style_includes as $include) {
-					echo '<link rel="stylesheet" type="text/css" href="'.$asset_url.'css/'.$include.'">';
+					echo '<link rel="stylesheet" type="text/css" href="' . $asset_url . $include.'">';
 				}
 			}
 		?>
