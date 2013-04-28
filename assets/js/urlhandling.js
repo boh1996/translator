@@ -9,6 +9,7 @@ $('[data-target]').live("click",function () {
 		   	url = event.target.getAttribute('data-target');
 
 		   	if ( url == "-back" ) {
+		   		console.log("BACK");
 		   		History.back();
 		   		return;
 		   	}

@@ -1,0 +1,7 @@
+translate
+create
+edit
+delete
+view
+manage
+moderate

@@ -13,6 +13,8 @@ class API_Language_Key extends T_API_Controller {
 	public function __construct () {
 		parent::__construct();
 		$this->load->library("key");
+		$this->load->model("user_roles_model");
+		$this->load->model("key_model");
 	}
 
 	/**
@@ -27,6 +29,14 @@ class API_Language_Key extends T_API_Controller {
         }
 
         $Key = new Key();
+
+        $project_id = $this->key_model->get_project_id($this->get('id'));
+
+        $modes = $this->user_roles_model->get_user_project_modes( $this->user->id, $token->project->id);
+
+        if ( count($modes) == 0 ) {
+        	self::error(403);
+        }
 
         if ( ! $Key->Load($this->get("id")) ) {
         	self::error($this->config->item("api_not_found_code"));
@@ -53,6 +63,14 @@ class API_Language_Key extends T_API_Controller {
 			self::error($this->config->item("api_bad_request_code"));
 			return;
 		}
+
+		$project_id = $this->key_model->get_project_id($this->get('id'));
+
+        $modes = $this->user_roles_model->get_user_project_modes( $this->user->id, $token->project->id);
+
+        if ( count(array_intersect($modes,array("create","manage"))) == 0 ) {
+    		self::error(403);
+   		}
 
 		if ( ! $Key->Save() ) {
 			self::error($this->config->item("api_error_while_saving_code"));
@@ -85,6 +103,14 @@ class API_Language_Key extends T_API_Controller {
 			return;
 		}
 
+		$project_id = $this->key_model->get_project_id($this->get('id'));
+
+        $modes = $this->user_roles_model->get_user_project_modes( $this->user->id, $token->project->id);
+
+        if ( count(array_intersect($modes,array("edit","manage"))) == 0 ) {
+    		self::error(403);
+   		}
+
 		if ( ! $Key->Save() ) {
 			self::error($this->config->item("api_error_while_saving_code"));
 			return;
@@ -105,6 +131,14 @@ class API_Language_Key extends T_API_Controller {
         }
 
         $Key = new Key();
+
+        $project_id = $this->key_model->get_project_id($this->get('id'));
+
+        $modes = $this->user_roles_model->get_user_project_modes( $this->user->id, $token->project->id);
+
+        if ( count(array_intersect($modes,array("delete","manage"))) == 0 ) {
+    		self::error(403);
+   		}
 
         if ( ! $Key->Load($this->get("id")) ) {
         	self::error($this->config->item("api_not_found_code"));

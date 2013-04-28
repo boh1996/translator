@@ -30,7 +30,14 @@ class File_Model extends CI_Model {
 			$keys[$key->id] = (bool)$key->approve_first;
 		}
 
-		$translationQuery = $this->db->from("language_key_translations")->where_in("language_key_id", $key_ids)->where(array("language_id" => $language_id))->select("approved, language_key_id")->get();
+		if ( count($key_ids) == 0 ) return false;
+
+		$this->db->from("language_key_translations");
+		$this->db->where_in("language_key_id", $key_ids);
+		$this->db->where(array("language_id" => $language_id));
+		$this->db->select("approved, language_key_id");
+
+		$translationQuery = $this->db->get();
 
 		$done = 0;
 		$missing_approval = 0;
@@ -58,6 +65,28 @@ class File_Model extends CI_Model {
 			"done_count" => $done,
 			"missing_approval_count" => $missing_approval
 		);
+	}
+
+	/**
+	 * Fetches the project id, that a file belongs to
+	 * 
+	 * @param  integer $file_id The file to check for
+	 * @return integer
+	 */
+	public function get_project_id ( $file_id ) {
+		$this->db->from("project_language_files");
+		$this->db->select("project_id");
+		$this->db->where(array(
+			"language_file_id" => $file_id
+		));
+
+		$query = $this->db->get();
+
+		if ( ! $query->num_rows() ) return false;
+
+		$row = $query->row();
+
+		return $row->project_id;
 	}
 
 	/**
@@ -123,12 +152,20 @@ class File_Model extends CI_Model {
 			$results = $query->result_array();
 		}
 
-		$query = $this->db->from("language_key_translations")->where_in("language_key_id", $approve_first_keys)->where_in("language_key_translations.language_id",$languages)->select("translations.translation, language_key_translations.language_key_id, language_key_translations.language_id, approved, translations.id ")->join("translations", "translations.id = language_key_translations.translation_id")->get();
+		if ( count($approve_first_keys) > 0 ) {
+			$query = $this->db->from("language_key_translations")->where_in("language_key_id", $approve_first_keys)->where_in("language_key_translations.language_id",$languages)->select("translations.translation, language_key_translations.language_key_id, language_key_translations.language_id, approved, translations.id ")->join("translations", "translations.id = language_key_translations.translation_id")->get();
+		
+			if ( $query->num_rows() > 0 ) {
+				$results = array_merge($results,$query->result_array());
+			}
+		}
 
-		$query = $this->db->from("language_key_translations")->where_in("language_key_id", $other_keys)->where_in("language_key_translations.language_id",$languages)->select("translations.translation, language_key_translations.language_key_id, language_key_translations.language_id, approved, translations.id ")->join("translations", "translations.id = language_key_translations.translation_id")->get();
-
-		if ( $query->num_rows() > 0 ) {
-			$results = array_merge($results,$query->result_array());
+		if ( count($other_keys) > 0 ) {
+			$query = $this->db->from("language_key_translations")->where_in("language_key_id", $other_keys)->where_in("language_key_translations.language_id",$languages)->select("translations.translation, language_key_translations.language_key_id, language_key_translations.language_id, approved, translations.id ")->join("translations", "translations.id = language_key_translations.translation_id")->get();
+		
+			if ( $query->num_rows() > 0 ) {
+				$results = array_merge($results,$query->result_array());
+			}
 		}
 
 		$this->db->from("language_key_tokens");

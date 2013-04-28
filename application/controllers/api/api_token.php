@@ -25,6 +25,7 @@ class API_Token extends T_API_Controller {
 	public function __construct () {
 		parent::__construct();
 		$this->load->library("token");
+		$this->load->model("user_roles_model");
 	}	
 
 	/**
@@ -46,6 +47,12 @@ class API_Token extends T_API_Controller {
         	return;
         }
 
+        $modes = $this->user_roles_model->get_user_project_modes( $this->user->id, $token->project->id);
+
+        if ( count(array_intersect($modes,array("edit","create","translate","manage","view","delete"))) == 0 ) {
+    		self::error(403);
+   		}
+
         $this->response($Token->Export());
 	}
 
@@ -61,6 +68,12 @@ class API_Token extends T_API_Controller {
 			self::error($this->config->item("api_bad_request_code"));
 			return;
 		}
+
+		$modes = $this->user_roles_model->get_user_project_modes( $this->user->id, $token->project->id);
+
+        if ( count(array_intersect($modes,array("edit","create","manage"))) == 0 ) {
+    		self::error(403);
+   		}
 
 		if ( ! $Token->Save() ) {
 			self::error($this->config->item("api_error_while_saving_code"));
@@ -94,6 +107,12 @@ class API_Token extends T_API_Controller {
 			return;
 		}
 
+		$modes = $this->user_roles_model->get_user_project_modes( $this->user->id, $token->project->id);
+
+        if ( count(array_intersect($modes,array("edit","create","manage"))) == 0 ) {
+    		self::error(403);
+   		}
+
 		if ( ! $Token->Save() ) {
 			self::error($this->config->item("api_error_while_saving_code"));
 			return;
@@ -123,6 +142,12 @@ class API_Token extends T_API_Controller {
         	return;
         }
 
+        $modes = $this->user_roles_model->get_user_project_modes( $this->user->id, $token->project->id);
+
+        if ( count(array_intersect($modes,array("edit","create","manage","delete"))) == 0 ) {
+    		self::error(403);
+   		}
+
         $Token->Delete();
 	}
 
@@ -143,6 +168,12 @@ class API_Token extends T_API_Controller {
         	self::error($this->config->item("api_not_found_code"));
         	return;
         }
+
+        $modes = $this->user_roles_model->get_user_project_modes( $this->user->id, $this->get("project_id"));
+
+        if ( count(array_intersect($modes,array("edit","create","translate","manage","delete","view"))) == 0 ) {
+    		self::error(403);
+   		}
 
         $this->load->model("token_model");
 

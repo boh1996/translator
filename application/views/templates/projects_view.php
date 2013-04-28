@@ -7,6 +7,7 @@
 				<th><?php echo $this->lang->line('front_name'); ?></th>
 				<th><?php echo $this->lang->line('front_edit'); ?></th>
 				<th><?php echo $this->lang->line('front_delete'); ?></th>
+				<th><?php echo $this->lang->line('front_manage'); ?></th>
 			</tr>
 		</thead>
 		<tbody>
@@ -38,6 +39,16 @@
 					{{^delete}}
 						<td></td>
 					{{/delete}}
+
+					{{#manage}}
+						<td>
+							<a href="#" data-index="{{id}}" data-target="project/manage/{{id}}"><?php echo $this->lang->line('front_manage'); ?></a>
+						</td>
+					{{/manage}}
+					
+					{{^manage}}
+						<td></td>
+					{{/manage}}
 				</tr>
 			{{/projects}}
 

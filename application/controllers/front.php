@@ -3,7 +3,7 @@
 class Front extends CI_Controller{
 
 	/**
-	 * This function recives all the calls when a page is requested
+	 * This function recives all the calls when a page is requestedk
 	 * @since 1.0
 	 * @access public
 	 */

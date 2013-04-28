@@ -30,6 +30,8 @@ class API_Project extends T_API_Controller {
 
         $Project = new Project();
 
+        $this->load->model("project_model");
+
         $modes = $this->user_roles_model->get_user_project_modes( $this->user->id, $this->get("id"));
 
         if (count($modes) == 0 ) {
@@ -41,7 +43,33 @@ class API_Project extends T_API_Controller {
         	return;
         }
 
+        if ( is_array($Project->languages) && count($Project->languages) > 0 ) {
+	        $languages = array();
+
+	        foreach ( $Project->languages as $language ) {
+	        	$languages[] = $language->id;
+	        }
+
+	        $languagesStatus = $this->project_model->project_languages_progress($Project,$languages);
+        }
+
         $export = $Project->Export();
+
+        $export["modes"] = $modes;
+
+        $roles = $this->user_roles_model->get_user_project_roles( $this->user->id, $export["id"]);
+
+        foreach ( $roles as $key => $role ) {
+			$roles[$key] = $role->Export();
+		}
+
+		$export["roles"] = $roles;
+
+        if ( $languagesStatus !== false ) {
+	        foreach ( $export["languages"] as $key => $language ) {
+	        	$export["languages"][$key]["progress"] = $languagesStatus[$language["id"]];
+	        }
+    	}
 
         $this->response( $export );
 	}
@@ -74,6 +102,16 @@ class API_Project extends T_API_Controller {
         }
 
         $export = $Project->Export();
+
+        $export["modes"] = $modes;
+
+        $roles = $this->user_roles_model->get_user_project_roles( $this->user->id, $export["id"]);
+
+        foreach ( $roles as $key => $role ) {
+			$roles[$key] = $role->Export();
+		}
+
+		$export["roles"] = $roles;
 
         if ( isset($export["files"]) ) {
         	$this->load->model("file_model");

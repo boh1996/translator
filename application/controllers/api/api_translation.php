@@ -1,6 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-require(APPPATH.'libraries/api/API_Controller.php');  
+require(APPPATH.'libraries/api/T_API_Controller.php');  
 
 /**
  * Translation Object Controller
@@ -25,6 +25,8 @@ class API_Translation extends T_API_Controller {
 	public function __construct () {
 		parent::__construct();
 		$this->load->library("translation");
+		$this->load->model("user_roles_model");
+		$this->load->model("translation_model");
 	}
 
 	/**
@@ -38,6 +40,18 @@ class API_Translation extends T_API_Controller {
 		if ( ! $this->get('id') ) {  
            	self::error($this->config->item("api_bad_request_code"));
             return; 
+        }
+
+        $language_key_id = $this->translation_model->get_translation_language_key($this->get("id"));
+
+        if ( $language_key_id === false ) {
+        	self::error($this->config->item("api_bad_request_code"));
+        	return;
+        }
+
+        if ( ! $this->translation_model->user_has_access_to($this->user->id, $language_key_id, array("moderate","manage","create","edit","translate")) ) {
+        	self::error($this->config->item("api_forbidden_error"));
+        	return;
         }
 
         $Translation = new Translation();
@@ -75,6 +89,12 @@ class API_Translation extends T_API_Controller {
 				self::error($this->config->item("api_bad_request_code"));
 				return;
 			}
+
+			$modes = $this->user_roles_model->get_user_project_modes( $this->user->id, $this->post("project_id"));
+
+			if ( count(array_intersect($modes,array("translate","manage","edit","create"))) == 0 ) {
+        		self::error(403);
+       		}
 
 			foreach ( $this->post("translations") as $translation ) {
 				$error = false;
@@ -246,6 +266,18 @@ class API_Translation extends T_API_Controller {
 			return;
 		}
 
+		$language_key_id = $this->translation_model->get_translation_language_key($this->get("id"));
+
+        if ( $language_key_id === false ) {
+        	self::error($this->config->item("api_bad_request_code"));
+        	return;
+        }
+
+        if ( ! $this->translation_model->user_has_access_to($this->user->id, $language_key_id, array("moderate","manage","create","edit","translate")) ) {
+        	self::error($this->config->item("api_forbidden_error"));
+        	return;
+        }
+
 		if ( ! $Translation->Save() ) {
 			self::error($this->config->item("api_error_while_saving_code"));
 			return;
@@ -265,7 +297,17 @@ class API_Translation extends T_API_Controller {
             return; 
         }
 
-        $this->load->model("translation_model");
+        $language_key_id = $this->translation_model->get_translation_language_key($this->get("translation_id"));
+
+        if ( $language_key_id === false ) {
+        	self::error($this->config->item("api_bad_request_code"));
+        	return;
+        }
+
+        if ( ! $this->translation_model->user_has_access_to($this->user->id, $language_key_id, array("moderate","manage")) ) {
+        	self::error($this->config->item("api_forbidden_error"));
+        	return;
+        }
 
         $this->translation_model->change_approval($this->get("language_key_id"),$this->get("language_id"),$this->get("translation_id"),$this->post("status"));
 	}
@@ -286,6 +328,11 @@ class API_Translation extends T_API_Controller {
 
         if ( ! $Translation->Load( $this->get("id") ) ) {
         	self::error($this->config->item("api_not_found_code"));
+        	return;
+        }
+
+        if ( ! $Translation->user->id == $this->user->id ) {
+        	self::error($this->config->item("api_forbidden_error"));
         	return;
         }
 

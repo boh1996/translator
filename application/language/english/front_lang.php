@@ -18,8 +18,9 @@
 	$lang["front_file_location"] = "File Location";
 	$lang["front_no_description_available"] = "No description available";
 	$lang["front_progress"] = "Progress";
+	$lang["front_go_back"] = "Back";
 	$lang["front_no_keys_available"] = "No keys available";
-	$lang["front_enter_translation"] = "Enter translation for '{{key}}'";
+	$lang["front_enter_translation"] = "Enter translation for &rsquo;{{key}}&rsquo;";
 	$lang["front_translation_key"] = "Key";
 	$lang["front_edit_language_key_title"] = "Edit {{key}}";
 	$lang["front_edit_language_key"] = "Edit Language Key";
@@ -43,6 +44,7 @@
 	$lang["front_token_updated"] = "The token has been updated";
 	$lang["front_token_added"] = "The selected token has been added";
 	$lang["front_token_not_found"] = "The token wasn't found!";
+	$lang["front_manage"] = "Manage";
 
 	########### Progress #############
 	$lang["front_progress_missing_approval_tooltip"] = "Missing approval: {{progress.missing_approval_count}}";

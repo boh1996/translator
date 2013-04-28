@@ -2,7 +2,7 @@ $(".approve-decline button").live("click", function () {
 	if ( $(this).attr("data-translation-id") == "" || $(this).attr("data-key-index") == "" || $(this).attr("data-translation-id") == false || $(this).attr("data-translation-id") == null ||$(this).attr("data-translation-id") == undefined ) {
 		return;
 	}
-	$.post(root+"change/approval/"+$(this).attr("data-key-index")+"/"+$("#language_id").val()+"/"+$(this).attr("data-translation-id"),{
+	$.post(root+"change/approval/"+$(this).attr("data-key-index")+"/"+$("#language_id").val()+"/"+$(this).attr("data-translation-id") + "?token="+token,{
 		"status" : ($(this).hasClass("approve")) ? true : false
 	});
 });
@@ -28,7 +28,7 @@ $(".save-translations").live("click", function () {
 });
 
 function sendTranslations ( data ) {
-	$.post(root+"translations", data).success(function () {
+	$.post(root+"translations?token="+token, data).success(function () {
 		alert(null, translations.data_saved, "alertsSuccessTemplate", $(".translations") , "prepend", null, 2000);	
 	}).error(function () {
 		alert(null, translations.error_sorry_error_occured, "alertsErrorTemplate", $(".translations") , "prepend", null, 2000);	

@@ -10,6 +10,7 @@
 
 <section class="well well-white inner-view view-padding">
 	<div class="translations">
+
 		{{#keys.length}}
 			<form class="form-horizontal" id="translation_form">
 				{{#keys}}
@@ -36,23 +37,26 @@
 								<div class="span10">
 									<textarea class="field span12 translate-field" rows="1" placeholder="<?= $this->lang->line("front_enter_translation"); ?>">{{#translation}}{{translation.translation}}{{/translation}}</textarea>
 								</div>	
+								
+								
+									{{#approve_first}}
+										{{#user.moderate}}
+										  	<div class="span2">	
+												<div class="btn-group approve-decline" data-toggle="buttons-radio">
+													<!-- Approve access -->
+													{{#translation.approved}}
+														<button type="button" data-key-index="{{id}}" {{#translation}} data-translation-id="{{translation.id}}" {{/translation}} data-toggle="button" class="btn btn-primary approve active"><i class="icon-ok icon-white"></i></button>
+														<button type="button" data-key-index="{{id}}" {{#translation}} data-translation-id="{{translation.id}}" {{/translation}} class="btn decline"><i class="icon-ban-circle"></i></button>
+													{{/translation.approved}}
 
-								{{#approve_first}}
-								  	<div class="span2">	
-										<div class="btn-group approve-decline" data-toggle="buttons-radio">
-											<!-- Approve access -->
-											{{#translation.approved}}
-												<button type="button" data-key-index="{{id}}" {{#translation}} data-translation-id="{{translation.id}}" {{/translation}} data-toggle="button" class="btn btn-primary approve active"><i class="icon-ok icon-white"></i></button>
-												<button type="button" data-key-index="{{id}}" {{#translation}} data-translation-id="{{translation.id}}" {{/translation}} class="btn decline"><i class="icon-ban-circle"></i></button>
-											{{/translation.approved}}
-
-											{{^translation.approved}}
-												<button type="button" data-key-index="{{id}}" {{#translation}} data-translation-id="{{translation.id}}" {{/translation}} class="btn btn-primary approve"><i class="icon-ok icon-white"></i></button>
-												<button type="button" data-key-index="{{id}}" {{#translation}} data-translation-id="{{translation.id}}" {{/translation}} data-toggle="button" class="btn decline active"><i class="icon-ban-circle"></i></button>
-											{{/translation.approved}}
-										</div>
-								  	</div>
-							  	{{/approve_first}}
+													{{^translation.approved}}
+														<button type="button" data-key-index="{{id}}" {{#translation}} data-translation-id="{{translation.id}}" {{/translation}} class="btn btn-primary approve"><i class="icon-ok icon-white"></i></button>
+														<button type="button" data-key-index="{{id}}" {{#translation}} data-translation-id="{{translation.id}}" {{/translation}} data-toggle="button" class="btn decline active"><i class="icon-ban-circle"></i></button>
+													{{/translation.approved}}
+												</div>
+										  	</div>
+										  {{/user.moderate}}
+								  	{{/approve_first}}
 							</div>
 						</div>
 
@@ -73,23 +77,44 @@
 						<div class="key">
 							<strong class="space-right"><?= $this->lang->line("front_translation_key"); ?>:</strong><em>{{key}}</em>
 						</div>
+						
+						{{#user.change}}
+							<div class="language-key-edit">
 
-						<div class="language-key-edit">
-							<a class="btn save-translation btn-primary" data-index="{{id}}"><?= $this->lang->line("common_save"); ?></a>
-							<a class="btn" data-target="language/key/{{id}}/edit"><?= $this->lang->line("front_edit"); ?></a>
-							<a class="btn" data-target="language/key/{{id}}/delete"><?= $this->lang->line("front_delete"); ?></a>
-						</div>
+								{{#user.translate}}
+									<a class="btn save-translation btn-primary" data-index="{{id}}"><?= $this->lang->line("common_save"); ?></a>
+								{{/user.translate}}
+
+								{{#user.edit}}
+									<a class="btn" data-target="language/key/{{id}}/edit"><?= $this->lang->line("front_edit"); ?></a>
+								{{/user.edit}}
+
+								{{#user.delete}}
+									<a class="btn" data-target="language/key/{{id}}/delete"><?= $this->lang->line("front_delete"); ?></a>
+								{{/user.delete}}
+							</div>
+						{{/user.change}}
+
 					</div>
 
 					<hr>
 				{{/keys}}
+
 			</form>
 
 			<div class="submit-area">
 				<div class="form-actions">
-					<button class="btn btn-primary save-translations"><?= $this->lang->line("common_save"); ?></button>
+					
+					{{#user.translate}}
+						<button class="btn btn-primary save-translations"><?= $this->lang->line("common_save"); ?></button>
+					{{/user.translate}}
+				  	
 				  	<a class="btn" data-target="project/{{project_id}}/{{language_id}}" ><?= $this->lang->line("common_cancel"); ?></a>
-				  	<a class="btn" data-target="project/{{project_id}}/{{language_id}}/{{file_id}}/add/key" ><?= $this->lang->line("front_add_key"); ?></a>
+
+				  	{{#user.create}}
+				  		<a class="btn" data-target="project/{{project_id}}/{{language_id}}/{{file_id}}/add/key" ><?= $this->lang->line("front_add_key"); ?></a>
+					{{/user.create}}
+
 				</div>
 			</div>
 		{{/keys.length}}

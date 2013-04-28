@@ -17,6 +17,8 @@
 		"token_added" : '<?php echo $this->lang->line('front_token_added'); ?>',
 		"token_not_found" : '<?php echo $this->lang->line('front_token_not_found'); ?>'
 	};
+
+	var language = <?= json_encode($this->lang->language); ?>;
 </script>
 
 <script type="text/javascript">
@@ -56,12 +58,14 @@
 
 			</div>
 
+			<div id="error_page" class="disabled_page"></div>
+
 			<div id="project_create" class="disabled_page">
 				<?= $this->user_control->LoadTemplate("create_project_view"); ?>
 			</div>
 
 			<div class="disabled_page" id="project_language_add_file">
-				<?= $this->user_control->LoadTemplate("project_language_add_file_view"); ?>
+				
 			</div>
 
 			<div class="disabled_page" id="project_add_language">
@@ -80,6 +84,14 @@
 <div style="display:none;">
 	<?= $this->user_control->LoadTemplate("alerts_view"); ?>
 </div>
+
+<script type="mustache/template" id="projectAddFileTemplate">
+	<?= $this->user_control->LoadTemplate("project_language_add_file_view"); ?>
+</script>
+
+<script type="mustache/template" id="errorTemplate">
+	<?= $this->user_control->LoadTemplate("error_view"); ?>
+</script>
 
 <script type="mustache/template" id="projectsTemplate">
 	<?= $this->user_control->LoadTemplate("projects_view"); ?>

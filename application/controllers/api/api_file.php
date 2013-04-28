@@ -25,6 +25,8 @@ class API_File extends T_API_Controller {
 	public function __construct () {
 		parent::__construct();
 		$this->load->library("file");
+		$this->load->model("file_model");
+        $this->load->model("user_roles_model");
 	}
 
 	/**
@@ -46,6 +48,14 @@ class API_File extends T_API_Controller {
         	self::error($this->config->item("api_not_found_code"));
         	return;
         }
+
+        $project_id = $this->file_model->get_project_id($this->get('id'));
+
+        $modes = $this->user_roles_model->get_user_project_modes( $this->user->id, $project_id);
+
+        if ( count($modes) == 0 ) {
+    		self::error(403);
+   		}
 
         $export = $File->Export();
 
@@ -100,9 +110,16 @@ class API_File extends T_API_Controller {
         	return;
         }
 
+        $project_id = $this->file_model->get_project_id($File->id);
+
+        $modes = $this->user_roles_model->get_user_project_modes( $this->user->id, $project_id);
+
+        if ( count($modes) == 0 ) {
+    		self::error(403);
+   		}
+
         $export = $File->Export();
 
-        $this->load->model("file_model");
         $this->load->model("project_model");
 
         $keys = $this->file_model->project_language_keys($File->id, $this->project_model->base_language($this->get("project_id")), $this->get("language_id"));
@@ -138,6 +155,14 @@ class API_File extends T_API_Controller {
 			return;
 		}
 
+		$project_id = $this->file_model->get_project_id($File->id);
+
+        $modes = $this->user_roles_model->get_user_project_modes( $this->user->id, $project_id);
+
+        if ( count(array_intersect($modes,array("edit","manage"))) == 0 ) {
+    		self::error(403);
+   		}
+
 		if ( ! $File->Save() ) {
 			self::error($this->config->item("api_error_while_saving_code"));
 			return;
@@ -167,6 +192,14 @@ class API_File extends T_API_Controller {
         	return;
         }
 
+        $project_id = $this->file_model->get_project_id($File->id);
+
+        $modes = $this->user_roles_model->get_user_project_modes( $this->user->id, $project_id);
+
+        if ( count(array_intersect($modes,array("manage","delete"))) == 0 ) {
+    		self::error(403);
+   		}
+
         $File->Delete();
 	}
 
@@ -177,6 +210,8 @@ class API_File extends T_API_Controller {
 	 * @param integer :file_id The id of the file to create the key for
 	 */
 	public function add_language_key_post () {
+		$this->load->model("key_model");
+
 		if ( ! $this->get('file_id') ) {  
             self::error($this->config->item("api_bad_request_code"));
             return; 
@@ -188,6 +223,14 @@ class API_File extends T_API_Controller {
         	self::error($this->config->item("api_not_found_code"));
         	return;
         }
+
+        $project_id = $this->file_model->get_project_id($File->id);
+
+        $modes = $this->user_roles_model->get_user_project_modes( $this->user->id, $project_id);
+
+        if ( count(array_intersect($modes,array("manage","edit","create","delete"))) == 0 ) {
+    		self::error(403);
+   		}
 
         $this->load->library("key");
 
@@ -212,6 +255,14 @@ class API_File extends T_API_Controller {
         }
 
         $Key->approve_first = $approve_first;
+
+   		$project_id = $this->key_model->get_project_id($this->get('id'));
+
+        $modes = $this->user_roles_model->get_user_project_modes( $this->user->id, $token->project->id);
+
+        if ( count(array_intersect($modes,array("manage","edit","create","delete"))) == 0 ) {
+    		self::error(403);
+   		}
 
        	if ( ! $Key->Save() ) {
         	self::error($this->config->item("api_error_while_saving_code"));
