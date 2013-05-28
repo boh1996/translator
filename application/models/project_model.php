@@ -34,6 +34,24 @@ class Project_Model extends CI_Model {
 	}
 
 	/**
+	 * Assosiactes a language with a project
+	 * 
+	 * @param integer $project_id  The project to associate with
+	 * @param integer $language_id The language to make a link with the project
+	 * @return boolean
+	 */
+	public function add_language ( $project_id, $language_id ) {
+		if ( $this->project_language_exists($project_id, $language_id) ) return true;
+
+		$this->db->insert("project_languages",array(
+			"project_id" 	=> $project_id,
+			"language_id" 	=> $language_id
+		));
+
+		return true;
+	}
+
+	/**
 	 * This function returns a projects standard language
 	 * @since 1.0
 	 * @access public

@@ -155,7 +155,7 @@ class T_API_Controller extends API_Controller {
 		}
 
 		if ( count($data) > 0 && ! isset($data["status"]) ) {
-			parent::response(array("result" => $data,"error_code" => null,"error" => null,"status" => true), $code);
+			parent::response(array("result" => $data,"error_code" => null,"error" => null,"status" => true, "code" => $code), $code);
 		} else if ( count($data) > 0 ) {
 			parent::response($data, $code);
 		} else {

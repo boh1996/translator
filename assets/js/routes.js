@@ -26,12 +26,12 @@ $(document).ready(function () {
 						History.pushState(null,null,root); 
 					}, 2000); 
 				},
-				error : function (xhr) {
-					if (xhr.status == 403) {
+				error : function ( xhr ) {
+					if ( xhr.status == 403 ) {
 						alert(null,translations.error_no_permission,"alertsErrorTemplate", $("#create_project_form"), "prepend", function () {
 							History.pushState(null,null,root); 
 						}, 2000);
-					} else if (xhr.status == 409) {
+					} else if ( xhr.status == 409 ) {
 						alert(null,translations.error_project_found,"alertsErrorTemplate", $("#create_project_form"), "prepend", function () {
 							History.pushState(null,null,root); 
 						}, 2000);
@@ -95,10 +95,6 @@ $(document).ready(function () {
 	    });
     });
 
-	crossroads.addRoute("project/{project_id}/delete/language/{id}",function (project_id, language_id) {
-
-	});
-
 	crossroads.addRoute("project/{id}",function (id) {
 		user(function () {
 			$.ajax({
@@ -107,7 +103,7 @@ $(document).ready(function () {
 					data = data.result;
 					data.user = window.userData;
 					var counter = 1;
-					data["project_id"] = data.id;
+					data["project"] = data;
 					data["count"] = function () {
 			            return function (text, render) {
 			                return counter++;
@@ -145,13 +141,12 @@ $(document).ready(function () {
 							success : function (data) {
 								user(function () {
 									data = data.result;
+									var file_data = data;
 									data.user = window.userData;
 									data["modes"] = project_data.modes;
-									data["project_id"] = project_data.id;
-									data["language_id"] = language_id;
-									data["project_name"] = project_data.name;
-									data["language_name"] = language_data.name;
-									data["file_id"] = file_id;
+									data["project"] = project_data;
+									data["language"] = language_data;
+									data["file"] = file_data;
 
 									for (var i = 0; i < data.keys.length; i++) {
 										data.keys[i].modes = project_data.modes;
@@ -217,16 +212,6 @@ $(document).ready(function () {
 		});
 	});
 
-	crossroads.addRoute("language/key/{language_key_id}/edit",function ( language_key_id ) {
-		var data = {};
-		$("#language_key_edit").html(Mustache.render($("#editLanguageKeyTemplate").html(),data));
-		showPage("language_key_edit");
-	});
-
-	crossroads.addRoute("language/key/{language_key_id}/delete",function ( language_key_id ) {
-		//showPage("language_key_edit");
-	});
-
 	crossroads.addRoute("project/{project_id}/{language_id}/{file_id}/add/key",function ( project_id, language_id, file_id ) {
 		$.ajax({
 			url : root + "language/" + language_id + "?token="+token,
@@ -274,14 +259,6 @@ $(document).ready(function () {
 		});
 	});
 
-	crossroads.addRoute("project/{project_id}/{language_id}/{file_id}/edit", function (project_id, language_id, file_id) {
-
-	});
-
-	crossroads.addRoute("project/{project_id}/{language_id}/{{file_id}/delete", function (project_id, language_id, file_id) {
-
-	});
-
     crossroads.addRoute("project/{project_id}/{language_id}/add/file", function (project_id, language_id) {
     	$.ajax({
 			url : root + "language/" + language_id + "?token="+token,
@@ -293,10 +270,8 @@ $(document).ready(function () {
 						data = data.result;
 						user(function () {
 							data.user = window.userData;
-							data.language_id = language_data.id;
-							data.project_id = data.id;
-							data.language_name = language_data.name;
-							data.project_name = data.name;
+							data.language = language_data;
+							data.project = data;
 							$("#project_language_add_file").html(Mustache.render($("#projectAddFileTemplate").html(),data));
 
 							showPage("project_language_add_file");
@@ -323,10 +298,6 @@ $(document).ready(function () {
 		});
     });
 
-	crossroads.addRoute("project/{id}/add/language",function (id) {
-		showPage("project_add_language");
-	});
-
 	crossroads.addRoute(/^project\/([0-9]+)\/([0-9]+)$/,function (project_id, language_id) {		
 		$.ajax({
 			url : root + "language/" + language_id + "?token="+token,
@@ -339,9 +310,8 @@ $(document).ready(function () {
 							data = data.result;
 							var counter = 1;
 							data.user = window.userData;
-							data["project_id"] = data.id;
-							data["language_id"] = language_id;
-							data["language_name"] = language_data.name;
+							data["project"] = data;
+							data["language"] = language_data;
 							data["count"] = function () {
 					            return function (text, render) {
 					                return counter++;
@@ -418,6 +388,82 @@ $(document).ready(function () {
 		error({
 			"error" : language.errors_page_not_found
 		});
+	});
+
+	crossroads.addRoute("project/{project_id}/add/language",function ( project_id) {
+		$.ajax({
+			url : root + "project/" + project_id + "?token="+token,
+			success : function (data) {
+				data = data.result;
+				var project_data = data;
+				data["project"] = project_data;
+				$("#project_add_language").html(Mustache.render($("#projectAddLanguageTemplate").html(),data));
+				showPage("project_add_language");
+
+				$("#language_name").typeaheadmap({
+					"notfound": new Array({'token' :translations.token_not_found, 'id': "not_found"}),
+					source : function (query, process) {
+						$.get(root + "languages?token="+token).success(function (data) {
+							data = data.result;
+							result = data;
+
+							process(data);
+							
+						});
+					},
+
+					displayer: function(that, item, highlighted) {
+						var object = findByProperty(result, "id", item.id);
+						if (typeof object !== "undefined") {
+					    	return highlighted + " - " + "<i>" + object.code + "</i>";
+					    } else {
+					    	return "<strong>"+that["notfound"][0][that.key]+"</strong>";
+					    }
+					},
+					listener : function ( language, id ) {
+						if ( id == "not_found" ) {
+							$("#language_name").val("");
+							$("#language_name").attr("data-language-id", "");
+							$("#language_name").attr("data-language-name", "");
+							return;
+						}
+
+						$("#language_name").attr("data-language-id", id);
+						$("#language_name").attr("data-language-name", language);
+					},
+					items : 5,
+					key : "name",
+					value : "id"
+				});
+			},
+			error : function () {
+				error({
+					"error" : language.error_occured_while_saving
+				});
+			}
+	    });
+	});
+
+	crossroads.addRoute("project/{project_id}/{language_id}/{file_id}/edit", function (project_id, language_id, file_id) {
+
+	});
+
+	crossroads.addRoute("project/{project_id}/{language_id}/{{file_id}/delete", function (project_id, language_id, file_id) {
+
+	});
+
+	crossroads.addRoute("project/{project_id}/delete/language/{id}",function (project_id, language_id) {
+
+	});
+
+	crossroads.addRoute("language/key/{language_key_id}/edit",function ( language_key_id ) {
+		var data = {};
+		$("#language_key_edit").html(Mustache.render($("#editLanguageKeyTemplate").html(),data));
+		showPage("language_key_edit");
+	});
+
+	crossroads.addRoute("language/key/{language_key_id}/delete",function ( language_key_id ) {
+		//showPage("language_key_edit");
 	});
 });
 

@@ -20,6 +20,7 @@ $(document).on("click", "#add_language_search_token", function () {
 		"notfound": new Array({'token' :translations.token_not_found, 'id': "not_found"}),
 		source : function (query, process) {
 			$.get(root + "token/get/"+$("#language_key_project_id").val()+".json").success(function (data) {
+				data = data.result;
 				result = data;
 
 				var lines = new Array();
@@ -114,14 +115,6 @@ $(document).on("click", "#add_language_keycreate_token_button", function () {
 		value : "id"
 	});
 });
-
-function findByProperty ( array, property, value) {
-	for (var i = 0; i < array.length; i++) {
-		if ( array[i][property] == value ) {
-			return array[i];
-		}
-	}
-}
 
 $(document).on("click", "#create_token_save_button", function () {
 	if ( $("#create_token_form").find("#token_name").val() !== "" && $("#create_token_form").find("#token_name").val() !== undefined ) {
@@ -259,9 +252,40 @@ $(document).on("submit","#create_language_key_form",function (event) {
 			}, 2000);
 		})
 		.error(function () {
-			//An error occurred
+			alert(null,translations.error_sorry_error_occured,"alertsErrorTemplate", $("#create_language_key_form").find(".modal-body"), "prepend", function () {
+			}, 2000);
 		});
 	} else {
 		// Show error key missing
 	}
+});
+
+$(document).on("click", "#add_language_to_project_save", function (event) {
+	event.preventDefault();
+	var add_language_data = {};
+
+	if ( ! $("#language_name").attr("data-language-name") == $("#language_name").val() ) {
+		return;
+	}
+
+	if ( $("#language_name").attr("data-language-id") == "" ) {
+		return;
+	}
+
+	add_language_data.id = $("#language_name").attr("data-language-id");
+
+	$.ajax({
+		url : root+"project/language/"+$("#add_language_to_project_id").val()+"/"+add_language_data.id+"?token="+token,
+		contentType : "application/json",
+		type : "POST",
+		data : JSON.stringify(add_language_data),
+		success : function ( data ) {
+			alert(null,Mustache.render(language.front_language_added_to_project, data.result),"alertsSuccessTemplate", $("#add_language_to_project_form"), "prepend", function () {
+				History.pushState(null,$("title").html(), root+"project/"+$("#add_language_to_project_id").val());
+			}, 3000);
+		},
+		error : function ( xhr ) {
+			alert(null,translations.errros_an_error_occured_while_adding_the_language,"alertsErrorTemplate", $("#add_language_to_project_form"), "prepend", function () {}, 2000);
+		}
+	});
 });

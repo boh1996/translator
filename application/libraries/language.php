@@ -26,6 +26,20 @@ class Language extends Std_Library {
 	 */
 	public $name = null;
 
+	/**
+	 * A description of the language
+	 * 
+	 * @var string
+	 */
+	public $description = null;
+
+	/**
+	 * The ISO language code
+	 * 
+	 * @var string
+	 */
+	public $code = null;
+
 	### Class Settings ###
 
 	/**
@@ -45,7 +59,7 @@ class Language extends Std_Library {
 		$this->_INTERNAL_NOT_ALLOWED_DUBLICATE_ROWS_ABORT_ON_NULL = true;
 		$this->_INTERNAL_NOT_ALLOWED_DUBLICATE_ROWS = 	array(
 			"name",
-			"directory"
+			"code"
 		);
 		$this->_INTERNAL_DATABASE_EXPORT_INGNORE = array(
 			"id"

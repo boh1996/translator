@@ -20,4 +20,5 @@ $lang["errors_language_not_found"] = "The language wasn't found!";
 $lang["errors_file_not_found"] = "File not found!";
 $lang["error_occured_while_saving"] = "Sorry an error occured while saving!";
 $lang["errors_project_language_not_found"] = "The requested language isn't associated with this project!";
+$lang["errros_an_error_occured_while_adding_the_language"] = "Sorry, something went wrong while adding your language to the project!";
 ?>

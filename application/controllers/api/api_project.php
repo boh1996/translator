@@ -65,7 +65,7 @@ class API_Project extends T_API_Controller {
 
 		$export["roles"] = $roles;
 
-        if ( $languagesStatus !== false ) {
+        if ( isset($languagesStatus) && $languagesStatus !== false ) {
 	        foreach ( $export["languages"] as $key => $language ) {
 	        	$export["languages"][$key]["progress"] = $languagesStatus[$language["id"]];
 	        }
@@ -132,6 +132,54 @@ class API_Project extends T_API_Controller {
         }
 
         $this->response( $export );
+	}
+
+	/**
+	 * Adds a language to a project
+	 * 
+	 * @return integer
+	 */
+	public function language_project_post () {
+		$this->load->model("project_model");
+		$this->load->model("language_model");
+		$this->load->library("language");
+		$this->lang->load("languages");
+
+		$Language = new Language();
+		$Project = new Project();
+		
+		if ( ! $this->get("project") || ! $this->get("language") ) {
+			self::error($this->config->item("api_bad_request_code"));
+			return;
+		}
+
+		if ( ! $Language->Load($this->get("language")) ) {
+			self::error(404);
+		}
+
+		if ( ! $Project->Load($this->get("project")) ) {
+			self::error(404);
+		}
+
+		$modes = $this->user_roles_model->get_user_project_modes( $this->user->id, $this->get("project"));
+
+        if ( count(array_intersect($modes,array("manage","edit"))) == 0 ) {
+    		self::error(403);
+   		}
+
+   		if ( ! $this->project_model->add_language($this->get("project"), $this->get("language")) ) {
+   			self::error($this->config->item("api_error_while_saving_code"));
+			return;
+   		}
+
+   		$Language->translated = $this->lang->line("languages_" . $Language->code);
+
+   		$response = array(
+   			"language" 	=> $Language->Export(),
+   			"project"	=> $Project->Export()
+   		);
+
+   		$this->response($response, 203);
 	}
 
 	/**

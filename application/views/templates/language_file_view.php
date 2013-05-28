@@ -1,12 +1,12 @@
 <ul class="breadcrumb project-navigation view-nagivation view-navigation-view-padding">
 	<li><a data-target=""><?= $this->lang->line("common_projects"); ?></a> <span class="divider">/</span></li>
-	<li><a data-target="project/{{project_id}}">{{project_name}}</a> <span class="divider">/</span></li>
-	<li><a data-target="project/{{project_id}}/{{language_id}}">{{language_name}}</a> <span class="divider">/</span></li>
+	<li><a data-target="project/{{project.id}}">{{project.name}}</a> <span class="divider">/</span></li>
+	<li><a data-target="project/{{project.id}}/{{language.id}}"><?= $this->lang->line("front_language_file_language_name"); ?></a> <span class="divider">/</span></li>
 	<li class="active"><strong>{{name}}</strong></li>
 </ul>
 
-<input type="hidden" id="language_id" value="{{language_id}}">
-<input type="hidden" id="project_id" value="{{project_id}}">
+<input type="hidden" id="language_id" value="{{language.id}}">
+<input type="hidden" id="project_id" value="{{project.id}}">
 
 <section class="well well-white inner-view view-padding">
 	<div class="translations">
@@ -109,10 +109,10 @@
 						<button class="btn btn-primary save-translations"><?= $this->lang->line("common_save"); ?></button>
 					{{/user.translate}}
 				  	
-				  	<a class="btn" data-target="project/{{project_id}}/{{language_id}}" ><?= $this->lang->line("common_cancel"); ?></a>
+				  	<a class="btn" data-target="project/{{project.id}}/{{language.id}}" ><?= $this->lang->line("common_cancel"); ?></a>
 
 				  	{{#user.create}}
-				  		<a class="btn" data-target="project/{{project_id}}/{{language_id}}/{{file_id}}/add/key" ><?= $this->lang->line("front_add_key"); ?></a>
+				  		<a class="btn" data-target="project/{{project.id}}/{{language.id}}/{{file.id}}/add/key" ><?= $this->lang->line("front_add_key"); ?></a>
 					{{/user.create}}
 
 				</div>

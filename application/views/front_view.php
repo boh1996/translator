@@ -69,7 +69,7 @@
 			</div>
 
 			<div class="disabled_page" id="project_add_language">
-				<?= $this->user_control->LoadTemplate("project_add_language_view"); ?>
+				
 			</div>
 
 			<div id="home" class="disabled_page">
@@ -84,6 +84,10 @@
 <div style="display:none;">
 	<?= $this->user_control->LoadTemplate("alerts_view"); ?>
 </div>
+
+<script type="mustache/template" id="projectAddLanguageTemplate">
+	<?= $this->user_control->LoadTemplate("project_add_language_view"); ?>
+</script>
 
 <script type="mustache/template" id="projectAddFileTemplate">
 	<?= $this->user_control->LoadTemplate("project_language_add_file_view"); ?>

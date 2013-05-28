@@ -21,6 +21,14 @@ function template (string,data, propagate) {
 	return string;
 }
 
+function findByProperty ( array, property, value) {
+	for (var i = 0; i < array.length; i++) {
+		if ( array[i][property] == value ) {
+			return array[i];
+		}
+	}
+}
+
 /**
  * This function shows a page and change the navbar link properly
  * @param  {string} newPage The name of the page to change too

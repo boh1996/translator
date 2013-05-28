@@ -16,6 +16,7 @@
 					{{/user.delete}}
 					
 					<th><?= $this->lang->line("front_progress"); ?></th>
+
 				<tr>
 			</thead>
 
@@ -23,10 +24,10 @@
 				{{#languages}}
 					<tr>
 						<td>{{count}}</td>
-						<td><a data-target="project/{{project_id}}/{{id}}">{{name}}</a></td>
+						<td><a data-target="project/{{project.id}}/{{id}}"><?= $this->lang->line("front_language_name"); ?></a></td>
 
 						{{#user.delete}}
-							<td><a data-target="project/{{project_id}}/delete/language/{{id}}"><?= $this->lang->line("front_delete"); ?></a></td>
+							<td><a data-target="project/{{project.id}}/delete/language/{{id}}"><?= $this->lang->line("front_delete"); ?></a></td>
 						{{/user.delete}}
 	
 						{{^user.delete}}

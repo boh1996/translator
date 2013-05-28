@@ -14,7 +14,7 @@
 	$lang["front_add_language"] = "Add Language";
 	$lang["front_file"] = "File";
 	$lang["front_add_file"] = "Add file";
-	$lang["front_add_language_file_to_project"] = "Add language file to {{project_name}}";
+	$lang["front_add_language_file_to_project"] = "Add language file to {{project.name}}";
 	$lang["front_file_location"] = "File Location";
 	$lang["front_no_description_available"] = "No description available";
 	$lang["front_progress"] = "Progress";
@@ -29,6 +29,8 @@
 	$lang["front_add_key"] = "Add Language key";
 	$lang["front_add_language_key_to_project"] = "Add Language Key to {{project.name}}";
 	$lang["front_description"] = "Description";
+	$lang["front_add"] = "Add";
+	$lang["front_language"] = "Language";
 	$lang["front_token"] = "Token";
 	$lang["front_approve_first"] = "Approve first";
 	$lang["front_create_token"] = "Create token";
@@ -45,6 +47,11 @@
 	$lang["front_token_added"] = "The selected token has been added";
 	$lang["front_token_not_found"] = "The token wasn't found!";
 	$lang["front_manage"] = "Manage";
+	$lang["front_add_language_to_project"] = "Add language";
+	$lang["front_add_language_to_project_name"] = "Add language {{name}}";
+	$lang["front_language_name"] = "{{name}}({{code}})";
+	$lang["front_language_file_language_name"] = "{{language.name}}({{language.code}})";
+	$lang["front_language_added_to_project"] = "{{language.translated}} has succesfully been added to {{project.name}}";
 
 	########### Progress #############
 	$lang["front_progress_missing_approval_tooltip"] = "Missing approval: {{progress.missing_approval_count}}";
