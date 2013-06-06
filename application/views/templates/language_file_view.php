@@ -39,7 +39,7 @@
 								</div>	
 								
 								
-									{{#approve_first}}
+									{{#approve.approve_translation_first}}
 										{{#user.moderate}}
 										  	<div class="span2">	
 												<div class="btn-group approve-decline" data-toggle="buttons-radio">
@@ -55,8 +55,8 @@
 													{{/translation.approved}}
 												</div>
 										  	</div>
-										  {{/user.moderate}}
-								  	{{/approve_first}}
+										{{/user.moderate}}
+								  	{{/approve.approve_translation_first}}
 							</div>
 						</div>
 

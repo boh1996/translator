@@ -109,6 +109,10 @@ if ( ! empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_R
 	### User Project Access ###
 	$route["me"] = "api/api_user/index";
 
+	### Export ###
+	$route["export/project/(:num)/language/(:num)"] = "api/api_export/project_language/project_id/$1/language_id/$2";
+	$route["export/project/(:num)"] = "api/api_export/project/project_id/$1";
+
 /**
  * User Routes
  */

@@ -64,7 +64,7 @@ $autoload['libraries'] = array("database","std_library","input","output","user_c
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('url','file');
+$autoload['helper'] = array('url','file', 'approve');
 
 
 /*

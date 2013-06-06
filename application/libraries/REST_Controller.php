@@ -245,6 +245,17 @@ abstract class REST_Controller extends CI_Controller
 			}
 		}
 
+		// only allow ajax requests
+		if ( ! $this->input->is_ajax_request() AND config_item('rest_ajax_only'))
+		{
+			$this->response(array('status' => false, 'error' => 'Only AJAX requests are accepted.'), 505);
+		}
+	}
+
+	/**
+	 * Fetches the API key
+	 */
+	protected function _fetch_key () {
 		$this->rest = new StdClass();
 		// Load DB if its enabled
 		if (config_item('rest_database_group') AND (config_item('rest_enable_keys') OR config_item('rest_enable_logging')))
@@ -262,12 +273,6 @@ abstract class REST_Controller extends CI_Controller
 		if ( config_item('rest_enable_keys') )
 		{
 			$this->_allow = $this->_detect_api_key();
-		}
-
-		// only allow ajax requests
-		if ( ! $this->input->is_ajax_request() AND config_item('rest_ajax_only'))
-		{
-			$this->response(array('status' => false, 'error' => 'Only AJAX requests are accepted.'), 505);
 		}
 	}
 	
@@ -297,6 +302,10 @@ abstract class REST_Controller extends CI_Controller
 		}
 
 		$controller_method = $object_called.'_'.$this->request->method;
+
+		$this->controller_method = $controller_method;
+
+		$this->_fetch_key();
 
 		// Do we want to log this method (if allowed by config)?
 		$log_method = !(isset($this->methods[$controller_method]['log']) AND $this->methods[$controller_method]['log'] == FALSE);
@@ -639,6 +648,12 @@ abstract class REST_Controller extends CI_Controller
 	{
 		// Get the api key name variable set in the rest config file
 		$api_key_variable = config_item('rest_key_name');
+		$rest_key_column = config_item('rest_key_column');
+		$rest_keys_table = config_item('rest_keys_table');
+
+		if ( isset($this->methods[$this->controller_method]["key_name"]) ) $api_key_variable = $this->methods[$this->controller_method]["key_name"];
+		if ( isset($this->methods[$this->controller_method]["key_column"]) ) $rest_key_column = $this->methods[$this->controller_method]["key_column"];
+		if ( isset($this->methods[$this->controller_method]["keys_table"]) ) $rest_keys_table = $this->methods[$this->controller_method]["keys_table"];
 
 		// Work out the name of the SERVER entry based on config
 		$key_name = 'HTTP_'.strtoupper(str_replace('-', '_', $api_key_variable));
@@ -651,13 +666,20 @@ abstract class REST_Controller extends CI_Controller
 		// Find the key from server or arguments
 		if (($key = isset($this->_args[$api_key_variable]) ? $this->_args[$api_key_variable] : $this->input->server($key_name)))
 		{	
-			if ( ! ($row = $this->rest->db->where(config_item('rest_key_column'), $key)->get(config_item('rest_keys_table'))->row()))
+			if ( ! ($row = $this->rest->db->where($rest_key_column, $key)->get($rest_keys_table)->row()))
 			{
 				return FALSE;
 			}
-
-			if ( ! $this->_is_key_valid($row) ) return false;
-			$this->rest->key = $row->{config_item('rest_key_column')};
+			if ( ! isset($this->methods[$this->controller_method]["validate_key_function"]) && ! isset($this->validate_key_function) ) {
+				if ( ! $this->_is_key_valid($row) ) return false;
+			} else {
+				if ( isset($this->methods[$this->controller_method]["validate_key_function"]) ) {
+					if ( ! $this->{$this->methods[$this->controller_method]["validate_key_function"]}($row) ) return false;
+				} else if ( isset($this->validate_key_function) ) {
+					if ( ! $this->{$this->validate_key_function}($row) ) return false;
+				}
+			}
+			$this->rest->key = $row->{$rest_key_column};
 
 			isset($row->user_id) AND $this->rest->user_id = $row->user_id;
 			isset($row->level) AND $this->rest->level = $row->level;

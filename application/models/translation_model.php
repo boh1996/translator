@@ -82,13 +82,115 @@ class Translation_Model extends CI_Model {
 	 */
 	public function link_translation ( $language_key_id, $translation_id, $language_id, $approved ) {
 		if ( ! self::link_exists($language_key_id, $translation_id, $language_id) ) {
+			if ( $approved == true ) {
+				self::unapprove_others($language_key_id, $language_id);
+			}
+
+			if ( $this->config->item("multiple_translations_per_key") == false ) {
+				self::remove_other_translations($language_key_id, $language_id);
+			}
+
 			$this->db->insert("language_key_translations", array(
 				"language_key_id" => $language_key_id,
 				"translation_id" => $translation_id,
 				"language_id" => $language_id,
 				"approved" => (int)$approved
 			));
+		} else {
+			$this->db->where(array(
+				"language_key_id" => $language_key_id,
+				"translation_id" => $translation_id,
+				"language_id" => $language_id,
+			));
+			$this->db->update("language_key_translations", array(
+				"approved" => (int)$approved
+			));
 		}
+	}
+
+	/**
+	 * Finds all translations associated with a language_key and language pair
+	 * 
+	 * @param  integer $language_key_id The language key to finds pairs for
+	 * @param  integer $language_id     The language to pair with
+	 * @return array<integer>
+	 */
+	public function find_translations ( $language_key_id, $language_id ) {
+		$this->db->from("language_key_translations");
+		$this->db->where(array(
+			"language_key_id"	=> $language_key_id,
+			"language_id"		=> $language_id
+		));
+		$this->db->select("translation_id");
+		$query = $this->db->get();
+
+		if ( ! $query->num_rows() ) return array();
+
+		$translations = array();
+
+		foreach ( $query->result() as $row ) {
+			$translations[] = $row->translation_id;
+		}
+
+		return $translations;
+	}
+
+	/**
+	 * This function removes all older translations, when a new is created
+	 * 
+	 * @param  integer $language_key_id The language key where a new translation has been added
+	 * @param  integer $language_id     The language the new translation is in
+	 */
+	public function remove_other_translations ( $language_key_id, $language_id ) {
+		$this->db->from("language_key_translations");
+		$this->db->where(array(
+			"language_key_id"	=> $language_key_id,
+			"language_id"		=> $language_id
+		));
+		$this->db->delete();
+
+		$translations = self::find_translations($language_key_id, $language_id);
+
+		if ( count($translations) > 0 ) {
+			$this->db->from("translation_tokens");
+			$this->db->where_in("translation_id", $translations);
+			$this->db->delete();
+		}
+	}
+
+	/**
+	 * Removes all links to a translation
+	 * 
+	 * @param  integer $translation_id The translation which is being deleted
+	 */
+	public function remove_translation ( $translation_id ) {
+		$this->db->from("language_key_translations");
+		$this->db->where(array(
+			"translation_id"	=> $translation_id
+		));
+		$this->db->delete();
+
+		$this->db->from("translation_tokens");
+		$this->db->where(array(
+			"translation_id"	=> $translation_id
+		));
+		$this->db->delete();
+	}
+
+	/**
+	 * Removes approval status from older translations
+	 * 
+	 * @param  integer $language_key_id The language key which is being translated
+	 * @param  integer $language_id     The language key the translation is for
+	 */
+	public function unapprove_others ( $language_key_id, $language_id ) {
+		$this->db->where(array(
+			"language_key_id"	=> $language_key_id,
+			"language_id"		=> $language_id
+		));
+		$this->db->update("language_key_translations",array(
+			"approved" => 0
+		));
 	}
 
 	/**

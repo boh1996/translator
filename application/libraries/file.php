@@ -36,6 +36,13 @@ class File extends Std_Library {
 	 */
 	public $file_location = null;
 
+	/**
+	 * If all keys in the file, should be approved first before exporting
+	 * 
+	 * @var boolean
+	 */
+	public $approve_first = null;
+
 	### Class Settings ###
 
 	/**

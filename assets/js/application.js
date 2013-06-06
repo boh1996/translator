@@ -256,7 +256,8 @@ $(document).on("submit","#create_language_key_form",function (event) {
 			}, 2000);
 		});
 	} else {
-		// Show error key missing
+		alert(null,language.errors_key_missing,"alertsErrorTemplate", $("#create_language_key_form").find(".modal-body"), "prepend", function () {
+		}, 2000);
 	}
 });
 

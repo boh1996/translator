@@ -58,6 +58,13 @@ class Project extends Std_Library {
 	 */
 	public $base_language = null;
 
+	/**
+	 * If all the projects translations, should be approved first before being accepted in an export
+	 * 
+	 * @var boolean
+	 */
+	public $approve_first = null;
+
 	### Class Settings ###
 
 	/**

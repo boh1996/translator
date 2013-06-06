@@ -28,6 +28,12 @@ $config['base_url']	= '';
 */
 $config['index_page'] = 'index.php';
 
+/**
+ * Use this option to control if a new translation shall overwrite the old, or add a new entry
+ * 
+ */
+$config["multiple_translations_per_key"] = false;
+
 /*
 |--------------------------------------------------------------------------
 | URI PROTOCOL

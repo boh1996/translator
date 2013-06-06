@@ -23,8 +23,15 @@
 			</div>
 		</div>
 
+		<div class="control-group">
+		    <label class="control-label" for="approve_first"><?= $this->lang->line("front_approve_first"); ?>:</label>
+		    <div class="controls">
+				<input type="checkbox" required name="approve_first" id="approve_first">
+			</div>
+		</div>
+
 		<div class="form-actions">
-			<button class="btn btn-primary" id="create_project_save"><?= $this->lang->line("front_create"); ?></button>
+			<button class="btn btn-primary" id="create_file_save"><?= $this->lang->line("front_create"); ?></button>
 		  	<a class="btn" data-target="" ><?= $this->lang->line("common_cancel"); ?></a>
 		</div>
 	</form>

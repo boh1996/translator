@@ -147,6 +147,10 @@ $(document).ready(function () {
 									data["project"] = project_data;
 									data["language"] = language_data;
 									data["file"] = file_data;
+									data["approve"] = {};
+									data["approve"].approve_translation_first = function () {
+										return approve_first(this, data);
+									}
 
 									for (var i = 0; i < data.keys.length; i++) {
 										data.keys[i].modes = project_data.modes;
@@ -582,6 +586,23 @@ function oneMode ( modes, object ) {
 			return true;
 		}
 	};
+	
+	return false;
+}
+
+/**
+ * If the key should be approved first
+ * 
+ * @param  {object} that An object containig a approve_first property
+ * @param  {object} data An object containing project and file
+ * @return {boolean}
+ */
+function approve_first ( that, data ) {
+	if ( data.project.approve_first == true ) return true;
+
+	if ( data.file.approve_first == true ) return true;
+
+	if ( that.approve_first == true ) return true;
 	
 	return false;
 }

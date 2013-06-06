@@ -143,6 +143,8 @@ class API_Translation extends T_API_Controller {
 					}
 				}
 
+				$this->load->model("translation_model");
+
 				if ( $error === false && $Key->is_loaded() ){
 					$data = array(
 						"language" => $Language->id,
@@ -153,6 +155,16 @@ class API_Translation extends T_API_Controller {
 						$data["tokens"] = $Key->tokens;
 					}
 					$TranslationObject->Import($data);
+
+					if ( $this->config->item("multiple_translations_per_key") == false ) {
+
+						// Remove the next couple of lines when a multiple translation feature is implemented
+						$existing_translation = $this->translation_model->find_translations($Key->id, $Language->id);
+
+						if ( ! count($existing_translation) == 0 ) {
+							$TranslationObject->id = $existing_translation[0];
+						}
+					}
 				}
 
 				if ( $error === false ) {
@@ -166,7 +178,6 @@ class API_Translation extends T_API_Controller {
 							$errors[] = array("message" => $this->lang->line("errors_error_saving_translation"),"code" => 500);
 						}
 					} else {
-						$this->load->model("translation_model");
 						$approval = ( isset($translation["approval"]) && ($translation["approval"] == "true" || $translation["approval"] === true) ) ? (bool)$translation["approval"] : false;
 						$this->translation_model->link_translation($Key->id, $TranslationObject->id, $Language->id, $approval);
 						$objects[] = $TranslationObject->Export(array(
@@ -319,6 +330,8 @@ class API_Translation extends T_API_Controller {
 	 * @access public
 	 */
 	public function index_delete () {
+		$this->load->model("translation_model");
+
 		if ( ! $this->get('id') ) {  
             self::error($this->config->item("api_bad_request_code"));
             return; 
@@ -336,6 +349,7 @@ class API_Translation extends T_API_Controller {
         	return;
         }
 
+        $this->translation_model->remove_translation($Translation->id);
         $Translation->Delete();
 	}
 }
