@@ -37,7 +37,7 @@
 | in the URL cannot be matched to a valid route.
 |
 */
-
+$route["session"] = "session/index";
 $route["test"] = "api/api_project/test";
 
 /**

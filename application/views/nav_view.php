@@ -2,13 +2,11 @@
 <div class="navbar navbar-fixed-top navbar-inverse">
   <div class="navbar-inner">
     <div class="container">
- 
 	      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
         <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
         	<span class="icon-th-list"></span>
 
       	</a>
- 
       	<!-- Be sure to leave the brand out there if you want it shown -->
       	<a class="brand" href="#">
       		<?php echo $this->lang->line('ui_brand_name'); ?>
@@ -33,7 +31,6 @@
 				</li>
 			</ul>
       	</div>
- 
     </div>
   </div>
 </div>

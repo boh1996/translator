@@ -42,8 +42,7 @@ class User_Control{
 		$this->_CI =& get_instance();
 
 		$this->_CI->load->config("settings");
-		
-		
+
 		if (isset($_GET["language"]) && array_key_exists($_GET["language"], $this->_CI->config->item("languages"))) {
 			$this->language = $_GET["language"];
 		}
